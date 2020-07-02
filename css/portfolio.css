@@ -1,0 +1,86 @@
+.subpage_title{
+    position: relative;
+    top: 135px;
+    text-align: center;
+/*     background-color: blue; */
+}
+.main_title{
+    font-family: 'Megrim', cursive;
+    font-size: 2.8125em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    margin-bottom: 20px;
+}
+.small_title{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.25em;
+    color: #909090;
+}
+#portfolio_list{
+    position: relative;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 480px;
+/*     background-color: red; */
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.preview_img{
+    width: 47.5%;
+    height: 100%;
+    overflow: hidden;
+}
+.preview_img img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: all .3s ease;
+}
+.preview_img img.color{
+    filter: grayscale(0);
+}
+.preview_img img:hover{
+    transform: scale(1.05);
+}
+.preview_img p{
+    position: absolute;
+    top: 100%;
+    width: 47.5%;
+    height: 30%;
+    background-color: #ff00005c;
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+    opacity: 1;
+    transition: all .5s .2s ease;
+}
+.preview_img p.show{
+    top: 70%;
+/*     height: 100%; */
+    opacity: 1;
+}
+.preview_img p:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+.portfolio_title{
+    text-indent: 15px;
+    position: absolute;
+    bottom: 50px;
+    font-size: 1.5em;
+/*     background-color: green; */
+}
+.portfolio_description{
+    text-indent: 15px;
+    position: absolute;
+    bottom: 20px;
+    font-size: 1.25em;
+/*     background-color: blue; */
+}

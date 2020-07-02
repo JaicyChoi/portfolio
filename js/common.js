@@ -1,6 +1,9 @@
+let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
+
 const menu_btn = document.querySelector('#menu_btn');
 const nav = document.querySelector('nav');
-const li = document.querySelectorAll('li')
+const li = document.querySelectorAll('li');
+const section = document.querySelectorAll('section');
 
 let menu_click = false;
 

@@ -1,5 +1,4 @@
 const parallax = document.querySelector('.parallax');
-const section = document.querySelectorAll('section');
 const prev_btn = document.querySelector('#prev_btn');
 const next_btn = document.querySelector('#next_btn');
 let index = 0;
