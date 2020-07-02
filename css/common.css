@@ -6,7 +6,7 @@
     height: 70px;
     background: rgba(0,0,0, 0.75);
     color: white;
-    z-index: 2;
+    z-index: 3;
 }
 #nav_inner{
     position: relative;
@@ -104,4 +104,31 @@ ul{
     font-size: 2.25em;
     font-weight: 300;
     text-transform: uppercase;
+}
+li{
+    opacity: 0;
+    transform: translateY(80px);
+}
+li a{
+    color: white;
+}
+li:nth-child(1).pop{
+    opacity: 1;
+    transition: all 3s .1s;
+    transform: translateY(0);
+}
+li:nth-child(2).pop{
+    opacity: 1;
+    transition: all 3s .3s;
+    transform: translateY(0);
+}
+li:nth-child(3).pop{
+    opacity: 1;
+    transition: all 3s .5s;
+    transform: translateY(0);
+}
+li:nth-child(4).pop{
+    opacity: 1;
+    transition: all 3s .7s;
+    transform: translateY(0);
 }

@@ -21,7 +21,7 @@ const toggleText = (index, state) => {
 toggleText(0, 'show');
 
 prev_btn.addEventListener('click', function(){
-    if( index< 1 ) return;
+    if( index< 1 ) { return; }
     toggleText(index, 'hide');
     index--;
 
@@ -49,12 +49,19 @@ window.addEventListener('scroll', function(){
     let offset = window.pageYOffset;
     parallax.style.backgroundPositionY = offset * 0.7 + 'px';
      
-    if( offset >= section[0].offsetHeight * 2 + section[0].offsetHeight * 0.5 ){ toggleText(0, 'hide'); toggleText(1, 'hide'); toggleText(2, 'hide'); toggleText(3, 'show'); index = 3; }
-    else if( offset >= section[0].offsetHeight + section[0].offsetHeight * 0.5 ){ toggleText(0, 'hide'); toggleText(1, 'hide'); toggleText(3, 'hide'); toggleText(2, 'show'); index = 2; }
+    if( offset >= section[0].offsetHeight * 2 + section[0].offsetHeight * 0.5 ){
+        toggleText(0, 'hide'); toggleText(1, 'hide'); toggleText(2, 'hide'); toggleText(3, 'show'); index = 3;
+        next_btn.classList.add('unvisible');
+    }
+    else if( offset >= section[0].offsetHeight + section[0].offsetHeight * 0.5 ){
+        toggleText(0, 'hide'); toggleText(1, 'hide'); toggleText(3, 'hide'); toggleText(2, 'show'); index = 2;
+        next_btn.classList.remove('unvisible');
+    }
     else if( offset >= section[0].offsetHeight * 0.5 ){
         toggleText(2, 'hide'); toggleText(3, 'hide'); toggleText(1, 'show'); toggleText(0, 'hide'); index = 1;
         document.querySelector('text').style.opacity = '0';
         document.querySelector('text').style.animation = 'none';
+        prev_btn.classList.add('visible');
     }
     else if( offset < section[0].offsetHeight * 0.5 ){
         toggleText(1, 'hide'); index = 0;
@@ -62,6 +69,7 @@ window.addEventListener('scroll', function(){
             toggleText(0, 'show');
             document.querySelector('text').style.opacity = '1';
             document.querySelector('text').style.animation = 'textAmimate 5s';
+            prev_btn.classList.remove('visible');
         }
     }
 });
