@@ -1,5 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Megrim&family=Monoton&family=Rasa:wght@300;400;500;600&family=Ubuntu+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600&display=swap');
 
+body{
+    cursor: none;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    background: linear-gradient(0deg, rgba(225,225,225,1) 0%, rgba(255,255,255,1) 100%);
+}
+body.dark_mode{
+    background: black;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(35,35,35,1) 100%);
+}
+
+#cursor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #909090;
+    box-sizing: border-box;
+    transition: .1s;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99;
+/*     background: red; */
+}
+#cursor.select{
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #909090;
+    animation: cursorAnimate 10s linear infinite;
+}
+#cursor.point{
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #909090;
+    animation: cursorAnimate 10s linear infinite;
+}
+#cursor.hide{
+    display: none;
+}
+#cursor span{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #909090;
+    text-shadow: 3px 3px 1px white;
+    position: absolute;
+    left: 0;
+    transform-origin: top left;
+}
+#cursor span.hide{
+    display: none;
+}
+@keyframes cursorAnimate{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 #nav_bg{
     position: fixed;
     width: 100%;
@@ -17,11 +81,17 @@
 /*     background: red; */
 }
 #logo{
+    position: relative;
+    z-index: 1;
     font-family: 'Rasa', serif;
     font-size: 32px;
     font-weight: 300;
     float: left;
 /*     background: green; */
+}
+#logo a{
+    cursor: none;
+    color: white;
 }
 #menu_btn{
     position: absolute;
@@ -36,6 +106,7 @@
     z-index: 1;
     transition: all .3s ease-in-out;
     /* background: blue; */
+    cursor: none;
 }
 #menu_btn_bar{
     width: 36px;
@@ -72,10 +143,6 @@
 #menu_btn.click #menu_btn_bar:after{
     transform: rotate(-45deg) translate(25px, 25px);
 }
-
-#logo, #menu_btn{
-    cursor: pointer;
-}
 nav{
     position: absolute;
     top: 0;
@@ -91,8 +158,10 @@ nav.show{
 }
 ul{
     position: relative;
+    width: 200px;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     color: white;
     height: 25vh;
 /*     background: blue; */
@@ -131,4 +200,77 @@ li:nth-child(4).pop{
     opacity: 1;
     transition: all 3s .7s;
     transform: translateY(0);
+}
+
+.checkbox{
+	opacity: 0;
+	position: absolute;
+}
+.label{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 70px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: white;
+    border: 2px solid #909090;
+    cursor: none;
+}
+#light_icon{
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    background: url(../images/light_mode.png) no-repeat;
+    width: 31px;
+    height: 33px;
+    background-size: contain;
+}
+#dark_icon{
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    background: url(../images/dark_mode.png) no-repeat;
+    width: 31px;
+    height: 33px;
+    background-size: contain;
+}
+#switch{
+    position: relative;
+    left: 3px;
+    top: 2.5px;
+    width: 30px;
+    height: 30px;
+    background-color: #CECECE;
+    border-radius: 50%;
+    transition: transform 0.3s linear;
+}
+.checkbox:checked + .label{
+    background-color: black;
+}
+.checkbox:checked + .label #switch{
+	transform: translateX(34px);
+}
+.subpage_title{
+    position: relative;
+    top: 135px;
+    text-align: center;
+/*     background-color: blue; */
+}
+.main_title{
+    font-family: 'Megrim', cursive;
+    font-size: 2.8125em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    margin-bottom: 20px;
+}
+.main_title.dark_mode{
+    color: white;
+    text-shadow: 0px 1px 5px white;
+}
+.small_title{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.25em;
+    color: #909090;
+    letter-spacing: 0.05em;
 }

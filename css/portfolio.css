@@ -1,21 +1,3 @@
-.subpage_title{
-    position: relative;
-    top: 135px;
-    text-align: center;
-/*     background-color: blue; */
-}
-.main_title{
-    font-family: 'Megrim', cursive;
-    font-size: 2.8125em;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    margin-bottom: 20px;
-}
-.small_title{
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.25em;
-    color: #909090;
-}
 #portfolio_list{
     position: relative;
     top: 220px;
@@ -32,6 +14,12 @@
     width: 47.5%;
     height: 100%;
     overflow: hidden;
+    cursor: none;
+}
+.preview_img:hover ~ #cursor{
+    width: 300px;
+    height: 300px;
+    background-color: red;
 }
 .preview_img img{
     width: 100%;
@@ -50,11 +38,10 @@
     top: 100%;
     width: 47.5%;
     height: 30%;
-    background-color: #ff00005c;
     color: white;
     font-family: 'Ubuntu Mono', monospace;
-    opacity: 1;
-    transition: all .5s .2s ease;
+    opacity: 0;
+    transition: all .6s cubic-bezier(0, 0.26, 0.73, 1.39);
 }
 .preview_img p.show{
     top: 70%;
@@ -66,9 +53,11 @@
     display: block;
     position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
+    height: 110%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.preview_img p.dark_mode:before{
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .portfolio_title{
     text-indent: 15px;
