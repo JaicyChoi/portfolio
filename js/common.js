@@ -59,3 +59,36 @@ menu_btn.addEventListener('click', function(){
             cursor.classList.add('hide');
     }
 });
+
+if( window.location.href.indexOf('index') === -1 ){
+    const mode = document.querySelector('#mode');
+
+    mode.addEventListener('change', () => {
+        document.body.classList.toggle('dark_mode');
+        document.querySelector('.main_title').classList.toggle('dark_mode');
+    });
+
+   (function(){
+       const star_bg = document.querySelector('#star_bg');
+       let count = 500;
+       let generate_star = 0;
+       while( generate_star< count ){
+           let star = document.createElement('generate_star');
+           let x = Math.floor(Math.random() * window.innerWidth);
+           let y = Math.floor(Math.random() * window.innerHeight);
+           let duration = Math.random() * 15;
+           let size = Math.random() * 2;
+
+           star.style.left = x + 'px';
+           star.style.stop = y + 'px';
+           star.style.width = 1 + size + 'px';
+           star.style.height = 1 + size + 'px';
+
+           star.style.animationDuration = 15 + duration + 's';
+           star.style.animationDelay = duration + 's';
+
+           star_bg.appendChild(star);
+           generate_star++;
+       }
+   })();
+}

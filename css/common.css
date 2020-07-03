@@ -6,6 +6,7 @@ body{
     height: 100vh;
     background: white;
     background: linear-gradient(0deg, rgba(225,225,225,1) 0%, rgba(255,255,255,1) 100%);
+    overflow-x: hidden;
 }
 body.dark_mode{
     background: black;
@@ -13,7 +14,7 @@ body.dark_mode{
 }
 
 #cursor{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     width: 70px;
@@ -179,7 +180,12 @@ li{
     transform: translateY(80px);
 }
 li a{
+    cursor: none;
     color: white;
+    transition: all .3s linear;
+}
+li a:hover{
+    color: #39A0FF;
 }
 li:nth-child(1).pop{
     opacity: 1;
@@ -201,7 +207,9 @@ li:nth-child(4).pop{
     transition: all 3s .7s;
     transform: translateY(0);
 }
-
+section.blur{
+    filter: blur(10px);
+}
 .checkbox{
 	opacity: 0;
 	position: absolute;
@@ -273,4 +281,31 @@ li:nth-child(4).pop{
     font-size: 1.25em;
     color: #909090;
     letter-spacing: 0.05em;
+}
+#star_bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+generate_star{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: starAnimate linear infinite;
+}
+@keyframes starAnimate{
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%, 90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
 }

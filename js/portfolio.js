@@ -50,10 +50,3 @@ img.forEach(img => img.addEventListener('mouseleave', () => {
         preview[getNodeindex(img)].classList.remove('show');
     }
 ));
-
-const mode = document.querySelector('#mode');
-
-mode.addEventListener('change', () => {
-    document.body.classList.toggle('dark_mode');
-    document.querySelector('.main_title').classList.toggle('dark_mode');
-});

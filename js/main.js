@@ -19,6 +19,9 @@ const toggleText = (index, state) => {
   
 toggleText(0, 'show');
 
+prev_btn.parentElement.addEventListener('mouseenter', () => { cursor.classList.remove('hide'); cursor.classList.add('select'); });
+prev_btn.parentElement.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+
 prev_btn.addEventListener('click', function(){
     if( index< 1 ) { return; }
     toggleText(index, 'hide');

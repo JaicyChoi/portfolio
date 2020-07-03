@@ -15,6 +15,7 @@
     height: 100%;
     overflow: hidden;
     cursor: none;
+    box-shadow: 0px 0px 10px 1px rgba(144, 144, 144, 0.3);
 }
 .preview_img:hover ~ #cursor{
     width: 300px;

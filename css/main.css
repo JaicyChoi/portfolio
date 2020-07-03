@@ -51,9 +51,6 @@ section:before{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.55);
 }
-section.blur{
-    filter: blur(10px);
-}
 #svg_wrapper{
     position: absolute;
     width: 638px;
