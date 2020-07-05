@@ -40,7 +40,7 @@ li.forEach(li => li.addEventListener('mouseleave', () => {
     cursor.classList.remove('select');
 }));
 
-menu_btn.addEventListener('click', function(){
+menu_btn.addEventListener('click', () => {
     if( !menu_click ){
         menu_btn.classList.add('click');
         menu_click = true;
@@ -60,6 +60,36 @@ menu_btn.addEventListener('click', function(){
     }
 });
 
+const degreeToRadian = (angle) => {
+    return angle * (Math.PI / 180);
+};
+const radius = 150;
+const circle_text = cursor.innerText;
+const characters = circle_text.split('');
+cursor.innerText = null;
+
+const startAngle = -90;
+const endAngle = -50;
+const angleRange = endAngle - startAngle;
+
+const deltaAngle = angleRange / characters.length;
+let currentAngle = startAngle;
+
+characters.forEach((char, index) => {
+    const charElement = document.createElement('span');
+    charElement.classList.add('hide');
+    charElement.innerText = char;
+    const xPos = radius * (1 + Math.cos(degreeToRadian(currentAngle)));
+    const yPos = radius * (1 + Math.sin(degreeToRadian(currentAngle)));
+
+    const transform = `translate(${xPos}px, ${yPos}px)`;
+    const rotate = `rotate(${index * deltaAngle}deg)`;
+    charElement.style.transform = `${transform} ${rotate}`;
+
+    currentAngle += deltaAngle;
+    cursor.appendChild(charElement);
+});
+
 if( window.location.href.indexOf('index') === -1 ){
     const mode = document.querySelector('#mode');
 
@@ -68,27 +98,37 @@ if( window.location.href.indexOf('index') === -1 ){
         document.querySelector('.main_title').classList.toggle('dark_mode');
     });
 
-   (function(){
-       const star_bg = document.querySelector('#star_bg');
-       let count = 500;
-       let generate_star = 0;
-       while( generate_star< count ){
-           let star = document.createElement('generate_star');
-           let x = Math.floor(Math.random() * window.innerWidth);
-           let y = Math.floor(Math.random() * window.innerHeight);
-           let duration = Math.random() * 15;
-           let size = Math.random() * 2;
+    const star_bg = document.querySelector('#star_bg');
 
-           star.style.left = x + 'px';
-           star.style.stop = y + 'px';
-           star.style.width = 1 + size + 'px';
-           star.style.height = 1 + size + 'px';
+    function star(){
+        let count = 500;
+        let generate_star = 0;
+        while( generate_star< count ){
+            let star = document.createElement('generate_star');
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * window.innerHeight);
+            let duration = Math.random() * 15;
+            let size = Math.random() * 2;
+ 
+            star.style.left = x + 'px';
+            star.style.stop = y + 'px';
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+ 
+            star.style.animationDuration = 15 + duration + 's';
+            star.style.animationDelay = duration + 's';
+ 
+            star_bg.appendChild(star);
+            generate_star++;
+        }
+    }
 
-           star.style.animationDuration = 15 + duration + 's';
-           star.style.animationDelay = duration + 's';
+    star();
 
-           star_bg.appendChild(star);
-           generate_star++;
-       }
-   })();
+    window.addEventListener('resize', () => {
+        while( star_bg.hasChildNodes() )
+            star_bg.removeChild(star_bg.firstChild);
+
+        star();
+    });
 }

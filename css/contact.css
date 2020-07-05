@@ -1,0 +1,204 @@
+form{
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+/*     background-color: black; */
+    text-align: center;
+}
+input::placeholder, textarea::placeholder{
+    color: #C4C4C4;
+}
+#name, #email{
+    position:absolute;
+    background: none;
+    border:none;
+    width: 45.83%;
+    height: 50px;
+    text-indent: 15px;
+    font-family: 'Ubuntu Mono', monospace;
+    border-bottom: 1px solid #C4C4C4;
+    font-size: 1em;
+    color: #C4C4C4;
+}
+#name{
+    left: 0;
+}
+#email{
+    right: 0;
+}
+#message{
+    position: relative;
+    background: none;
+    left: 0;
+    border:none;
+    width: 100%;
+    height: 160px;
+    font-family: 'Ubuntu Mono', monospace;
+    border-bottom: 1px solid #C4C4C4;
+    margin-top: 130px;
+    font-size: 1em;
+    text-indent: 15px;
+    resize: vertical;
+    color: #C4C4C4;
+}
+#name:focus, #email:focus, #message:focus, button{
+    outline: none;
+}
+button{
+    width: 180px;
+    height: 45px;
+    border-radius: 22.5px;
+    border: none;
+    background-color: #C4C4C4;
+    font-family: 'Rasa', serif;
+    font-size: 1.3125em;
+    font-weight: 300;
+    margin-top: 70px;
+    cursor: none;
+    transition: all .5s ease;
+}
+button:hover{
+    box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 1), 0px 0px 10px 1.5px rgba(255, 255, 255, 0.7), 0px 0px 15px 1px rgba(255, 255, 255, 0.5);
+    animation: buttonAnimate .5s linear;
+}
+@keyframes buttonAnimate{
+    0%, 50%, 100%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.9);
+    }
+    75%{
+        transform: scale(0.8);
+    }
+}
+#loading{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 120px;
+    background: url('../images/loading.gif') no-repeat center;
+    background-size: contain;
+    display: none;
+}
+.thankyou_message{
+    margin-top: 30px;
+    display: none;
+    font-family: 'Rasa', serif;
+    font-weight: 300;
+}
+#message1{
+    letter-spacing: 0.7px;
+    font-size: 1.7em;
+}
+#message2{
+    font-size: 1.1em;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+}
+#re-write{
+    line-height: 40px;
+    font-size: 1em;
+    color: #39A0FF;
+    padding: 10px;
+}
+#re-write:before{
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    bottom: -5px;
+    left: -10px;
+    background: url('../images/re-try.png') no-repeat;
+/*     animation: retryAnimate 2s linear infinite; */
+}
+@keyframes retryAnimate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.thankyou_message.dark_mode{
+    color: white;
+}
+#contact_method{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.25);
+}
+#contact_inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    color: white;
+    line-height: 25px;
+/*     background-color: blue; */
+}
+#contact_inner p span:first-child{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.125em;
+    letter-spacing: 1.5px;
+}
+#contact_inner p span:nth-child(3){
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.9375em;
+    letter-spacing: 1.75px;
+}
+#phone_contact:before{
+    content: '';
+    position: relative;
+    display: inline-block;
+    left: -10px;
+    bottom: -7px;
+    transform: rotate(-25deg);
+    width: 21px;
+    height: 22px;
+    background: url(../images/smartphone.png) no-repeat;
+    background-size: contain;
+    animation: bounce 1s infinite;
+/*     animation: rotateAnimate .3s infinite; */
+}
+#email_contact:before{
+    content: '';
+    position: relative;
+    display: inline-block;
+    left: -10px;
+    bottom: -10px;
+    transform: rotate(-25deg);
+    width: 21px;
+    height: 22px;
+    background: url(../images/email.png) no-repeat;
+    background-size: contain;
+    animation: bounce 1s infinite;
+/*     animation: rotateAnimate .3s infinite; */
+}
+@keyframes bounce{
+    0%, 100%{
+       transform: translateY(-2px) rotate(-25deg); 
+    }
+    50%{
+        transform: translateY(2px) rotate(-25deg); 
+    }
+}
+@keyframes rotateAnimate{
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-25deg);
+    }
+}

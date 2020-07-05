@@ -30,7 +30,7 @@
 #prev_btn.visible{
     opacity: 1;
 }
-#next_btn.unvisible{
+#next_btn.invisible{
     opacity: 0;
 }
 #prev_btn, #next_btn{
@@ -133,20 +133,47 @@ svg text{
     text-align: center;
 }
 .main_button{
+    display: inline-block;
     margin-top: 65px;
-    border: none;
     background-color: white;
+    border: none;
     width: 210px;
     height: 45px;
     border-radius: 25px;
     font-family: 'Rasa', serif;
     font-size: 1.25em;
-}
-.main_button{
-    cursor: pointer;
+    cursor: none;
+    color: black;
+    line-height: 45px;
+    transition: all .5s linear;
 }
 .main_button:focus{
     outline: none;
+}
+.main_button:hover{
+    background: linear-gradient(90deg, #0162c8, #55e7fc, #0162c8);
+    background-size: 400%;
+    color: white;
+    animation: buttonAnimate .5s linear, buttonBg 8s linear infinite;
+}
+@keyframes buttonAnimate{
+    0%, 50%, 100%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.9);
+    }
+    75%{
+        transform: scale(0.8);
+    }
+}
+@keyframes buttonBg{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
 }
 canvas{
     position: fixed;

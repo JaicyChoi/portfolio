@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>contact me</title>
+</head>
+<body>
+    <div id="star_bg"></div>
+    <div id="cursor">click</div>
+    <div id="nav_bg">
+        <div id="nav_inner">
+            <h1 id="logo"><a href="index.html">CYJ</a></h1>
+            <div id="menu_btn">
+                <div id="menu_btn_bar"></div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="mode_btn">
+        <input type="checkbox" class="checkbox" id="mode">
+        <label class="label" for="mode">
+            <span id="light_icon"></span>
+            <span id="dark_icon"></span>
+            <div id="switch"></div>
+        </label>
+    </div>
+    <section id="content">
+        <div class="subpage_title">
+            <p class="main_title">contact me</p>
+            <p class="small_title">Get in touch!</p>
+        </div>
+        <form class="gform" method="POST" data-email="jaicychoi@gmail.com" action="https://script.google.com/macros/s/AKfycbwVZcYa5WyDFJxD0Nd131SuYLR8Ge1taK_SOmSD/exec">
+            <div id="form_elements">
+                <input id="name" name="name" required placeholder="your name">
+                <input id="email" name="email" type="email" value="" required placeholder="e-mail"/>
+                <textarea id="message" name="message" rows="10" placeholder="tell me anything"></textarea>
+                <button>Submit</button>           
+            </div>
+            <div id="loading"></div>
+            <div class="thankyou_message">
+                <span id="message1">Thanks for contacting me!</span><br>
+                <span id="message2">I will get back to you soon!</span><br>
+                <span id="re-write">re-write</span>
+            </div>
+        </form>
+        <div id="contact_method">
+            <div id="contact_inner">
+                <p>
+                    <span>Call Me</span><br>
+                    <span id="phone_contact">+82 10 4147 3282</span>
+                </p>
+                <p>
+                    <span>E-mail</span><br>
+                    <span id="email_contact">jaicychoi@gmail.com</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="js/common.js"></script>
+    <script src="js/contact.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+</body>
+</html>
