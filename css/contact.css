@@ -21,6 +21,7 @@ input::placeholder, textarea::placeholder{
     border-bottom: 1px solid #C4C4C4;
     font-size: 1em;
     color: #C4C4C4;
+    transition: all .3s linear;
 }
 #name{
     left: 0;
@@ -42,9 +43,13 @@ input::placeholder, textarea::placeholder{
     text-indent: 15px;
     resize: vertical;
     color: #C4C4C4;
+    transition: all .3s linear;
 }
 #name:focus, #email:focus, #message:focus, button{
     outline: none;
+}
+#name:focus, #email:focus, #message:focus{
+    background-color: rgba(255, 255, 255, 0.1);
 }
 button{
     width: 180px;
