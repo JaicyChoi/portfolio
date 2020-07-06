@@ -93,4 +93,3 @@ main_button.forEach(button => button.addEventListener('mouseleave', () => {
     cursor.classList.add('hide');
     cursor.classList.remove('select');
 }));
-

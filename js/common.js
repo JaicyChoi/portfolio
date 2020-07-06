@@ -1,5 +1,7 @@
 let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
 
+window.onbeforeunload = () => { window.scrollTo(0, 0); }
+
 const logo = document.querySelector('#logo');
 const menu_btn = document.querySelector('#menu_btn');
 const nav = document.querySelector('nav');
