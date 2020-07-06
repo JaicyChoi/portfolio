@@ -35,7 +35,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
     setTimeout( () => {
         loading.style.display = 'none';
-    }, 2000);
+    }, 2100);
 });
 
 const contact = document.querySelectorAll('#contact_inner p');
