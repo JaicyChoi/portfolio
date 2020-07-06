@@ -4,8 +4,8 @@ window.onbeforeunload = () => { window.scrollTo(0, 0); }
 
 const logo = document.querySelector('#logo');
 const menu_btn = document.querySelector('#menu_btn');
-const nav = document.querySelector('nav');
-const li = document.querySelectorAll('li');
+const nav = document.querySelector('#navigation');
+const li = document.querySelectorAll('#navigation ul li');
 const section = document.querySelectorAll('section');
 const cursor = document.querySelector('#cursor');
 
@@ -47,7 +47,8 @@ menu_btn.addEventListener('click', () => {
         menu_btn.classList.add('click');
         menu_click = true;
         nav.classList.add('show');
-        section.forEach(section => section.classList.add('blur'));
+        // section.forEach(section => section.classList.add('blur'));
+        document.querySelector('#content').classList.add('blur');
         li.forEach(li => li.classList.add('pop'));
         cursor.classList.remove('hide');
     }
@@ -55,7 +56,8 @@ menu_btn.addEventListener('click', () => {
         menu_btn.classList.remove('click');
         menu_click = false;
         nav.classList.remove('show');
-        section.forEach(section => section.classList.remove('blur'));
+        // section.forEach(section => section.classList.remove('blur'));
+        document.querySelector('#content').classList.remove('blur');
         li.forEach(li => li.classList.remove('pop'));
         if( window.location.href.indexOf('index') > 0 )
             cursor.classList.add('hide');

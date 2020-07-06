@@ -98,6 +98,10 @@ button:hover{
     display: none;
     font-family: 'Rasa', serif;
     font-weight: 300;
+    transition: all 1s ease-in; 
+}
+.thankyou_message.dark_mode{
+    color: white;
 }
 #message1{
     letter-spacing: 0.7px;
@@ -132,9 +136,6 @@ button:hover{
     100%{
         transform: rotate(360deg);
     }
-}
-.thankyou_message.dark_mode{
-    color: white;
 }
 #contact_method{
     position: absolute;

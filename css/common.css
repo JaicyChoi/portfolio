@@ -144,20 +144,21 @@ body.dark_mode{
 #menu_btn.click #menu_btn_bar:after{
     transform: rotate(-45deg) translate(25px, 25px);
 }
-nav{
+#navigation{
     position: absolute;
-    top: 0;
+    top: -20vh;
     width: 100%;
     height: 0;
     background: rgba(0, 0, 0, 0.85); 
     transition: all 0.5s ease-in-out;
     opacity: 0;
 }
-nav.show{
+#navigation.show{
+    top: 0;
     height: 100vh;
     opacity: 1;
 }
-ul{
+#navigation ul{
     position: relative;
     width: 200px;
     left: 50%;
@@ -175,40 +176,44 @@ ul{
     font-weight: 300;
     text-transform: uppercase;
 }
-li{
+#navigation ul li{
     opacity: 0;
     transform: translateY(80px);
 }
-li a{
+#navigation ul li a{
     cursor: none;
     color: white;
     transition: all .3s linear;
 }
-li a:hover{
+#navigation ul li a:hover{
     color: #39A0FF;
 }
-li:nth-child(1).pop{
+#navigation ul li:nth-child(1).pop{
     opacity: 1;
     transition: all 3s .1s;
     transform: translateY(0);
 }
-li:nth-child(2).pop{
+#navigation ul li:nth-child(2).pop{
     opacity: 1;
     transition: all 3s .3s;
     transform: translateY(0);
 }
-li:nth-child(3).pop{
+#navigation ul li:nth-child(3).pop{
     opacity: 1;
     transition: all 3s .5s;
     transform: translateY(0);
 }
-li:nth-child(4).pop{
+#navigation ul li:nth-child(4).pop{
     opacity: 1;
     transition: all 3s .7s;
     transform: translateY(0);
 }
-section.blur{
+.blur{
+    position: relative;
+    width: 100%;
+    height: 100vh;
     filter: blur(10px);
+    transition: all .5s ease-in-out;
 }
 .checkbox{
 	opacity: 0;
@@ -271,6 +276,7 @@ section.blur{
     text-transform: uppercase;
     letter-spacing: 0.5em;
     margin-bottom: 20px;
+    transition: all 1s ease-in;
 }
 .main_title.dark_mode{
     color: white;
