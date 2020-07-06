@@ -1,3 +1,7 @@
+body{
+    position: relative;
+    min-height: 1130px;
+}
 form{
     position: absolute;
     top: 320px;
