@@ -142,11 +142,10 @@ svg text{
     overflow: hidden;
 }
 .main_subtitle p.typing{
-    animation: typing 3.5s steps(16,end) forwards, blink 1s 
-    infinite;
+    animation: typing 3.5s steps(16,end) forwards, blink 1s infinite;
 }
 @keyframes typing{
-    0%{
+    0%, 20%{
         width: 0%;
     }
     100%{
