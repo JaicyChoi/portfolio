@@ -44,6 +44,54 @@ body{
 .bold{
     font-weight: 700;
 }
+#speech_bubble{
+    position: absolute;
+    left: 30%;
+    bottom: 225px;
+    background-color: black;
+    color: white;
+    width: 120px;
+    padding: 15px 7px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.125em;
+    font-weight: 500;
+    box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.35), 0px 0px 5px 3px rgba(255, 255, 255, 0.25);
+    opacity: 0.3;
+    animation: bubbleAnimation 2.5s linear infinite;
+    transition: all 1.5s ease;
+}
+#speech_bubble:before{
+    content: '';
+    bottom: -20px;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top-color: black;
+    transition: all .5s ease;
+}
+#speech_bubble.dark_mode{
+    color: black;
+    background-color: white
+}
+#speech_bubble.invisible{
+    bottom: 50px;
+    opacity: 0;
+}
+@keyframes bubbleAnimation{
+    0%, 90%{
+        transform: rotate(0);
+    }
+    93%{
+        transform: rotate(-13deg);
+    }
+    96.5%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-13deg);
+    }
+}
 #aim_wrapper{
     position: absolute;
     bottom: 0;

@@ -1,6 +1,7 @@
 const parallax = document.querySelector('.parallax');
 const prev_btn = document.querySelector('#prev_btn');
 const next_btn = document.querySelector('#next_btn');
+const typing_text = document.querySelectorAll('.main_subtitle p');
 let index = 0;
 
 for( let i = 0 ; i < section.length; i++ ){
@@ -11,11 +12,18 @@ for( let i = 0 ; i < section.length; i++ ){
 const toggleText = (index, state) => {
     // if( index === 0 ) return;
     if (state === 'show')
-      section[index].querySelector('.main_text').classList.add('show');  
+      section[index].querySelector('.main_text').classList.add('show');
     else
-      section[index].querySelector('.main_text').classList.remove('show');  
-  }
+      section[index].querySelector('.main_text').classList.remove('show');
+  };
   
+  const typingText = (index, state) => {
+      if( state === 'show')
+        typing_text[index].style.cssText = 'animation: typing 3.5s steps(' + typing_text[index].innerText.length + ', end) forwards, blink 1s infinite;';
+    else
+        typing_text[index].style.cssText = 'animation: none;';
+  };
+
 toggleText(0, 'show');
 
 prev_btn.parentElement.addEventListener('mouseenter', () => { cursor.classList.remove('hide'); cursor.classList.add('select'); });
@@ -59,20 +67,30 @@ window.addEventListener('scroll', function(){
     parallax.style.backgroundPositionY = offset * 0.7 + 'px';
      
     if( offset >= section[0].offsetHeight * 2 + section[0].offsetHeight * 0.5 ){
-        toggleText(0, 'hide'); toggleText(1, 'hide'); toggleText(2, 'hide'); toggleText(3, 'show'); index = 3;
+        typingText(1, 'hide');
+        toggleText(0, 'hide'); toggleText(1, 'hide'); toggleText(2, 'hide'); toggleText(3, 'show');
+        typingText(2, 'show');
+        index = 3;
         next_btn.classList.add('invisible');
     }
     else if( offset >= section[0].offsetHeight + section[0].offsetHeight * 0.5 ){
-        toggleText(0, 'hide'); toggleText(1, 'hide'); toggleText(3, 'hide'); toggleText(2, 'show'); index = 2;
+        typingText(2, 'hide'); typingText(0, 'hide');
+        toggleText(0, 'hide'); toggleText(1, 'hide'); toggleText(3, 'hide'); toggleText(2, 'show');
+        typingText(1, 'show');
+        index = 2;
         next_btn.classList.remove('invisible');
     }
     else if( offset >= section[0].offsetHeight * 0.5 ){
-        toggleText(2, 'hide'); toggleText(3, 'hide'); toggleText(0, 'hide'); toggleText(1, 'show'); index = 1;
+        typingText(1, 'hide');
+        toggleText(2, 'hide'); toggleText(3, 'hide'); toggleText(0, 'hide'); toggleText(1, 'show');
+        typingText(0, 'show');
+        index = 1;
         document.querySelector('text').style.opacity = '0';
         document.querySelector('text').style.animation = 'none';
         prev_btn.classList.add('visible');
     }
     else if( offset < section[0].offsetHeight * 0.5 ){
+        typingText(0, 'hide');
         toggleText(1, 'hide'); index = 0;
         if( offset < section[0].offsetHeight * 0.3 ){
             toggleText(0, 'show');

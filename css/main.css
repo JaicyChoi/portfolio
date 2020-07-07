@@ -128,9 +128,38 @@ svg text{
     font-family: 'Ubuntu Mono', monospace;
     font-size: 1.25em;
     height: 35px;
-    line-height: 35px;
+/*     line-height: 35px; */
     width: 220px;
     text-align: center;
+}
+.main_subtitle p{
+/*     background-color: red; */
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.main_subtitle p.typing{
+    animation: typing 3.5s steps(16,end) forwards, blink 1s 
+    infinite;
+}
+@keyframes typing{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 160px;
+    }
+}
+@keyframes blink {
+  0%, 100%{
+    border-right: 2px solid transparent;
+  }
+  50% {
+    border-right: 2px solid white;
+  }
 }
 .main_button{
     display: inline-block;
