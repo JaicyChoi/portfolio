@@ -72,8 +72,14 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             let languages_title = document.createElement('span'); languages_title.innerText = 'Languages';
             let css = document.createElement('p'); css.classList.add('css'); css.style.width = project.languages[0].CSS + '%';
             console.log(project.languages[0].css + '%');
+            let css_after = document.head.appendChild(document.createElement('style'));
+            css_after.innerHTML = '.css:after{ content: "CSS ' + project.languages[0].CSS + '%"; }';
             let html = document.createElement('html'); html.classList.add('html'); html.style.width = project.languages[0].HTML + '%';
+            let html_after = document.head.appendChild(document.createElement('style'));
+            html_after.innerHTML = '.html:after{ content: "HTML ' + project.languages[0].HTML + '%"; }';
             let js = document.createElement('js'); js.classList.add('js'); js.style.width = project.languages[0].JavaScript + '%';
+            let js_after = document.head.appendChild(document.createElement('style'));
+            js_after.innerHTML = '.js:after{ content: "JavaScript ' + project.languages[0].JavaScript + '%"; }';
             languages.appendChild(languages_title); languages.appendChild(css); languages.appendChild(html); languages.appendChild(js);
     
             description_box.appendChild(project_title); description_box.appendChild(project_info);

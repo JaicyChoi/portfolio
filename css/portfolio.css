@@ -250,7 +250,7 @@
     background-color: #29A5FF;
 }
 .css:after{
-    content: 'CSS';
+    /* content: 'CSS'; */
     position: relative;
     display: block;
     font-family: 'Rajdhani', sans-serif;
@@ -268,7 +268,7 @@
 .html:after{
     position: relative;
     display: block;
-    content: 'HTML';
+    /* content: 'HTML'; */
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.875em;
     font-weight: 400;
@@ -284,7 +284,7 @@
 .js:after{
     position: relative;
     display: block;
-    content: 'JavaScript';
+    /* content: 'JavaScript'; */
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.875em;
     font-weight: 400;
