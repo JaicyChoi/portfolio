@@ -89,7 +89,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             description_box.appendChild(project_link); description_box.appendChild(languages);
     
             let video = document.createElement('video'); video.setAttribute('autoplay', ''); video.setAttribute('loop', '');
-            let source = document.createElement('source'); source.src='video/' + project.project_id + '_overview.mp4'; source.setAttribute('type', 'video/mp4');
+            let source = document.createElement('source'); source.src='video/' + project.project_id + '__overview.mp4'; source.setAttribute('type', 'video/mp4');
             video.appendChild(source);
     
             let project_logo = document.createElement('div'); project_logo.classList.add('project_logo');
