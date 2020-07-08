@@ -6,9 +6,17 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <script src="js/data.js"></script>
     <title>portfolio</title>
 </head>
 <body>
+    <div class="loader_wrapper">
+        <div class="effect">
+			<div class="slide_effect"></div>
+			<div class="slide_effect"></div>
+		</div>
+        <span class="loader">CYJ</span>
+    </div>
     <div id="star_bg"></div>
     <div id="cursor">click</div>
     <div id="nav_bg">
@@ -42,65 +50,18 @@
         </div>
         <div id="portfolio_list">
             <div class="preview_img">
-                <img src="images/portfolio_0.png" alt="project tobe">
+                <div id="tobe"></div>
                 <p>
                     <span class="portfolio_title">Today's Beer</span>
                     <span class="portfolio_description">Beer recommendation and user review</span>
                 </p>
             </div>
             <div class="preview_img">
-                <img src="images/portfolio_1.png" alt="project samueladams">
+                <div id="samueladams"></div>
                 <p>
                     <span class="portfolio_title">SamuelAdams Boston Lagar</span>
                     <span class="portfolio_description">Beer promotion page</span>
                 </p>
-            </div>
-        </div>
-    </section>
-    <section class="view_portfolio">
-        <div class="view_inner">
-            <div class="top_preview"></div>
-            <span class="close_btn"></span>
-            <div class="description_box">
-                <div class="project_title">
-                    <p>Today’s Beer</p>
-                    <p>planning, web design and publishing</p>
-                </div>
-                <div class="project_info">
-                    <div class="about">
-                        <p class="info_title">About</p>
-                        <p class="info_text">It's web site designed recommends beer based on various themes so that ordinary people who are interested in beer but are hesitating about which beer to choose can easily choose a beer.</p>
-                    </div>
-                    <div class="aim">
-                        <p class="info_title">Aim</p>
-                        <p class="info_text">Design without complicity considering user convenience. design responsively in response to changes in resolution, design for tablets and mobile devices.</p>
-                    </div>
-                    <div class="aim">
-                        <p class="info_title">Achievements</p>
-                        <p class="info_text">Understanding of the overall flow from planning to design and coding.<br/>Understanding of standard and responsive design.</p>
-                    </div>
-                </div>
-                <div class="project_link">
-                    <span>Project link</span>
-                    <span>tobe.dothome.co.kr</span>
-                </div>
-                <div class="languages">
-                    <span>Languages</span>
-                    <p class="css"></p>
-                    <p class="html"></p>
-                    <p class="js"></p>
-                </div>
-            </div>
-            <video></video>
-            <div class="project_logo">
-                <div class="logo1"></div>
-                <div class="logo2"></div>
-                <div class="logo3"></div>
-            </div>
-            <div class="project_mockup">
-                <div class="mockup1"></div>
-                <div class="mockup2"></div>
-                <div class="mockup3"></div>
             </div>
         </div>
     </section>

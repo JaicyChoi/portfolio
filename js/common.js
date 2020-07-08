@@ -1,3 +1,18 @@
+setTimeout( () => {
+    document.querySelector('.loader').style.display = 'none';
+    document.querySelector('.loader').classList.add('hide');
+
+    let effect = document.querySelector('.effet');
+    let slide_effect = document.querySelectorAll('.slide_effect');
+
+    for( let i = 0 ; i < slide_effect.length; i++ )
+        slide_effect[i].style.height = '0%';
+
+    setTimeout( () => {
+        document.body.removeChild(document.querySelector('.loader_wrapper'));
+    }, 1000);
+}, 1500);
+
 let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
 
 window.onbeforeunload = () => { window.scrollTo(0, 0); }

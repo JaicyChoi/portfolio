@@ -34,7 +34,7 @@
     opacity: 0;
 }
 #prev_btn, #next_btn{
-    cursor: pointer;
+    cursor: none;
 }
 
 section{
