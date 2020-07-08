@@ -139,6 +139,10 @@ body::-webkit-scrollbar{
     color: white;
     z-index: 3;
 }
+#nav_bg.view_portfolio{
+    position: absolute;
+    z-index: -1;
+}
 #nav_inner{
     position: relative;
     height: 100%;

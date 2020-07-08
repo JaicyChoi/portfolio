@@ -23,12 +23,15 @@ img.forEach(img => img.addEventListener('mouseleave', () => {
 ));
 
 img.forEach(img => img.firstElementChild.addEventListener('click', () => {
+        const nav_bg = document.querySelector('#nav_bg');
+
+        nav_bg.style.zIndex = '-1';
         img.firstElementChild.style.position = 'absolute';
         img.firstElementChild.classList.add('view');
         content.classList.add('blur');
 
         setTimeout( () => {
-            document.querySelector('#nav_bg').style.position = 'absolute';
+            nav_bg.style.position = 'absolute';
     
             let project = PROJECT_DATA[Object.keys(PROJECT_DATA)[getNodeindex(img)]][0];
     
@@ -140,7 +143,8 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
                 cursor.classList.remove('select');
                 content.classList.remove('blur');
                 img.firstElementChild.classList.remove('view');
-                document.querySelector('#nav_bg').style.position = 'fixed';
+                nav_bg.style.position = 'fixed';
+                nav_bg.style.zIndex = '3';
             });            
         }, 800);
     }

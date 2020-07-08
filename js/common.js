@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 if( window.location.href.indexOf('index') > 0 )
     cursor.classList.add('hide');
 
-=======
->>>>>>> 730414c6ebf743b664facb7060564383fe8f741a
 setTimeout( () => {
     document.querySelector('.loader').style.display = 'none';
     document.querySelector('.loader').classList.add('hide');
