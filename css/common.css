@@ -4,15 +4,81 @@ body{
     cursor: none;
     width: 100%;
     height: 100vh;
-    background: white;
     background: linear-gradient(0deg, rgba(225,225,225,1) 0%, rgba(255,255,255,1) 100%);
     overflow-x: hidden;
 }
 body.dark_mode{
-    background: black;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(35,35,35,1) 100%);
 }
-
+body{
+   -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.loader_wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+.effect{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.slide_effect{
+	width: 100%;
+	height: 50%;
+	transition: 1s;
+	background-color: rgb(20, 20, 20);
+}
+.loader{
+    font-family: 'Rasa', serif;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 60px;
+    position: relative;
+    text-indent: 17px;
+/*     width: 120px; */
+    letter-spacing: 25px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-weight: 500;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.1);
+}
+.loader:before{
+    content: 'CYJ';
+    position: absolute;
+    top: 0;
+    left: 0;
+/*     width: 115px; */
+    padding: 7px;
+    color: #39A0FF;
+    text-shadow: 0px 0px 3px rgba(57, 160, 255, 0.7), 0px 0px 15px rgba(57, 160, 255, 0.3), 0px 0px 20px rgba(57, 160, 255, 0.5);
+    border-bottom: 5px solid #39a0ff;
+    overflow: hidden;
+    opacity: 0;
+    animation: loadingAnimate 1.5s infinite linear;
+}
+@keyframes loadingAnimate{
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
 #cursor{
     position: fixed;
     top: 50%;
@@ -144,20 +210,21 @@ body.dark_mode{
 #menu_btn.click #menu_btn_bar:after{
     transform: rotate(-45deg) translate(25px, 25px);
 }
-nav{
+#navigation{
     position: absolute;
-    top: 0;
+    top: -20vh;
     width: 100%;
     height: 0;
     background: rgba(0, 0, 0, 0.85); 
     transition: all 0.5s ease-in-out;
     opacity: 0;
 }
-nav.show{
+#navigation.show{
+    top: 0;
     height: 100vh;
     opacity: 1;
 }
-ul{
+#navigation ul{
     position: relative;
     width: 200px;
     left: 50%;
@@ -175,40 +242,77 @@ ul{
     font-weight: 300;
     text-transform: uppercase;
 }
-li{
+#navigation ul li{
     opacity: 0;
     transform: translateY(80px);
 }
-li a{
+#navigation ul:hover li a{
+    color: gray;
+}
+#navigation ul li a{
     cursor: none;
     color: white;
     transition: all .3s linear;
 }
-li a:hover{
+#navigation ul li a:hover{
+    font-size: 1.1em;
+    text-shadow: 5px 10px 3px rgba(255, 255, 255, 0.5);
     color: #39A0FF;
 }
-li:nth-child(1).pop{
+#navigation ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7.5em;
+    font-family: 'Megrim', cursive;
+    color: transparent;
+/*     z-index: -1; */
+    opacity: 0;
+    font-weight: bold;
+    letter-spacing: 500px;
+    transition: letter-spacing .7s ease, left .3s;
+}
+#navigation ul li a:hover:before{
+    content: attr(data-text);
+    opacity: 0.4;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    text-shadow: none;
+    width: 100vw;
+    height: 200px;
+     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    text-shadow: 0px 0px 5px rgba(57, 160, 255, 0.15), 0px 0px 10px rgba(57, 160, 255, 0.1) ,0px 0px 20px rgba(57, 160, 255, 0.1), 0px 0px 30px rgba(57, 160, 255, 0.3);
+}
+#navigation ul li:nth-child(1).pop{
     opacity: 1;
     transition: all 3s .1s;
     transform: translateY(0);
 }
-li:nth-child(2).pop{
+#navigation ul li:nth-child(2).pop{
     opacity: 1;
     transition: all 3s .3s;
     transform: translateY(0);
 }
-li:nth-child(3).pop{
+#navigation ul li:nth-child(3).pop{
     opacity: 1;
     transition: all 3s .5s;
     transform: translateY(0);
 }
-li:nth-child(4).pop{
+#navigation ul li:nth-child(4).pop{
     opacity: 1;
     transition: all 3s .7s;
     transform: translateY(0);
 }
-section.blur{
+.blur{
+    position: relative;
+    width: 100%;
+    height: 100vh;
     filter: blur(10px);
+    transition: all .5s ease-in-out;
 }
 .checkbox{
 	opacity: 0;
@@ -271,6 +375,7 @@ section.blur{
     text-transform: uppercase;
     letter-spacing: 0.5em;
     margin-bottom: 20px;
+    transition: all 1s ease-in;
 }
 .main_title.dark_mode{
     color: white;

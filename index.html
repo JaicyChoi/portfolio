@@ -9,6 +9,13 @@
     <title>CYJ</title>
 </head>
 <body>
+    <div class="loader_wrapper">
+        <div class="effect">
+			<div class="slide_effect"></div>
+			<div class="slide_effect"></div>
+		</div>
+        <span class="loader">CYJ</span>
+    </div>
     <div id="cursor"></div>
     <div id="nav_bg">
         <div id="nav_inner">
@@ -17,24 +24,24 @@
                 <div id="menu_btn_bar"></div>
             </div>
         </div>
-        <nav>
+        <nav id="navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-text="home">Home</a></li>
+                <li><a href="portfolio.html" data-text="Portfolio">Portfolio</a></li>
+                <li><a href="about.html" data-text="About me">About me</a></li>
+                <li><a href="contact.html" data-text="Contact">Contact</a></li>
             </ul>
         </nav>
     </div>
-    <div id="arrow_btn">
-        <div id="prev_btn"></div>
-        <div id="next_btn"></div>
-    </div>
     <div id="content">
+        <div id="arrow_btn">
+            <div id="prev_btn"></div>
+            <div id="next_btn"></div>
+        </div>
         <section class="parallax" id="hello">
             <div id="svg_wrapper">
                 <svg viewBox="0 0 638 170">
-                   <text x="50%" y="95%" fill="transparent" text-anchor="middle">HELLO</text>
+                    <text x="50%" y="95%" fill="transparent" text-anchor="middle">HELLO</text>
                 </svg>
             </div>
             <div id="main_visual_text" class="main_text">I'm CHOI YOOJUNG.<br>I'm ready now.</div>
@@ -42,21 +49,21 @@
         <section id="portfolio">
             <div class="main_text">
                 <h1 class="main_title">PORTFOLIO</h1>
-                <p class="main_subtitle">What I worked on</p>
+                <div class="main_subtitle"><p>What I worked on</p></div>
                 <button class="main_button" onclick="location.href='portfolio.html'">Discover</a>
             </div>
         </section>
         <section id="about_me">
             <div class="main_text">
                 <h1 class="main_title">ABOUT ME</h1>
-                <p class="main_subtitle">This is who am I</p>
-                <button class="main_button">Find out more</a>
+                <div class="main_subtitle"><p>This is who am I</p></div>
+                <button class="main_button" onclick="location.href='about.html'">Find out more</a>
             </div>
         </section>
         <section id="contact">
             <div class="main_text">
                 <h1 class="main_title">CONTACT</h1>
-                <p class="main_subtitle">Get in touch</p>
+                <div class="main_subtitle"><p>Get in touch me!</p></div>
                 <button class="main_button" onclick="location.href='contact.html'">Contact me</button>
             </div>
         </section>

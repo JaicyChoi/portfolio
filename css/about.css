@@ -1,0 +1,228 @@
+body{
+    position: relative;
+    min-height: 1150px;
+}
+#intro{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    position: relative;
+    top: 220px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.25em;
+    text-align: justify;
+    transition: all 1s ease-in;
+}
+#intro.dark_mode{
+    color: #dfdfdf;
+}
+#profile_img{
+    position: relative;
+    left: 0p;
+    width: 490px;
+    height: 540px;
+    background: url(https://source.unsplash.com/random) no-repeat center;
+    background-size: cover;
+    float: left;
+    box-shadow: 0px 0px 10px 1px rgba(144, 144, 144, 0.3);
+}
+#intro_text1{
+    position: relative;
+    float: right;
+    top: 15px;
+    width: 55%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #909090;
+}
+#intro_text2{
+    position: relative;
+    float: right;
+    width: 55%;
+    margin-top: 45px;
+}
+.bold{
+    font-weight: 700;
+}
+#speech_bubble{
+    position: absolute;
+    left: 30%;
+    bottom: 225px;
+    background-color: black;
+    color: white;
+    width: 120px;
+    padding: 15px 7px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.125em;
+    font-weight: 500;
+    box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.35), 0px 0px 5px 3px rgba(255, 255, 255, 0.25);
+    opacity: 0.3;
+    animation: bubbleAnimation 2.5s linear infinite;
+    transition: all 1.5s ease;
+}
+#speech_bubble:before{
+    content: '';
+    bottom: -20px;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top-color: black;
+    transition: all .5s ease;
+}
+#speech_bubble.dark_mode{
+    color: black;
+    background-color: white
+}
+#speech_bubble.invisible{
+    bottom: 50px;
+    opacity: 0;
+}
+@keyframes bubbleAnimation{
+    0%, 90%{
+        transform: rotate(0);
+    }
+    93%{
+        transform: rotate(-13deg);
+    }
+    96.5%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-13deg);
+    }
+}
+#aim_wrapper{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.25);
+}
+#aim{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 100%;
+}
+#aim ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 200px;
+    justify-content: space-around;
+    overflow: hidden;
+}
+#aim ul li{
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+.initial{
+    position: relative;
+    font-family: 'Megrim', cursive;
+    font-size: 2.8125em;
+    color: #39A0FF;
+    transition: all 1s ease-in;
+    transform: rotateY(0);
+    top: 0;
+    opacity: 1;
+    animation: jumpAnimate 1s linear;
+}
+.initial.jump{
+    animation: jumpAnimate 1s linear;
+}
+.initial.moving{
+    animation: moveAnimate 1s linear infinite;
+}
+@keyframes moveAnimate{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-13px);
+    }
+}
+.initial.stop{
+    animation: none;
+}
+#aim ul li:nth-child(1) .initial{
+    animation-delay: 0.5s;
+}
+#aim ul li:nth-child(2) .initial{
+    animation-delay: 1.5s;
+}
+#aim ul li:nth-child(3) .initial{
+    animation-delay: 2s;
+}
+#aim ul li:nth-child(4) .initial{
+    animation-delay: 2.5s;
+}
+.initial.transform{
+    animation: none;
+    opacity: 0;
+    transform: rotateY(270deg);
+}
+@keyframes jumpAnimate{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-13px);
+    }
+}
+.description{
+    position: relative;
+    top: -165px;
+    line-height: 30px;
+    opacity: 0;
+    transform: rotateY(270deg);
+    transition: all 1s ease-out;
+}
+.description.transform{
+    opacity: 1;
+    transform: rotateY(0);
+}
+.description .title{
+    position: relative;
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+.description .icon{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 7px;
+}
+colored{
+    color: #39A0FF;
+}
+#aim ul li:nth-child(1) .icon{
+    background: url(../images/challenge.png) no-repeat;
+    background-size: contain;
+}
+#aim ul li:nth-child(2) .icon{
+    background: url(../images/honest.png) no-repeat;
+    background-size: contain;
+}
+#aim ul li:nth-child(3) .icon{
+    background: url(../images/openness.png) no-repeat;
+    background-size: contain;
+}
+#aim ul li:nth-child(4) .icon{
+    background: url(../images/innovation.png) no-repeat;
+    background-size: contain;
+}
+.description .text{
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.875em;
+}

@@ -1,3 +1,7 @@
+body{
+    position: relative;
+    min-height: 1130px;
+}
 form{
     position: absolute;
     top: 320px;
@@ -21,6 +25,7 @@ input::placeholder, textarea::placeholder{
     border-bottom: 1px solid #C4C4C4;
     font-size: 1em;
     color: #C4C4C4;
+    transition: all .3s linear;
 }
 #name{
     left: 0;
@@ -42,9 +47,13 @@ input::placeholder, textarea::placeholder{
     text-indent: 15px;
     resize: vertical;
     color: #C4C4C4;
+    transition: all .3s linear;
 }
 #name:focus, #email:focus, #message:focus, button{
     outline: none;
+}
+#name:focus, #email:focus, #message:focus{
+    background-color: rgba(255, 255, 255, 0.1);
 }
 button{
     width: 180px;
@@ -89,6 +98,10 @@ button:hover{
     display: none;
     font-family: 'Rasa', serif;
     font-weight: 300;
+    transition: all 1s ease-in; 
+}
+.thankyou_message.dark_mode{
+    color: white;
 }
 #message1{
     letter-spacing: 0.7px;
@@ -123,9 +136,6 @@ button:hover{
     100%{
         transform: rotate(360deg);
     }
-}
-.thankyou_message.dark_mode{
-    color: white;
 }
 #contact_method{
     position: absolute;

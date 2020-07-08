@@ -35,12 +35,12 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
     setTimeout( () => {
         loading.style.display = 'none';
-    }, 2000);
+    }, 2100);
 });
 
 const contact = document.querySelectorAll('#contact_inner p');
 const re_write = document.querySelector('#re-write');
-let tmp_style = document.head.appendChild(document.createElement("style"));
+let tmp_style = document.head.appendChild(document.createElement('style'));
 
 re_write.addEventListener('mouseenter', () => {
     cursor.classList.add('select');

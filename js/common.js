@@ -1,16 +1,34 @@
+if( window.location.href.indexOf('index') > 0 )
+    cursor.classList.add('hide');
+
+setTimeout( () => {
+    document.querySelector('.loader').style.display = 'none';
+    document.querySelector('.loader').classList.add('hide');
+
+    let effect = document.querySelector('.effet');
+    let slide_effect = document.querySelectorAll('.slide_effect');
+
+    for( let i = 0 ; i < slide_effect.length; i++ )
+        slide_effect[i].style.height = '0%';
+
+    setTimeout( () => {
+        document.body.removeChild(document.querySelector('.loader_wrapper'));
+    }, 1000);
+}, 1500);
+
 let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
+
+window.onbeforeunload = () => { window.scrollTo(0, 0); }
 
 const logo = document.querySelector('#logo');
 const menu_btn = document.querySelector('#menu_btn');
-const nav = document.querySelector('nav');
-const li = document.querySelectorAll('li');
+const nav = document.querySelector('#navigation');
+const li = document.querySelectorAll('#navigation ul li');
 const section = document.querySelectorAll('section');
 const cursor = document.querySelector('#cursor');
+const content = document.querySelector('#content');
 
 let menu_click = false;
-
-if( window.location.href.indexOf('index') > 0 )
-    cursor.classList.add('hide');
 
 document.addEventListener('mousemove', (e) => {
     let x = e.clientX;
@@ -45,7 +63,8 @@ menu_btn.addEventListener('click', () => {
         menu_btn.classList.add('click');
         menu_click = true;
         nav.classList.add('show');
-        section.forEach(section => section.classList.add('blur'));
+        // section.forEach(section => section.classList.add('blur'));
+        content.classList.add('blur');
         li.forEach(li => li.classList.add('pop'));
         cursor.classList.remove('hide');
     }
@@ -53,7 +72,8 @@ menu_btn.addEventListener('click', () => {
         menu_btn.classList.remove('click');
         menu_click = false;
         nav.classList.remove('show');
-        section.forEach(section => section.classList.remove('blur'));
+        // section.forEach(section => section.classList.remove('blur'));
+        content.classList.remove('blur');
         li.forEach(li => li.classList.remove('pop'));
         if( window.location.href.indexOf('index') > 0 )
             cursor.classList.add('hide');
