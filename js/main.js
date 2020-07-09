@@ -24,7 +24,9 @@ const toggleText = (index, state) => {
         typing_text[index].style.cssText = 'animation: none;';
   };
 
-toggleText(0, 'show');
+// setTimeout( () => {  }, 3000);
+
+// toggleText(0, 'show')
 
 prev_btn.parentElement.addEventListener('mouseenter', () => { cursor.classList.remove('hide'); cursor.classList.add('select'); });
 prev_btn.parentElement.addEventListener('mouseleave', () => { cursor.classList.add('hide'); cursor.classList.remove('select'); });
@@ -62,7 +64,7 @@ next_btn.addEventListener('click', function(){
     section[index].scrollIntoView({behavior: 'smooth'});
 });
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', () => {
     let offset = window.pageYOffset;
     parallax.style.backgroundPositionY = offset * 0.7 + 'px';
      
