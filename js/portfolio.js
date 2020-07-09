@@ -74,7 +74,6 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             let languages = document.createElement('div'); languages.classList.add('languages');
             let languages_title = document.createElement('span'); languages_title.innerText = 'Languages';
             let css = document.createElement('p'); css.classList.add('css'); css.style.width = project.languages[0].CSS + '%';
-            console.log(project.languages[0].css + '%');
             let css_after = document.head.appendChild(document.createElement('style'));
             css_after.innerHTML = '.css:after{ content: "CSS ' + project.languages[0].CSS + '%"; }';
             let html = document.createElement('html'); html.classList.add('html'); html.style.width = project.languages[0].HTML + '%';
