@@ -211,6 +211,61 @@
     line-height: 18px;
     text-align: justify;
 }
+.view_file{
+    position: absolute;
+    width: 100%;
+    text-align: right;
+}
+.view_file a{
+    font-style: oblique;
+    display: inline-block;
+    color: black;
+    font-weight: 500;
+    cursor: none;
+    transition: all .5s ease;
+    padding: 0 0 10px 15px;
+}
+.view_file a.dark_mode{
+    color: white;
+}
+.view_file a:first-child{
+    margin-right: 10px;
+}
+.view_file a:hover{
+    color: #909090;
+}
+.view_file a:first-child:after{
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: 4px;
+    margin-left: 5px;
+    width: 17px;
+    height: 17px;
+    background: url(../images/view_file.png) no-repeat;
+    background-size: contain;
+/*     animation: shakeAnimate .7s infinite; */
+}
+.view_file a:last-child:after{
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: 4px;
+    margin-left: 5px;
+    width: 17px;
+    height: 17px;
+    background: url(../images/view_file.png) no-repeat;
+    background-size: contain;
+/*     animation: shakeAnimate .7s infinite; */
+}
+@keyframes shakeAnimate{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+}
 .project_link{
     position: absolute;
     top: 190px;
@@ -220,9 +275,15 @@
     font-weight: 400;
 }
 .project_link span:last-child{
+    position: relative;
+    top: -7px;
     margin-left: 30px;
     padding-right: 10px;
     font-weight: 600;
+    transition: all .5s ease;
+}
+.project_link span:last-child:hover{
+    color: #909090;
 }
 .project_link span:last-child:after{
     content: '';
@@ -376,4 +437,30 @@
 }
 .mockup3{
     grid-column: span 2;
+}
+.go_top{
+    position: fixed;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: all .7s ease;
+    opacity: 0;
+    z-index: 3;
+}
+.go_top:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/arrow_icon.png) no-repeat center;
+    transform: rotate(180deg);
+    background-size: 40px 40px;
+}
+.go_top.show{
+    top: 0;
+    opacity: 1;
 }

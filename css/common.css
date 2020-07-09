@@ -6,13 +6,11 @@ body{
     height: 100vh;
     background: linear-gradient(0deg, rgba(225,225,225,1) 0%, rgba(255,255,255,1) 100%);
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 body.dark_mode{
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(35,35,35,1) 100%);
-}
-body{
-   -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 body::-webkit-scrollbar{
     display: none;

@@ -50,7 +50,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
 
         let about = document.createElement('div');
         let about_title = document.createElement('p'); about_title.classList.add('info_title'); about_title.innerText = 'About';
-        let about_text = document.createElement('p'); about_text.classList.add('info_text'); about_text.innerText = project.project_info[0].about;
+        let about_text = document.createElement('p'); about_text.classList.add('info_text'); about_text.innerHTML = project.project_info[0].about;
         about.appendChild(about_title); about.appendChild(about_text);
 
         let aim = document.createElement('div');
@@ -66,7 +66,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         project_info.appendChild(about); project_info.appendChild(aim); project_info.appendChild(achievements);
 
         let project_link = document.createElement('div'); project_link.classList.add('project_link');
-        let project_link_title = document.createElement('span'); project_link_title.innerText = 'Project link';
+        let project_link_title = document.createElement('span'); project_link_title.innerHTML = 'Project link<br/>(PC/Mobile)';
         let link_address = document.createElement('span'); link_address.innerText = project.project_link[0];
         project_link.appendChild(project_link_title); project_link.appendChild(link_address);
 
@@ -121,12 +121,45 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         document.body.insertBefore(view_portfolio, document.body.lastElementChild.previousElementSibling);
         
         setTimeout( () => { view_portfolio.classList.add('down'); }, 1);
+        
+        if( getNodeindex(img) === 0 ){
+            const a =  document.querySelectorAll('.view_file a');
+            
+            if( document.body.classList.value === 'dark_mode' )
+                a.forEach(a => a.classList.add('dark_mode'));
+            else
+                a.forEach(a => a.classList.remove('dark_mode'));
+
+            a.forEach(a => a.addEventListener( 'mouseenter' , () => {
+                cursor.classList.add('select');
+                let file_view = document.head.appendChild(document.createElement('style'));
+                file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: shakeAnimate .7s infinite; }';
+            }));
+            a.forEach(a => a.addEventListener( 'mouseleave' , () => {
+                cursor.classList.remove('select');
+                let file_view = document.head.appendChild(document.createElement('style'));
+                file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: none; }';
+            }));
+        }
+
+        let go_top = document.createElement('div'); go_top.classList.add('go_top');
+        document.body.appendChild(go_top);
+        go_top.addEventListener('mousemove', () => { cursor.classList.add('select'); });
+        go_top.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+        go_top.addEventListener('click', () => {  top_preview.scrollIntoView({behavior: 'smooth'}); });
+
+        window.addEventListener('scroll', () => {
+            if( window.pageYOffset >= view_portfolio.offsetHeight / 3.5 )
+                go_top.classList.add('show');
+            else
+                go_top.classList.remove('show');
+        });
 
         link_address.addEventListener('click', () => window.open(project.project_link[0]) );
         link_address.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
         link_address.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
 
-        if( document.body.classList.value === 'dark_mode'){
+        if( document.body.classList.value === 'dark_mode' ){
             view_portfolio.classList.add('dark_mode');
             description_box.classList.add('dark_mode');
             close_btn.classList.add('dark_mode');
@@ -144,6 +177,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             setTimeout( () => { document.body.removeChild(view_portfolio); }, 1000);
             view_portfolio.classList.remove('down');
             cursor.classList.remove('select');
+            document.body.removeChild(go_top);
             img.firstElementChild.classList.remove('view');
             nav_bg.style.position = 'fixed';
             nav_bg.style.zIndex = '3';

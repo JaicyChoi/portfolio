@@ -58,12 +58,11 @@ li.forEach(li => li.addEventListener('mouseleave', () => {
     cursor.classList.remove('select');
 }));
 
-menu_btn.addEventListener('click', () => {
+menu_btn.addEventListener('click', (e) => {
     if( !menu_click ){
         menu_btn.classList.add('click');
         menu_click = true;
         nav.classList.add('show');
-        // section.forEach(section => section.classList.add('blur'));
         content.classList.add('blur');
         li.forEach(li => li.classList.add('pop'));
         cursor.classList.remove('hide');
@@ -72,7 +71,6 @@ menu_btn.addEventListener('click', () => {
         menu_btn.classList.remove('click');
         menu_click = false;
         nav.classList.remove('show');
-        // section.forEach(section => section.classList.remove('blur'));
         content.classList.remove('blur');
         li.forEach(li => li.classList.remove('pop'));
         if( window.location.href.indexOf('index') > 0 )

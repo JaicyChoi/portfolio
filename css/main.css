@@ -65,9 +65,12 @@ svg text{
     font-size: 10.625em;
     font-family: 'Monoton', cursive;
     fill:white;
+    opacity: 0;
+}
+svg text.visible{
+    opacity: 1;
     animation: textAmimate 5s;
 }
-
 @keyframes textAmimate{
     0%{
         stroke-dasharray: 0 50%;
@@ -95,13 +98,18 @@ svg text{
 /*     background-color: red; */
     text-align: center;
     line-height: 1.15em;
+    opacity: 0;
+    transition: all 2s ease;
+    transition-delay: 1.7s;
+}
+#main_visual_text.show{
+    opacity: 1;
 }
 .main_text{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -35%);
-/*     background-color: green; */
     color: white;
     text-align: center;
     opacity: 0;

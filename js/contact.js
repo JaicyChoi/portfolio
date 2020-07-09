@@ -1,3 +1,12 @@
+// menu_btn.addEventListener('click', () => {
+//     if( nav.classList.value.includes('show') ){
+//         console.log('hello');
+//         document.querySelector('#contact_method').classList.add('hide_bottom');
+//     }
+//     else
+//         document.querySelector('#contact_method').classList.remove('hide_bottom');
+// });
+
 mode.addEventListener('change', () => {
     document.querySelector('.thankyou_message').classList.toggle('dark_mode');
 });
