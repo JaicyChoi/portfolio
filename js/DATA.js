@@ -12,6 +12,7 @@ let PROJECT_DATA = {
                     achievements: 'Understanding of the overall flow from planning to design and coding.<br/>Understanding of standard and responsive design.'
                 }
             ],
+            video: 'https://gfycat.com/ifr/PhysicalScentedErmine',
             project_link: [ 'http://tobe.dothome.co.kr' ],
             languages: [
                 {
@@ -35,6 +36,7 @@ let PROJECT_DATA = {
                     achievements: 'I realized that creating a smooth animation effect with vanilla JavaScript without a plugin is a bit difficult, Overall understanding of scroll animation behavior'
                 }
             ],
+            video: 'https://gfycat.com/ifr/SneakyPoliteKagu',
             project_link: [ 'https://jaicychoi.github.io/samueladams' ],
             languages: [
                 {

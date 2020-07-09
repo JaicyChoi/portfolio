@@ -87,9 +87,14 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             description_box.appendChild(project_title); description_box.appendChild(project_info);
             description_box.appendChild(project_link); description_box.appendChild(languages);
     
-            let video = document.createElement('video'); video.setAttribute('autoplay', ''); video.setAttribute('loop', '');
-            let source = document.createElement('source'); source.src='video/' + project.project_id + '_overview.mp4'; source.setAttribute('type', 'video/mp4');
-            video.appendChild(source);
+            let video = document.createElement('div'); video.classList.add('video');
+            let iframe = document.createElement('iframe'); iframe.src = project.video;
+            iframe.setAttribute('frameborder', 0); iframe.setAttribute('scrolling', 'no'); iframe.setAttribute('allowfullscreen', '');
+            video.appendChild(iframe);
+
+            // let video = document.createElement('video'); video.setAttribute('autoplay', ''); video.setAttribute('loop', '');
+            // let source = document.createElement('source'); source.src='video/' + project.project_id + '_overview.mp4'; source.setAttribute('type', 'video/mp4');
+            // video.appendChild(source);
     
             let project_logo = document.createElement('div'); project_logo.classList.add('project_logo');
     
