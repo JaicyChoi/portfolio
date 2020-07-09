@@ -1,3 +1,7 @@
+const cursor = document.querySelector('#cursor');
+if( window.location.href.indexOf('index') > 0 )
+    cursor.classList.add('hide');
+
 setTimeout( () => {
     document.querySelector('.loader').style.display = 'none';
     document.querySelector('.loader').classList.add('hide');
@@ -22,13 +26,9 @@ const menu_btn = document.querySelector('#menu_btn');
 const nav = document.querySelector('#navigation');
 const li = document.querySelectorAll('#navigation ul li');
 const section = document.querySelectorAll('section');
-const cursor = document.querySelector('#cursor');
 const content = document.querySelector('#content');
 
 let menu_click = false;
-
-if( window.location.href.indexOf('index') > 0 )
-    cursor.classList.add('hide');
 
 document.addEventListener('mousemove', (e) => {
     let x = e.clientX;
