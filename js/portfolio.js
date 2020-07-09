@@ -89,7 +89,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             description_box.appendChild(project_link); description_box.appendChild(languages);
     
             let video = document.createElement('video'); video.setAttribute('autoplay', ''); video.setAttribute('loop', '');
-            let source = document.createElement('source'); source.src='video/' + project.project_id + '__overview.mp4'; source.setAttribute('type', 'video/mp4');
+            let source = document.createElement('source'); source.src='video/' + project.project_id + '_overview.mp4'; source.setAttribute('type', 'video/mp4');
             video.appendChild(source);
     
             let project_logo = document.createElement('div'); project_logo.classList.add('project_logo');
@@ -104,7 +104,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             let project_mockup = document.createElement('div'); project_mockup.classList.add('project_mockup');
             for( let i = 0 ; i < 3 ; i++ ){
                 let div = document.createElement('div'); div.classList.add('mockup' + ( i + 1) );
-                div.style.cssText = 'background: url(images/' + project.project_id + '_mockup' + ( i + 1 ) + '.png) no-repeat center; background-size: cover;'
+                div.style.cssText = 'background: url(images/' + project.project_id + '_mockup' + ( i + 1 ) + '.jpg) no-repeat center; background-size: cover;'
                 project_mockup.appendChild(div);
             }
     
