@@ -1,3 +1,12 @@
+// menu_btn.addEventListener('click', () => {
+//     if( nav.classList.value.includes('show') ){
+//         console.log('hello');
+//         document.querySelector('#contact_method').classList.add('hide_bottom');
+//     }
+//     else
+//         document.querySelector('#contact_method').classList.remove('hide_bottom');
+// });
+
 mode.addEventListener('change', () => {
     document.querySelector('.thankyou_message').classList.toggle('dark_mode');
 });
@@ -50,7 +59,10 @@ re_write.addEventListener('mouseleave', () => {
     cursor.classList.remove('select');
     tmp_style.innerHTML = '#re-write:before{ animation: none; }';
 });
-re_write.addEventListener('click', () => { location.reload(); });
+re_write.addEventListener('click', () => {
+    document.querySelector('button').disabled = false;
+    document.querySelector('form').reset();
+});
 
 contact[0].addEventListener('mouseenter', () => {
     tmp_style.innerHTML = '#phone_contact:before{ animation: rotateAnimate .3s infinite; }';
@@ -64,3 +76,10 @@ contact[1].addEventListener('mouseenter', () => {
 contact[1].addEventListener('mouseleave', () => {
     tmp_style.innerHTML = '#email_contact:before{ animation: bounce 1s infinite; }';
 });
+
+// function disableAllButtons(form) {
+//     var buttons = form.querySelectorAll("button");
+//     for (var i = 0; i < buttons.length; i++) {
+//       buttons[i].disabled = true;
+//     }
+//   }

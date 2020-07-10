@@ -5,6 +5,22 @@ const description = document.querySelectorAll('.description');
 const initial = document.querySelectorAll('.initial');
 let tmp_style = document.head.appendChild(document.createElement('style'));
 
+
+// menu_btn.addEventListener('click', () => {
+//     if( window.innerHeight <= 1150 && window.pageYOffset > 0 ){
+//         if( menu_click )
+//             bottom_area.style.cssText = 'bottom: ' + -window.pageYOffset + 'px;';
+//         else
+//             bottom_area.style.cssText = 'bottom: 0';
+//     }
+//     else if( window.innerHeight <= 1150 && window.pageYOffset === 0 ){
+//         if( menu_click )
+//             bottom_area.style.cssText = 'top: 950px;';
+//         else
+//             bottom_area.style.cssText = 'bottom: 0';
+//     }
+// });
+
 mode.addEventListener('change', () => {
     document.querySelector('#intro').classList.toggle('dark_mode');
     speech_bubble.classList.toggle('dark_mode');

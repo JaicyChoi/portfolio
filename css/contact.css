@@ -1,6 +1,8 @@
 body{
     position: relative;
-    min-height: 1130px;
+}
+body.load_complete{
+    min-height: 1150px;
 }
 form{
     position: absolute;
