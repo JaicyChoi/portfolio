@@ -1,4 +1,12 @@
+let data_reload = document.querySelectorAll('[data-reload]');
+
+if( window.location.hash ){
+    if( window.location.hash === '#kor' )
+        console.log(window.location.hash);
+}
+
 const cursor = document.querySelector('#cursor');
+
 if( window.location.href.indexOf('index') > 0 )
     cursor.classList.add('hide');
 
@@ -58,6 +66,31 @@ li.forEach(li => li.addEventListener('mouseenter', () => {
 li.forEach(li => li.addEventListener('mouseleave', () => {
     cursor.classList.remove('select');
 }));
+
+const language_option = document.querySelector('#language_option');
+const eng = document.querySelector('#eng');
+const kor = document.querySelector('#kor');
+
+eng.addEventListener('click', () => {
+    if( eng.classList.value.includes('eng_selected') ) return;
+    else{
+        eng.classList.add('eng_selected');
+        kor.classList.add('eng_selected');
+        kor.classList.remove('kor_selected');
+        language_option.childNodes[1].style.color = 'white';
+        language_option.childNodes[3].style.color = 'black';
+    }
+});
+kor.addEventListener('click', () => {
+    if( kor.classList.value.includes('kor_selected') ) return;
+    else{
+        kor.classList.add('kor_selected');
+        eng.classList.remove('eng_selected');
+        kor.classList.remove('eng_selected');
+        language_option.childNodes[1].style.color = 'black';
+        language_option.childNodes[3].style.color = 'white';
+    }
+});
 
 menu_btn.addEventListener('click', () => {
     if (content.lastElementChild.classList.value.includes('bottom_area') )

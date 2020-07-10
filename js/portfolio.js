@@ -23,6 +23,8 @@ img.forEach(img => img.addEventListener('mouseleave', () => {
 ));
 
 img.forEach(img => img.firstElementChild.addEventListener('click', () => {
+        console.log(window.location.hash);
+
         const nav_bg = document.querySelector('#nav_bg');
 
         nav_bg.style.zIndex = '-1';
@@ -31,8 +33,13 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         content.classList.add('blur');
 //setTimeout 1
         nav_bg.style.position = 'absolute';
-    
-        let project = PROJECT_DATA[Object.keys(PROJECT_DATA)[getNodeindex(img)]][0];
+
+        let project;
+
+        if( window.location.hash === '#kor')
+            project = PROJECT_DATA.kor[Object.keys(PROJECT_DATA.kor)[getNodeindex(img)]][0];
+        else
+            project = PROJECT_DATA.eng[Object.keys(PROJECT_DATA.eng)[getNodeindex(img)]][0];
 
         let view_portfolio = document.createElement('section'); view_portfolio.classList.add('view_portfolio');
         let view_inner = document.createElement('div'); view_inner.classList.add('view_inner');
