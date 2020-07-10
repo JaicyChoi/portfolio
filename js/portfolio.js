@@ -8,7 +8,7 @@ img.forEach(img => img.childNodes[1].addEventListener('mouseenter', () => {
         cursor.childNodes.forEach(span => span.classList.remove('hide'));
         preview[getNodeindex(img)].classList.add('show');
 
-        if( document.body.classList.value === 'dark_mode')
+        if( document.body.classList.value.includes('dark_mode') )
             img.childNodes[3].classList.add('dark_mode');
         else
             img.childNodes[3].classList.remove('dark_mode');
