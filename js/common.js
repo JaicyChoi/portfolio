@@ -13,6 +13,7 @@ setTimeout( () => {
         slide_effect[i].style.height = '0%';
 
     setTimeout( () => {
+        document.body.classList.add('load_complete');
         document.body.removeChild(document.querySelector('.loader_wrapper'));
     }, 1000);
 }, 1500);
@@ -58,8 +59,16 @@ li.forEach(li => li.addEventListener('mouseleave', () => {
     cursor.classList.remove('select');
 }));
 
-menu_btn.addEventListener('click', (e) => {
+menu_btn.addEventListener('click', () => {
+    if (content.lastElementChild.classList.value.includes('bottom_area') )
+        var bottom_area = document.querySelector('.bottom_area');
+
     if( !menu_click ){
+        if( window.innerHeight <= 1150 && window.pageYOffset > 0 )
+            bottom_area.style.cssText = 'bottom: ' + -window.pageYOffset + 'px;';
+        else if( window.innerHeight <= 1150 && window.pageYOffset === 0 )
+            bottom_area.style.cssText = 'top: 950px;';
+        document.body.classList.add('scroll_fix');
         menu_btn.classList.add('click');
         menu_click = true;
         nav.classList.add('show');
@@ -68,6 +77,11 @@ menu_btn.addEventListener('click', (e) => {
         cursor.classList.remove('hide');
     }
     else{
+        if( window.innerHeight <= 1150 && window.pageYOffset > 0 )
+            bottom_area.style.cssText = 'bottom: 0';
+        else if( window.innerHeight <= 1150 && window.pageYOffset === 0 )
+            bottom_area.style.cssText = 'bottom: 0';
+        document.body.classList.remove('scroll_fix');
         menu_btn.classList.remove('click');
         menu_click = false;
         nav.classList.remove('show');

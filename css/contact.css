@@ -1,6 +1,8 @@
 body{
     position: relative;
-    min-height: 1130px;
+}
+body.load_complete{
+    min-height: 1150px;
 }
 form{
     position: absolute;
@@ -144,9 +146,6 @@ button:hover{
     height: 200px;
     background-color: black;
     box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.25);
-}
-#contact_method.hide_bottom{
-    bottom: -200px;
 }
 #contact_inner{
     width: 1200px;

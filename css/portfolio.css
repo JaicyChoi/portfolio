@@ -214,6 +214,8 @@
 .view_file{
     position: absolute;
     width: 100%;
+    font-size: 0.9em;
+    margin-top: 5px ;
     text-align: right;
 }
 .view_file a{
@@ -223,7 +225,7 @@
     font-weight: 500;
     cursor: none;
     transition: all .5s ease;
-    padding: 0 0 10px 15px;
+    padding: 0 0 15px 15px;
 }
 .view_file a.dark_mode{
     color: white;
@@ -238,11 +240,11 @@
     content: '';
     position: relative;
     display: inline-block;
-    top: 4px;
-    margin-left: 5px;
-    width: 17px;
-    height: 17px;
-    background: url(../images/view_file.png) no-repeat;
+    top: 3px;
+    margin-left: 7px;
+    width: 13px;
+    height: 13px;
+    background: url(../images/download.png) no-repeat;
     background-size: contain;
 /*     animation: shakeAnimate .7s infinite; */
 }
@@ -250,20 +252,20 @@
     content: '';
     position: relative;
     display: inline-block;
-    top: 4px;
-    margin-left: 5px;
-    width: 17px;
-    height: 17px;
-    background: url(../images/view_file.png) no-repeat;
+    top: 3px;
+    margin-left: 7px;
+    width: 13px;
+    height: 13px;
+    background: url(../images/download.png) no-repeat;
     background-size: contain;
 /*     animation: shakeAnimate .7s infinite; */
 }
-@keyframes shakeAnimate{
+@keyframes updownAnimate{
     0%, 100%{
-        transform: scale(1);
+        transform: translateY(-3px);
     }
     50%{
-        transform: scale(1.2);
+        transform: translateY(0);
     }
 }
 .project_link{

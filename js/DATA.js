@@ -7,7 +7,7 @@ let PROJECT_DATA = {
             ],
             project_info: [
                 {
-                    about: 'It\'s web site designed recommends beer based on various themes so that ordinary people who are interested in beer but are hesitating about which beer to choose can easily choose a beer.<br/><p class="view_file"><a href="doc/tobe_proposal.pdf" download target="_blank">view proposal</a><a href="doc/tobe_storyboard.pdf" download target="_blank">view storyboard</a></p>',
+                    about: 'It\'s web site designed recommends beer based on various themes so that ordinary people who are interested in beer but are hesitating about which beer to choose can easily choose a beer.<br/><p class="view_file"><a href="doc/tobe_proposal.pdf" download target="_blank">download proposal</a><a href="doc/tobe_storyboard.pdf" download target="_blank">download storyboard</a></p>',
                     aim: 'Design without complicity considering user convenience. design responsively in response to changes in resolution, design for tablets and mobile devices',
                     achievements: 'Understanding of the overall flow from planning to design and coding.<br/>Understanding of standard and responsive design.'
                 }

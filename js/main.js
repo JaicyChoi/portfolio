@@ -12,7 +12,7 @@ for( let i = 0 ; i < section.length; i++ ){
 }
 
 const toggleText = (index, state) => {
-    // if( index === 0 ) return;
+    if( index === 0 ) return;
     if (state === 'show')
       section[index].querySelector('.main_text').classList.add('show');
     else
@@ -91,8 +91,6 @@ window.addEventListener('scroll', () => {
         typingText(0, 'show');
         index = 1;
         text.classList.remove('visible');
-        // document.querySelector('text').style.opacity = '0';
-        // document.querySelector('text').style.animation = 'none';
         prev_btn.classList.add('visible');
     }
     else if( offset < section[0].offsetHeight * 0.5 ){
@@ -101,8 +99,6 @@ window.addEventListener('scroll', () => {
         if( offset < section[0].offsetHeight * 0.3 ){
             main_visual_text.classList.add('show');
             text.classList.add('visible');
-            // document.querySelector('text').style.opacity = '1';
-            // document.querySelector('text').style.animation = 'textAmimate 5s';
             prev_btn.classList.remove('visible');
         }
     }
