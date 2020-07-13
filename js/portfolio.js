@@ -1,3 +1,6 @@
+// if( localStorage.getItem('hash') === null ) localStorage.setItem('hash', '#eng');
+// if( localStorage.getItem('site_mode') === null ) localStorage.setItem('site_mode', 'light');
+
 const img = document.querySelectorAll('.preview_img');
 const preview = document.querySelectorAll('.preview_img p');
 const view_portfolio = document.querySelectorAll('.view_portfolio');
@@ -8,7 +11,7 @@ img.forEach(img => img.childNodes[1].addEventListener('mouseenter', () => {
         cursor.childNodes.forEach(span => span.classList.remove('hide'));
         preview[getNodeindex(img)].classList.add('show');
 
-        if( document.body.classList.value.includes('dark_mode') )
+        if( localStorage.getItem('site_mode') === 'dark' )
             img.childNodes[3].classList.add('dark_mode');
         else
             img.childNodes[3].classList.remove('dark_mode');
@@ -34,7 +37,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
 
         let project;
 
-        if( window.location.hash === '#kor')
+        if( localStorage.getItem('hash') === '#kor')
             project = PROJECT_DATA.kor[Object.keys(PROJECT_DATA.kor)[getNodeindex(img)]][0];
         else
             project = PROJECT_DATA.eng[Object.keys(PROJECT_DATA.eng)[getNodeindex(img)]][0];
@@ -72,8 +75,12 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
 
         let project_link = document.createElement('div'); project_link.classList.add('project_link');
         let project_link_title = document.createElement('span'); project_link_title.innerHTML = 'Project link<br/>(PC/Mobile)';
-        let link_address = document.createElement('span'); link_address.innerText = project.project_link[0];
+        let link_address = document.createElement('a'); link_address.innerText = project.project_link;
+        link_address.setAttribute('href', project.project_link); link_address.setAttribute('target', '_blank');
         project_link.appendChild(project_link_title); project_link.appendChild(link_address);
+
+        let github = document.createElement('a'); github.classList.add('github');
+        github.setAttribute('href', project.github); github.setAttribute('target', '_blank');
 
         let languages = document.createElement('div'); languages.classList.add('languages');
         let languages_title = document.createElement('span'); languages_title.innerText = 'Languages';
@@ -94,7 +101,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         else js_after.innerHTML = '.js:after{ content: "JavaScript ' + project.languages[0].JavaScript + '%"; }';
         languages.appendChild(languages_title); languages.appendChild(css); languages.appendChild(html); languages.appendChild(js);
 
-        description_box.appendChild(project_title); description_box.appendChild(project_info);
+        description_box.appendChild(project_title); description_box.appendChild(github); description_box.appendChild(project_info);
         description_box.appendChild(project_link); description_box.appendChild(languages);
 
         let video = document.createElement('div'); video.classList.add('video');
@@ -130,7 +137,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         if( getNodeindex(img) === 0 ){
             const a =  document.querySelectorAll('.view_file a');
             
-            if( document.body.classList.value.includes('dark_mode') )
+            if( localStorage.getItem('site_mode') === 'dark' )
                 a.forEach(a => a.classList.add('dark_mode'));
             else
                 a.forEach(a => a.classList.remove('dark_mode'));
@@ -159,18 +166,25 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             else
                 go_top.classList.remove('show');
         });
+        
+        github.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
+        github.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
 
-        link_address.addEventListener('click', () => window.open(project.project_link[0]) );
+        // link_address.addEventListener('click', () => window.open(project.project_link) );
         link_address.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
         link_address.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
 
-        if( document.body.classList.value.includes('dark_mode') ){
+        if( localStorage.getItem('site_mode') === 'dark' ){
             view_portfolio.classList.add('dark_mode');
+            github.classList.add('dark_mode');
+            link_address.classList.add('dark_mode');
             description_box.classList.add('dark_mode');
             close_btn.classList.add('dark_mode');
         }
         else{
             view_portfolio.classList.remove('dark_mode');
+            github.classList.remove('dark_mode');
+            link_address.classList.remove('dark_mode');
             description_box.classList.remove('dark_mode');
             close_btn.classList.remove('dark_mode');
         }

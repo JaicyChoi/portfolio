@@ -83,3 +83,12 @@ contact[1].addEventListener('mouseleave', () => {
 //       buttons[i].disabled = true;
 //     }
 //   }
+
+
+// target.animate([
+//     {left:0},{left:100}
+// ],{
+//     duration:3000, easing:'ease-out, fill:'forwards'
+// }).onfinish=()=>{
+//     alert('종료')
+// }

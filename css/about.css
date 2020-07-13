@@ -1,3 +1,5 @@
+@font-face { font-family: 'BBTreeGL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGL.woff') format('woff'); font-weight: normal; font-style: normal; }
+
 body{
     position: relative;
 }
@@ -11,10 +13,14 @@ body.load_complete{
     width: 1200px;
     position: relative;
     top: 220px;
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Ubuntu Mono', 'BBTreeGL', monospace;
     font-size: 1.25em;
     text-align: justify;
     transition: all 1s ease-in;
+}
+#intro.kor{
+    font-size: 1.2em;
+    line-height: 23px;
 }
 #intro.dark_mode{
     color: #dfdfdf;
@@ -34,6 +40,7 @@ body.load_complete{
     float: right;
     top: 15px;
     width: 55%;
+
     padding-bottom: 30px;
     border-bottom: 1px solid #909090;
 }
@@ -42,6 +49,7 @@ body.load_complete{
     float: right;
     width: 55%;
     margin-top: 45px;
+
 }
 .bold{
     font-weight: 700;
@@ -225,6 +233,6 @@ colored{
     background-size: contain;
 }
 .description .text{
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Ubuntu Mono', 'BBTreeGL', monospace;
     font-size: 0.875em;
 }

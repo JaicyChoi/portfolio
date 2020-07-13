@@ -182,9 +182,38 @@
     margin-bottom: 10px;
 }
 .project_title p:nth-child(2){
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Rajdhani', sans-serif, 'NanumBarunpen';
     font-size: 1em;
     letter-spacing: 0.5px;
+}
+.github{
+    position: relative;
+    float: left;
+    top: 80px;
+    background: url(../images/github.png) no-repeat center;
+    background-size: contain;
+    width: 27px;
+    height: 27px;
+    color: black;
+    cursor: none;
+    transition: all .5s ease;
+}
+.github:after{
+    content: 'github';
+    position: absolute;
+    left: 35px;
+    line-height: 30px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+}
+.github:hover{
+    opacity: 0.6;   
+}
+.github.dark_mode{
+    color: white;
+    background: url(../images/github_white.png) no-repeat center;
+    background-size: contain;
 }
 .project_info{
     position: absolute;
@@ -193,7 +222,7 @@
     width: 58.33%;
 }
 .project_info div{
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Rajdhani', 'NanumBarunpen', sans-serif;
     letter-spacing: 0.5px;
     margin-bottom: 30px;
 }
@@ -208,7 +237,7 @@
 .info_text{
     font-size: 1em;
     font-weight: 300;
-    line-height: 18px;
+    line-height: 20px;
     text-align: justify;
 }
 .view_file{
@@ -276,18 +305,23 @@
     letter-spacing: 0.5px;
     font-weight: 400;
 }
-.project_link span:last-child{
+.project_link a{
+    color: black;
     position: relative;
     top: -7px;
     margin-left: 30px;
     padding-right: 10px;
     font-weight: 600;
     transition: all .5s ease;
+    cursor: none;
 }
-.project_link span:last-child:hover{
+.project_link a.dark_mode{
+    color: white;
+}
+.project_link a:hover{
     color: #909090;
 }
-.project_link span:last-child:after{
+.project_link a:after{
     content: '';
     position: relative;
     left: 7px;
