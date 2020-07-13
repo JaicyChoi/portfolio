@@ -1,9 +1,5 @@
-if( localStorage.getItem('hash') === null ){
+if( localStorage.getItem('hash') === null )
     localStorage.setItem('hash', '#eng');
-    console.log(localStorage.getItem('hash'));
-}
-else
-    console.log(localStorage.getItem('hash'));
 
 const main_visual_text = document.querySelector('#main_visual_text')
 const parallax = document.querySelector('.parallax');
