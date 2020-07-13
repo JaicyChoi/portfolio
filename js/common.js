@@ -187,7 +187,7 @@ characters.forEach((char, index) => {
     cursor.appendChild(charElement);
 });
 
-if( window.location.href.indexOf('index') === -1 ){
+if( window.location.href.indexOf('index') === -1 && window.location.href.length > 38 ){
     const mode = document.querySelector('#mode');
 
     mode.addEventListener('click', () => {
