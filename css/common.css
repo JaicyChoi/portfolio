@@ -45,24 +45,25 @@ body.scroll_fix{
 	background-color: rgb(20, 20, 20);
 }
 .loader{
-    font-family: 'Rasa', serif;
+    font-family: 'Rasa', 'NanumBarunpen', serif;
     color: rgba(255, 255, 255, 0.1);
     font-size: 60px;
     position: relative;
     text-indent: 17px;
-/*     width: 120px; */
     letter-spacing: 25px;
     padding: 7px;
     box-sizing: border-box;
     font-weight: 500;
-    border-bottom: 5px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+}
+.loader.kor{
+    letter-spacing: 5px;
 }
 .loader:before{
-    content: 'CYJ';
     position: absolute;
+    height: 60px;
     top: 0;
     left: 0;
-/*     width: 115px; */
     padding: 7px;
     color: #39A0FF;
     text-shadow: 0px 0px 3px rgba(57, 160, 255, 0.7), 0px 0px 15px rgba(57, 160, 255, 0.3), 0px 0px 20px rgba(57, 160, 255, 0.5);
@@ -101,6 +102,12 @@ body.scroll_fix{
     height: 120px;
     border: 2px dashed #909090;
     animation: cursorAnimate 10s linear infinite;
+}
+#cursor.small{
+	width: 20px;
+    height: 20px;
+    border: none;
+	background: #909090;
 }
 #cursor.point{
     width: 300px;
@@ -226,11 +233,14 @@ body.scroll_fix{
 #logo{
     position: relative;
     z-index: 1;
-    font-family: 'Rasa', serif;
+    font-family: 'Rasa', 'NanumBarunpen', serif;
     font-size: 32px;
     font-weight: 300;
     float: left;
 /*     background: green; */
+}
+#logo.kor{
+	letter-spacing: -7px;
 }
 #logo a{
     cursor: none;

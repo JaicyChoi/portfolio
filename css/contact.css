@@ -1,3 +1,5 @@
+@font-face { font-family: 'BBTreeGL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGL.woff') format('woff'); font-weight: normal; font-style: normal; }
+
 body{
     position: relative;
 }
@@ -23,7 +25,7 @@ input::placeholder, textarea::placeholder{
     width: 45.83%;
     height: 50px;
     text-indent: 15px;
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Ubuntu Mono', 'BBTreeGL', monospace;
     border-bottom: 1px solid #C4C4C4;
     font-size: 1em;
     color: #C4C4C4;
@@ -42,7 +44,8 @@ input::placeholder, textarea::placeholder{
     border:none;
     width: 100%;
     height: 160px;
-    font-family: 'Ubuntu Mono', monospace;
+    max-height: 450px;
+    font-family: 'Ubuntu Mono', 'BBTreeGL', monospace;
     border-bottom: 1px solid #C4C4C4;
     margin-top: 130px;
     font-size: 1em;
@@ -98,7 +101,7 @@ button:hover{
 .thankyou_message{
     margin-top: 30px;
     display: none;
-    font-family: 'Rasa', serif;
+    font-family: 'Rasa', 'NanumBarunpen', serif;
     font-weight: 300;
     transition: all 1s ease-in; 
 }

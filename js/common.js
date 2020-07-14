@@ -28,11 +28,34 @@ if( window.location.href.indexOf('index') === -1 && window.location.href.length 
     },1500);
 }
 
-setTimeout( () => {
-    document.querySelector('.loader').style.display = 'none';
-    document.querySelector('.loader').classList.add('hide');
+const loader = document.querySelector('.loader');
+let loader_before = document.head.appendChild(document.createElement('style'));
+const logo = document.querySelector('#logo');
+let logo_link = document.querySelector('#logo_link');
 
-    let effect = document.querySelector('.effet');
+if ( localStorage.getItem('hash') === '#kor' ){
+    loader.innerText = 'ㅊㅇㅈ';
+    loader.classList.add('kor');
+    loader_before.innerHTML = '.loader:before{ content: "ㅊㅇㅈ"; }';
+    logo_link.innerText = 'ㅊㅇㅈ'
+    logo.classList.add('kor');
+}
+else{
+    loader.innerText = 'CJY';
+    loader.classList.remove('kor');
+    loader_before.innerHTML = '.loader:before{ content: "CJY"; }';
+    logo_link.innerText = 'CJY'
+    logo.classList.remove('kor');
+}
+setTimeout( () => {
+    loader.style.borderBottom = '5px solid rgba(255, 255, 255, 0.1)';
+}, 500);
+
+setTimeout( () => {
+    loader.style.borderBottom = '5px solid rgba(255, 255, 255, 0)';
+    loader.style.display = 'none';
+    loader.classList.add('hide');
+
     let slide_effect = document.querySelectorAll('.slide_effect');
 
     for( let i = 0 ; i < slide_effect.length; i++ )
@@ -48,7 +71,6 @@ let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
 
 window.onbeforeunload = () => { window.scrollTo(0, 0); }
 
-const logo = document.querySelector('#logo');
 const menu_btn = document.querySelector('#menu_btn');
 const nav = document.querySelector('#navigation');
 const li = document.querySelectorAll('#navigation ul li');
@@ -86,6 +108,7 @@ li.forEach(li => li.addEventListener('mouseleave', () => {
 }));
 
 const language_option = document.querySelector('#language_option');
+const all_language = document.querySelectorAll('#language_option a');
 const eng = document.querySelector('#eng');
 const kor = document.querySelector('#kor');
 
@@ -93,9 +116,12 @@ if( localStorage.getItem('hash') === '#kor' ){
     kor.classList.add('kor_selected');
     eng.classList.remove('eng_selected');
     kor.classList.remove('eng_selected');
-    language_option.childNodes[1].style.color = 'black';
-    language_option.childNodes[3].style.color = 'white';    
+    all_language[0].style.color = 'black';
+    all_language[1].style.color = 'white';    
 }
+
+all_language.forEach(language => language.addEventListener('mouseenter', () => { cursor.classList.add('small'); }));
+all_language.forEach(language => language.addEventListener('mouseleave', () => { cursor.classList.remove('small'); }));
 
 eng.addEventListener('click', () => {
     localStorage.setItem('hash', '#eng');
@@ -104,9 +130,11 @@ eng.addEventListener('click', () => {
         eng.classList.add('eng_selected');
         kor.classList.add('eng_selected');
         kor.classList.remove('kor_selected');
-        language_option.childNodes[1].style.color = 'white';
-        language_option.childNodes[3].style.color = 'black';
+        all_language[0].style.color = 'white';
+        all_language[1].style.color = 'black';
     }
+    logo_link.innerText = 'CJY'
+    logo.classList.remove('kor');
 });
 kor.addEventListener('click', () => {
     localStorage.setItem('hash', '#kor');
@@ -115,9 +143,11 @@ kor.addEventListener('click', () => {
         kor.classList.add('kor_selected');
         eng.classList.remove('eng_selected');
         kor.classList.remove('eng_selected');
-        language_option.childNodes[1].style.color = 'black';
-        language_option.childNodes[3].style.color = 'white';
+        all_language[0].style.color = 'black';
+        all_language[1].style.color = 'white';
     }
+    logo_link.innerText = 'ㅊㅇㅈ'
+    logo.classList.add('kor');
 });
 
 menu_btn.addEventListener('click', () => {
@@ -189,6 +219,10 @@ characters.forEach((char, index) => {
 
 if( window.location.href.indexOf('index') === -1 && window.location.href.length > 38 ){
     const mode = document.querySelector('#mode');
+    const label = document.querySelector('.label');
+
+    label.addEventListener('mouseenter', () => { cursor.classList.add('small'); });
+    label.addEventListener('mouseleave', () => { cursor.classList.remove('small'); });
 
     mode.addEventListener('click', () => {
         if( localStorage.getItem('site_mode') === 'light' )

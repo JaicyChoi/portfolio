@@ -6,9 +6,53 @@
 //     else
 //         document.querySelector('#contact_method').classList.remove('hide_bottom');
 // });
+let thankyou_message = document.querySelector('.thankyou_message');
+let message;
 
-mode.addEventListener('change', () => {
-    document.querySelector('.thankyou_message').classList.toggle('dark_mode');
+if( localStorage.getItem('hash') === '#kor' ) message = CONTACT.kor;
+else message = CONTACT.eng;
+
+let message1 = document.createElement('span');
+let message2 = document.createElement('span');
+let reset_wrtie = document.createElement('span');
+let br1 = document.createElement('br'); let br2 = document.createElement('br');
+
+insertText();
+
+function insertText(){
+    message1.innerText = message.message[0]; message1.id = 'message1';
+    message2.innerText = message.message[1]; message2.id = 'message2';
+    reset_wrtie.innerText = message.message[2]; reset_wrtie.id = 're-write';
+}
+
+thankyou_message.appendChild(message1); thankyou_message.appendChild(br1);
+thankyou_message.appendChild(message2); thankyou_message.appendChild(br2);
+thankyou_message.appendChild(reset_wrtie);
+
+change_mode();
+
+function change_mode(){
+    if( localStorage.getItem('site_mode') === 'dark' )
+        document.querySelector('.thankyou_message').classList.add('dark_mode');
+    else
+        document.querySelector('.thankyou_message').classList.remove('dark_mode');
+}
+
+function change_language(){
+    if( localStorage.getItem('hash') === '#kor' ) message = CONTACT.kor;
+    else message = CONTACT.eng;
+}
+eng.addEventListener('click', () => {
+    message = CONTACT.eng;
+    insertText();
+});
+kor.addEventListener('click', () => {
+    message = CONTACT.kor;
+    insertText();
+});
+
+mode.addEventListener('click', () => { 
+    change_mode();
 });
 
 const input = document.querySelectorAll('#form_elements input');
@@ -62,6 +106,7 @@ re_write.addEventListener('mouseleave', () => {
 re_write.addEventListener('click', () => {
     document.querySelector('button').disabled = false;
     document.querySelector('form').reset();
+    thankyou_message.style.display = 'none';
 });
 
 contact[0].addEventListener('mouseenter', () => {
@@ -76,14 +121,6 @@ contact[1].addEventListener('mouseenter', () => {
 contact[1].addEventListener('mouseleave', () => {
     tmp_style.innerHTML = '#email_contact:before{ animation: bounce 1s infinite; }';
 });
-
-// function disableAllButtons(form) {
-//     var buttons = form.querySelectorAll("button");
-//     for (var i = 0; i < buttons.length; i++) {
-//       buttons[i].disabled = true;
-//     }
-//   }
-
 
 // target.animate([
 //     {left:0},{left:100}

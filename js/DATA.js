@@ -131,3 +131,12 @@ let ABOUT_DATA = {
         ]
     }
 }
+
+let CONTACT = {
+    eng:{
+        message: ['Thanks for contacting me!', 'I will get back to you soon!', 're-wrtie']
+    },
+    kor:{
+        message: ['메시지 감사합니다!', '곧 연락드리겠습니다!', '다시 작성하기']
+    }
+}
