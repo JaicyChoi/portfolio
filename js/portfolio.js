@@ -2,8 +2,8 @@ setTimeout( () => {
     document.body.style.minHeight = '1450px';
 }, 1500);
 
-const img = document.querySelectorAll('.preview_img');
-const preview = document.querySelectorAll('.preview_img p');
+const img = document.querySelectorAll('.list');
+const preview = document.querySelectorAll('.list p');
 const view_portfolio = document.querySelectorAll('.view_portfolio');
 
 img.forEach(img => img.childNodes[1].addEventListener('mouseenter', () => {
@@ -27,7 +27,8 @@ img.forEach(img => img.addEventListener('mouseleave', () => {
 ));
 
 img.forEach(img => img.firstElementChild.addEventListener('click', () => {
-        img.classList.remove('preview_img'); img.classList.add('preview_img_click');
+        img.classList.remove('preview_img');
+
         const nav_bg = document.querySelector('#nav_bg');
 
         nav_bg.style.zIndex = '-1';
@@ -194,7 +195,11 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         close_btn.addEventListener('mouseenter',  () => { cursor.classList.add('select'); });
         close_btn.addEventListener('mouseleave',  () => { cursor.classList.remove('select'); });
         close_btn.addEventListener('click',  () => {
-            setTimeout( () => { img.firstElementChild.style.position = 'relative';  content.classList.remove('blur') }, 700);
+            setTimeout( () => {
+                img.firstElementChild.style.position = 'relative';
+                content.classList.remove('blur');
+                img.classList.add('preview_img');
+            }, 700);
             setTimeout( () => { document.body.removeChild(view_portfolio); }, 1000);
             view_portfolio.classList.remove('down');
             cursor.classList.remove('select');
@@ -202,7 +207,6 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             img.firstElementChild.classList.remove('view');
             nav_bg.style.position = 'fixed';
             nav_bg.style.zIndex = '3';
-            img.classList.add('preview_img'); img.classList.remove('preview_img_click');//what the error point?
         });            
     }
 ));
