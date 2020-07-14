@@ -166,6 +166,7 @@ menu_btn.addEventListener('click', () => {
         menu_click = true;
         nav.classList.add('show');
         content.classList.add('blur');
+        language_option.classList.add('blur');
         li.forEach(li => li.classList.add('pop'));
         cursor.classList.remove('hide');
     }
@@ -180,6 +181,7 @@ menu_btn.addEventListener('click', () => {
         menu_btn.classList.remove('click');
         menu_click = false;
         nav.classList.remove('show');
+        language_option.classList.remove('blur');
         content.classList.remove('blur');
         li.forEach(li => li.classList.remove('pop'));
         if( window.location.href.indexOf('index') > 0 )
