@@ -240,6 +240,7 @@ body.scroll_fix{
 /*     background: green; */
 }
 #logo.kor{
+	line-height: 77px;
 	letter-spacing: -7px;
 }
 #logo a{
