@@ -1,5 +1,6 @@
-// if( localStorage.getItem('hash') === null ) localStorage.setItem('hash', '#eng');
-// if( localStorage.getItem('site_mode') === null ) localStorage.setItem('site_mode', 'light');
+setTimeout( () => {
+    document.body.style.minHeight = '1450px';
+}, 1500);
 
 const img = document.querySelectorAll('.preview_img');
 const preview = document.querySelectorAll('.preview_img p');
@@ -26,6 +27,7 @@ img.forEach(img => img.addEventListener('mouseleave', () => {
 ));
 
 img.forEach(img => img.firstElementChild.addEventListener('click', () => {
+        img.classList.remove('preview_img'); img.classList.add('preview_img_click');
         const nav_bg = document.querySelector('#nav_bg');
 
         nav_bg.style.zIndex = '-1';
@@ -68,7 +70,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
 
         let achievements = document.createElement('div');
         let achievements_title = document.createElement('p'); achievements_title.classList.add('info_title'); achievements_title.innerText = 'Achievements';
-        let achievements_text = document.createElement('p'); achievements_text.classList.add('info_text'); achievements_text.innerText = project.project_info[0].aim;
+        let achievements_text = document.createElement('p'); achievements_text.classList.add('info_text'); achievements_text.innerHTML = project.project_info[0].achievements;
         achievements.appendChild(achievements_title); achievements.appendChild(achievements_text);
 
         project_info.appendChild(about); project_info.appendChild(aim); project_info.appendChild(achievements);
@@ -200,6 +202,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             img.firstElementChild.classList.remove('view');
             nav_bg.style.position = 'fixed';
             nav_bg.style.zIndex = '3';
+            img.classList.add('preview_img'); img.classList.remove('preview_img_click');//what the error point?
         });            
     }
 ));

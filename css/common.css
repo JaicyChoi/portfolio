@@ -2,6 +2,7 @@
 @font-face { font-family: 'NanumBarunpen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 body{
+	position: relative;
     cursor: none;
     width: 100%;
     height: 100vh;
@@ -244,7 +245,7 @@ body.scroll_fix{
 }
 #logo.kor{
     line-height: 77px;
-	letter-spacing: -7px;
+    letter-spacing: -7px;
 }
 #logo a{
     cursor: none;
