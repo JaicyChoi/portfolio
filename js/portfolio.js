@@ -27,16 +27,16 @@ img.forEach(img => img.addEventListener('mouseleave', () => {
 ));
 
 img.forEach(img => img.firstElementChild.addEventListener('click', () => {
+        let scrolltop = document.scrollingElement.scrollTop;
         img.classList.remove('preview_img');
 
         const nav_bg = document.querySelector('#nav_bg');
 
-        nav_bg.style.zIndex = '-1';
         img.firstElementChild.style.position = 'absolute';
         img.firstElementChild.classList.add('view');
         content.classList.add('blur');
+        nav_bg.classList.add('blur');
 //setTimeout 1
-        nav_bg.style.position = 'absolute';
 
         let project;
 
@@ -134,7 +134,8 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
 
         view_portfolio.appendChild(view_inner);
         document.body.insertBefore(view_portfolio, document.body.lastElementChild.previousElementSibling);
-        
+        top_preview.scrollIntoView({behavior: 'smooth'});
+
         setTimeout( () => { view_portfolio.classList.add('down'); }, 1);
         
         if( getNodeindex(img) === 0 ){
@@ -197,16 +198,17 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         close_btn.addEventListener('click',  () => {
             setTimeout( () => {
                 img.firstElementChild.style.position = 'relative';
+                language_option.classList.remove('blur');
                 content.classList.remove('blur');
                 img.classList.add('preview_img');
             }, 700);
             setTimeout( () => { document.body.removeChild(view_portfolio); }, 1000);
+            window.scrollTo({top: scrolltop, left: 0, behavior: 'smooth'});
             view_portfolio.classList.remove('down');
             cursor.classList.remove('select');
             document.body.removeChild(go_top);
             img.firstElementChild.classList.remove('view');
-            nav_bg.style.position = 'fixed';
-            nav_bg.style.zIndex = '3';
+            nav_bg.classList.remove('blur');
         });            
     }
 ));

@@ -149,6 +149,11 @@ body.scroll_fix{
     color: white;
     z-index: 3;
 }
+#nav_bg.blur{
+    position: absolute;
+    z-index: -1;
+	filter: blur(10px);
+}
 #nav_bg.view_portfolio{
     position: absolute;
     z-index: -1;

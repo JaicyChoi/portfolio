@@ -54,7 +54,7 @@ let PROJECT_DATA = {
             {
                 project_id: 'portfolio',
                 project_title: [
-                    'Portfolio', 'plannig, web design and publishing'
+                    'Profile Page', 'plannig, web design and publishing'
                 ],
                 project_info: [
                     {
@@ -131,7 +131,7 @@ let PROJECT_DATA = {
             {
                 project_id: 'portfolio',
                 project_title: [
-                    'Portfolio', '기획, 웹 디자인, 퍼블리싱'
+                    'Profile Page', '기획, 웹 디자인, 퍼블리싱'
                 ],
                 project_info: [
                     {
