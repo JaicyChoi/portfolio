@@ -282,29 +282,18 @@
     cursor: none;
     transition: all .5s ease;
     padding: 0 0 15px 15px;
+    margin-right: 15px;
 }
 .view_file a.dark_mode{
     color: white;
 }
-.view_file a:first-child{
-    margin-right: 10px;
+.view_file a:last-child{
+    margin-right: 0px;
 }
 .view_file a:hover{
     color: #909090;
 }
-.view_file a:first-child:after{
-    content: '';
-    position: relative;
-    display: inline-block;
-    top: 3px;
-    margin-left: 7px;
-    width: 13px;
-    height: 13px;
-    background: url(../images/download.png) no-repeat;
-    background-size: contain;
-/*     animation: shakeAnimate .7s infinite; */
-}
-.view_file a:last-child:after{
+.view_file a:nth-child(n):after{
     content: '';
     position: relative;
     display: inline-block;

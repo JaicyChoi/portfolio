@@ -425,6 +425,10 @@ body.scroll_fix{
     border: 2px solid #909090;
     cursor: none;
 }
+.label.blur{
+	z-index: -1;
+    filter: blur(10px)
+}
 #light_icon{
     position: absolute;
     right: 4px;

@@ -29,12 +29,14 @@ img.forEach(img => img.addEventListener('mouseleave', () => {
 img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         let scrolltop = document.scrollingElement.scrollTop;
         img.classList.remove('preview_img');
-
+        // let mode_btn_top = mode_btn.getBoundingClientRect().top;
+        const label = document.querySelector('.label');
         const nav_bg = document.querySelector('#nav_bg');
 
         img.firstElementChild.style.position = 'absolute';
         img.firstElementChild.classList.add('view');
         content.classList.add('blur');
+        label.classList.add('blur');
         nav_bg.classList.add('blur');
 //setTimeout 1
 
@@ -137,26 +139,44 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         top_preview.scrollIntoView({behavior: 'smooth'});
 
         setTimeout( () => { view_portfolio.classList.add('down'); }, 1);
-        
-        if( getNodeindex(img) === 0 ){
-            const a =  document.querySelectorAll('.view_file a');
-            
-            if( localStorage.getItem('site_mode') === 'dark' )
-                a.forEach(a => a.classList.add('dark_mode'));
-            else
-                a.forEach(a => a.classList.remove('dark_mode'));
 
-            a.forEach(a => a.addEventListener( 'mouseenter' , () => {
-                cursor.classList.add('select');
-                let file_view = document.head.appendChild(document.createElement('style'));
-                file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: updownAnimate .9s infinite; }';
-            }));
-            a.forEach(a => a.addEventListener( 'mouseleave' , () => {
-                cursor.classList.remove('select');
-                let file_view = document.head.appendChild(document.createElement('style'));
-                file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: none; }';
-            }));
-        }
+        const a =  document.querySelectorAll('.view_file a');
+        
+        if( localStorage.getItem('site_mode') === 'dark' )
+            a.forEach(a => a.classList.add('dark_mode'));
+        else
+            a.forEach(a => a.classList.remove('dark_mode'));
+
+        a.forEach(a => a.addEventListener( 'mouseenter' , () => {
+            cursor.classList.add('select');
+            let file_view = document.head.appendChild(document.createElement('style'));
+            file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: updownAnimate .9s infinite; }';
+        }));
+        a.forEach(a => a.addEventListener( 'mouseleave' , () => {
+            cursor.classList.remove('select');
+            let file_view = document.head.appendChild(document.createElement('style'));
+            file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: none; }';
+        }));
+
+        // if( getNodeindex(img) === 0 ){
+        //     const a =  document.querySelectorAll('.view_file a');
+            
+        //     if( localStorage.getItem('site_mode') === 'dark' )
+        //         a.forEach(a => a.classList.add('dark_mode'));
+        //     else
+        //         a.forEach(a => a.classList.remove('dark_mode'));
+
+        //     a.forEach(a => a.addEventListener( 'mouseenter' , () => {
+        //         cursor.classList.add('select');
+        //         let file_view = document.head.appendChild(document.createElement('style'));
+        //         file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: updownAnimate .9s infinite; }';
+        //     }));
+        //     a.forEach(a => a.addEventListener( 'mouseleave' , () => {
+        //         cursor.classList.remove('select');
+        //         let file_view = document.head.appendChild(document.createElement('style'));
+        //         file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: none; }';
+        //     }));
+        // }
 
         let go_top = document.createElement('div'); go_top.classList.add('go_top');
         document.body.appendChild(go_top);
@@ -203,12 +223,13 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
                 img.classList.add('preview_img');
             }, 700);
             setTimeout( () => { document.body.removeChild(view_portfolio); }, 1000);
-            window.scrollTo({top: scrolltop, left: 0, behavior: 'smooth'});
             view_portfolio.classList.remove('down');
             cursor.classList.remove('select');
             document.body.removeChild(go_top);
             img.firstElementChild.classList.remove('view');
+            label.classList.remove('blur');
             nav_bg.classList.remove('blur');
+            window.scrollTo({top: scrolltop, left: 0, behavior: 'smooth'});
         });            
     }
 ));
