@@ -1,14 +1,14 @@
 #arrow_btn{
     position: fixed;
-    right: 15px;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
-/*     background-color: blue; */
     z-index: 2;
     height: 65px;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+    padding: 15px;
 }
 #prev_btn{
     width: 25px;
@@ -53,11 +53,10 @@ section:before{
 }
 #svg_wrapper{
     position: absolute;
-    width: 638px;
+    width: 688px;
     left: 50%;
     top: 44%;
     transform: translate(-50%, -50%);
-/*     background-color: blue; */
 }
 svg text{
     stroke: white;
@@ -66,6 +65,7 @@ svg text{
     font-family: 'Monoton', cursive;
     fill:white;
     opacity: 0;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 1), 0px 0px 7px rgba(255, 255, 255, 0.7), 0px 0px 20px rgba(255, 255, 255, 0.5), 0px 0px 30px rgba(255, 255, 255, 0.3);
 }
 svg text.visible{
     opacity: 1;
