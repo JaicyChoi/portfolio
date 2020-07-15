@@ -33,7 +33,7 @@
     top: 0;
     left: 0;
     width: 570px;
-    background: url(../images/portfolio_0.png) no-repeat;
+    background: url(../images/portfolio_0.jpg) no-repeat;
     background-size: cover;
     transition: all .7s ease;
     opacity: 1;
@@ -44,7 +44,7 @@
     height: 350px;
     top: -300px;
     left: -25px;
-    background: url(../images/tobe_preview.png) no-repeat center;
+    background: url(../images/tobe_preview.jpg) no-repeat center;
     background-size: cover;
     z-index: 1;
     transition: all .6s ease;
@@ -55,7 +55,7 @@
     top: 0;
     right: 0;
     width: 570px;
-    background: url(../images/portfolio_1.png) no-repeat;
+    background: url(../images/portfolio_1.jpg) no-repeat;
     background-size: cover;
     transition: all .7s ease;
     opacity: 1;
@@ -66,7 +66,7 @@
     right: -25px;
     height: 350px;
     top: -300px;
-    background: url(../images/samueladams_preview.png) no-repeat center;
+    background: url(../images/samueladams_preview.jpg) no-repeat center;
     background-size: cover;
     transition: all .6s ease-out;
     opacity: 0;

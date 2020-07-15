@@ -48,7 +48,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         let view_portfolio = document.createElement('section'); view_portfolio.classList.add('view_portfolio');
         let view_inner = document.createElement('div'); view_inner.classList.add('view_inner');
         let top_preview = document.createElement('div'); top_preview.classList.add('top_preview');
-        top_preview.style.cssText = 'background: url(images/' + project.project_id + '_preview.png) no-repeat center; background-size: cover;'
+        top_preview.style.cssText = 'background: url(images/' + project.project_id + '_preview.jpg) no-repeat center; background-size: cover;'
         let close_btn = document.createElement('span'); close_btn.classList.add('close_btn');
         let description_box = document.createElement('div'); description_box.classList.add('description_box');
         
