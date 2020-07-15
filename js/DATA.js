@@ -14,7 +14,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/PhysicalScentedErmine',
-                project_link: 'https://jaicychoi.github.io/tobe/',
+                project_link: 'https://jaicychoi.github.io/tobe',
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
                     {
