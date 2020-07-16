@@ -1,3 +1,35 @@
+let MAIN_TEXT = {
+    eng: [
+        'I\'m CHOI YOOJUNG.<br/>I\'m ready now.',
+        'Discover',
+        'Find out more',
+        'Get in touch me!'
+    ],
+    kor: [
+        '안녕하세요, 최유정입니다.<br/>방문을 환영합니다.',
+        '보러가기',
+        '알아보기',
+        '연락하기'
+    ]
+}
+
+let PROJECT_PREVIEW = {
+    eng:{
+        description: [
+            'Beer recommendation and user review',
+            'Beer promotion page',
+            'Web page for portfolio'
+        ]
+    },
+    kor: {
+        description: [
+            '맥주 추천/리뷰, 사용자간 의견 공유',
+            '맥주 프로모션 페이지',
+            '자기소개 웹 페이지'
+        ]
+    }
+}
+
 let PROJECT_DATA = {
     eng:{
         project_1:[
@@ -184,9 +216,13 @@ let ABOUT_DATA = {
 
 let CONTACT = {
     eng:{
-        message: ['Thanks for contacting me!', 'I will get back to you soon!', 're-wrtie']
+        placeholder: ['your name', 'e-mail', 'tell me anything'],
+        message: ['Thanks for contacting me!', 'I will get back to you soon!', 're-wrtie'],
+        submit: 'Submit'
     },
     kor:{
-        message: ['메시지 감사합니다!', '곧 연락드리겠습니다!', '다시 작성하기']
+        placeholder: ['이름', '이메일', '무엇이든 이야기 해주세요'],
+        message: ['메시지 감사합니다!', '곧 연락드리겠습니다!', '다시 작성하기'],
+        submit: '보내기'
     }
 }

@@ -14,6 +14,44 @@ for( let i = 0 ; i < section.length; i++ ){
     else section[i].style.cssText = 'background: url(images/main_' + i + '.jpg) no-repeat center; background-size: cover; background-attachment: fixed;';
 }
 
+setTimeout( () => { main_visual_text.style.cssText = 'transition-delay: 0s;' }, 4000);
+
+const main_button = document.querySelectorAll('.main_button');
+let main_text;
+
+if( localStorage.getItem('hash') === '#kor' ) main_text = MAIN_TEXT.kor;
+else main_text = MAIN_TEXT.eng;
+
+text_setting();
+
+function text_setting(){
+    if(  localStorage.getItem('hash') === '#kor' ){
+        main_visual_text.classList.add('kor');
+        main_button.forEach(button => button.classList.add('kor'));
+    }
+    else{
+        main_visual_text.classList.remove('kor');
+        main_button.forEach(button => button.classList.remove('kor'));
+    }
+
+    main_visual_text.innerHTML = main_text[0];
+    for( let i = 0 ; i < main_button.length ; i++ )
+        main_button[i].innerText = main_text[i+1];
+}
+
+eng.addEventListener('click', () => {
+    main_text = MAIN_TEXT.eng;
+    main_visual_text.style.transition = 'none';
+    text_setting();
+    setTimeout( () => {main_visual_text.style.transition = 'all 2s ease';}, 1000 );
+});
+kor.addEventListener('click', () => {
+    main_text = MAIN_TEXT.kor;
+    main_visual_text.style.transition = 'none';
+    text_setting();
+    setTimeout( () => {main_visual_text.style.transition = 'all 2s ease';}, 1000 );
+});
+
 const toggleText = (index, state) => {
     if( index === 0 ) return;
     if (state === 'show')
@@ -90,9 +128,10 @@ window.addEventListener('scroll', () => {
     }
     else if( offset >= section[0].offsetHeight * 0.5 ){
         typingText(1, 'hide');
-        toggleText(2, 'hide'); toggleText(3, 'hide'); main_visual_text.classList.remove('show'); toggleText(1, 'show');
+        toggleText(2, 'hide'); toggleText(3, 'hide'); toggleText(1, 'show');
         typingText(0, 'show');
         index = 1;
+        main_visual_text.classList.remove('show');
         text.classList.remove('visible');
         prev_btn.classList.add('visible');
     }
@@ -105,9 +144,8 @@ window.addEventListener('scroll', () => {
             prev_btn.classList.remove('visible');
         }
     }
+    if( offset === 0 ) section[0].style.cssText = 'background: url(images/main_0.jpg) no-repeat  center; background-size: contain; background-color: black;';
 });
-
-const main_button = document.querySelectorAll('.main_button');
 
 main_button.forEach(button => button.addEventListener('mouseenter', () => {
     cursor.classList.remove('hide');

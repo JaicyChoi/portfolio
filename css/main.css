@@ -44,6 +44,9 @@ section{
     width: 100%;
     height: 100vh;
 }
+section:first-child{
+    transition: all .5s ease;
+}
 section:before{
     content: '';
     position: absolute;
@@ -92,7 +95,7 @@ svg text.visible{
     top: 56.5%;
     transform:translate(-50%, -50%);
     color: white;
-    font-family: 'Rasa', serif;
+    font-family: 'Rasa', 'NanumBarunpen', serif;
     font-size: 1.75em;
     font-weight: 300;
 /*     background-color: red; */
@@ -100,7 +103,11 @@ svg text.visible{
     line-height: 1.15em;
     opacity: 0;
     transition: all 2s ease;
-    transition-delay: 1.7s;
+    transition-delay: 2s;
+}
+#main_visual_text.kor{
+    font-size: 1.5em;
+    line-height: 1.35em;
 }
 #main_visual_text.show{
     opacity: 1;
@@ -176,12 +183,15 @@ svg text.visible{
     width: 210px;
     height: 45px;
     border-radius: 25px;
-    font-family: 'Rasa', serif;
+    font-family: 'Rasa', 'NanumBarunpen', serif;
     font-size: 1.25em;
     cursor: none;
     color: black;
     line-height: 45px;
     transition: all .5s linear;
+}
+.main_button.kor{
+    line-height: 50px;
 }
 .main_button:focus{
     outline: none;

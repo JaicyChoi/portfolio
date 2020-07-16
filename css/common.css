@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Megrim&family=Monoton&family=Rasa:wght@300;400;500;600&family=Ubuntu+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600&family=Nanum+Gothic:wght@400;700&display=swap');
 @font-face { font-family: 'NanumBarunpen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BBTreeGL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGL.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 body{
 	position: relative;
@@ -424,10 +425,11 @@ body.scroll_fix{
     background-color: white;
     border: 2px solid #909090;
     cursor: none;
+    transition: all .3s ease-out;
 }
 .label.blur{
 	z-index: -1;
-    filter: blur(10px)
+    filter: blur(10px);
 }
 #light_icon{
     position: absolute;

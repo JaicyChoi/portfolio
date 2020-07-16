@@ -166,6 +166,8 @@ menu_btn.addEventListener('click', () => {
         menu_click = true;
         nav.classList.add('show');
         content.classList.add('blur');
+        if( window.location.href.indexOf('index') === -1 && window.location.href.length > 38 )
+            document.querySelector('label').classList.add('blur');
         language_option.classList.add('blur');
         li.forEach(li => li.classList.add('pop'));
         cursor.classList.remove('hide');
@@ -181,6 +183,8 @@ menu_btn.addEventListener('click', () => {
         menu_btn.classList.remove('click');
         menu_click = false;
         nav.classList.remove('show');
+        if( window.location.href.indexOf('index') === -1 && window.location.href.length > 38 )
+            document.querySelector('label').classList.remove('blur');
         language_option.classList.remove('blur');
         content.classList.remove('blur');
         li.forEach(li => li.classList.remove('pop'));

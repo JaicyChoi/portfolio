@@ -4,7 +4,27 @@ setTimeout( () => {
 
 const img = document.querySelectorAll('.list');
 const preview = document.querySelectorAll('.list p');
-const view_portfolio = document.querySelectorAll('.view_portfolio');
+const description = document.querySelectorAll('.portfolio_description');
+let description_text;
+// const view_portfolio = document.querySelectorAll('.view_portfolio');
+
+if( localStorage.getItem('hash') === '#kor' ) description_text = PROJECT_PREVIEW.kor.description;
+else description_text = PROJECT_PREVIEW.eng.description;
+
+change_description();
+
+function change_description(){
+    for( let i = 0 ; i < description.length; i++ )
+        description[i].innerText = description_text[i];
+}
+eng.addEventListener('click', () => {
+    description_text = PROJECT_PREVIEW.eng.description;
+    change_description();
+});
+kor.addEventListener('click', () => {
+    description_text = PROJECT_PREVIEW.kor.description;
+    change_description();
+});
 
 img.forEach(img => img.childNodes[1].addEventListener('mouseenter', () => {
         img.childNodes[1].classList.add('color');
@@ -42,7 +62,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
 
         let project;
 
-        if( localStorage.getItem('hash') === '#kor')
+        if( localStorage.getItem('hash') === '#kor' )
             project = PROJECT_DATA.kor[Object.keys(PROJECT_DATA.kor)[getNodeindex(img)]][0];
         else
             project = PROJECT_DATA.eng[Object.keys(PROJECT_DATA.eng)[getNodeindex(img)]][0];
@@ -157,26 +177,6 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             let file_view = document.head.appendChild(document.createElement('style'));
             file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: none; }';
         }));
-
-        // if( getNodeindex(img) === 0 ){
-        //     const a =  document.querySelectorAll('.view_file a');
-            
-        //     if( localStorage.getItem('site_mode') === 'dark' )
-        //         a.forEach(a => a.classList.add('dark_mode'));
-        //     else
-        //         a.forEach(a => a.classList.remove('dark_mode'));
-
-        //     a.forEach(a => a.addEventListener( 'mouseenter' , () => {
-        //         cursor.classList.add('select');
-        //         let file_view = document.head.appendChild(document.createElement('style'));
-        //         file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: updownAnimate .9s infinite; }';
-        //     }));
-        //     a.forEach(a => a.addEventListener( 'mouseleave' , () => {
-        //         cursor.classList.remove('select');
-        //         let file_view = document.head.appendChild(document.createElement('style'));
-        //         file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: none; }';
-        //     }));
-        // }
 
         let go_top = document.createElement('div'); go_top.classList.add('go_top');
         document.body.appendChild(go_top);

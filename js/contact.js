@@ -6,11 +6,42 @@
 //     else
 //         document.querySelector('#contact_method').classList.remove('hide_bottom');
 // });
-let thankyou_message = document.querySelector('.thankyou_message');
+const input = document.querySelectorAll('#form_elements input');
+const textarea = document.querySelector('textarea');
+const submit = document.querySelector('button');
 let message;
-
 if( localStorage.getItem('hash') === '#kor' ) message = CONTACT.kor;
 else message = CONTACT.eng;
+
+placeholder_setting();
+
+function placeholder_setting(){
+    input[0].placeholder = message.placeholder[0];
+    input[1].placeholder = message.placeholder[1];
+    textarea.placeholder = message.placeholder[2];
+    submit.innerText = message.submit;
+}
+input.forEach(input => input.addEventListener('mouseenter', () => {
+    cursor.classList.add('hide');
+}));
+input.forEach(input => input.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hide');
+}));
+textarea.addEventListener('mouseenter', () => { cursor.classList.add('hide'); });
+textarea.addEventListener('mouseleave', () => { cursor.classList.remove('hide'); });
+submit.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
+submit.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+
+for( let i = 0 ; i < input.length ; i++ )
+    input[i].addEventListener('focus', () => { input[i].placeholder = ''; });
+
+textarea.addEventListener('focus', () => { textarea.placeholder = ''; });
+
+input[0].addEventListener('blur', () => { input[0].placeholder = message.placeholder[0]; });
+input[1].addEventListener('blur', () => { input[1].placeholder = message.placeholder[1]; });
+textarea.addEventListener('blur', () => { textarea.placeholder = message.placeholder[2] });
+
+let thankyou_message = document.querySelector('.thankyou_message');
 
 let message1 = document.createElement('span');
 let message2 = document.createElement('span');
@@ -38,46 +69,24 @@ function change_mode(){
         document.querySelector('.thankyou_message').classList.remove('dark_mode');
 }
 
-function change_language(){
-    if( localStorage.getItem('hash') === '#kor' ) message = CONTACT.kor;
-    else message = CONTACT.eng;
-}
+// function change_language(){
+//     if( localStorage.getItem('hash') === '#kor' ) message = CONTACT.kor;
+//     else message = CONTACT.eng;
+// }
 eng.addEventListener('click', () => {
     message = CONTACT.eng;
+    placeholder_setting();
     insertText();
 });
 kor.addEventListener('click', () => {
     message = CONTACT.kor;
+    placeholder_setting();
     insertText();
 });
 
 mode.addEventListener('click', () => { 
     change_mode();
 });
-
-const input = document.querySelectorAll('#form_elements input');
-const textarea = document.querySelector('textarea');
-const submit = document.querySelector('button');
-
-input.forEach(input => input.addEventListener('mouseenter', () => {
-    cursor.classList.add('hide');
-}));
-input.forEach(input => input.addEventListener('mouseleave', () => {
-    cursor.classList.remove('hide');
-}));
-textarea.addEventListener('mouseenter', () => { cursor.classList.add('hide'); });
-textarea.addEventListener('mouseleave', () => { cursor.classList.remove('hide'); });
-submit.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
-submit.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
-
-for( let i = 0 ; i < input.length ; i++ )
-    input[i].addEventListener('focus', () => { input[i].placeholder = ''; });
-
-textarea.addEventListener('focus', () => { textarea.placeholder = ''; });
-
-input[0].addEventListener('blur', () => { input[0].placeholder = 'your name'; });
-input[1].addEventListener('blur', () => { input[1].placeholder = 'e-mail'; });
-textarea.addEventListener('blur', () => { textarea.placeholder = 'tell me anything' });
 
 const loading = document.querySelector('#loading');
 
