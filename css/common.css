@@ -426,6 +426,7 @@ body.scroll_fix{
     border: 2px solid #909090;
     cursor: none;
     transition: all .3s ease-out;
+    z-index: 1;
 }
 .label.blur{
 	z-index: -1;

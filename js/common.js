@@ -1,3 +1,5 @@
+document.body.classList.add('scroll_fix');
+
 let data_reload = document.querySelectorAll('[data-reload]');
 
 if( localStorage.getItem('hash') === null ) localStorage.setItem('hash', '#eng');
@@ -64,6 +66,7 @@ setTimeout( () => {
     setTimeout( () => {
         document.body.classList.add('load_complete');
         document.body.removeChild(document.querySelector('.loader_wrapper'));
+        document.body.classList.remove('scroll_fix');
     }, 1000);
 }, 1500);
 
