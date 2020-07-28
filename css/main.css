@@ -54,6 +54,28 @@ section:before{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.55);
 }
+#vanilla{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Rasa', 'BBTreeGL', serif;
+    font-size: 0.9em;
+    opacity: 1;
+    animation: blinkAnimate 7s ease-in-out infinite;
+}
+#vanilla.eng{
+    font-size: 1em;
+}
+@keyframes blinkAnimate{
+    25%, 75%{
+        opacity: 1;
+    }
+    0%, 50%, 100%{
+        opacity: 0.1;
+    }
+}
 #svg_wrapper{
     position: absolute;
     width: 688px;

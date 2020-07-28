@@ -1,3 +1,8 @@
+let VANILLA = {
+    eng: 'This site is coded with pure JavaScript',
+    kor: '이 사이트는 순수 자바스크립트로 코딩되었습니다.'
+}
+
 let MAIN_TEXT = {
     eng: [
         'I\'m CHOI YOOJUNG.<br/>I\'m ready now.',

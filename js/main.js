@@ -7,6 +7,7 @@ const prev_btn = document.querySelector('#prev_btn');
 const next_btn = document.querySelector('#next_btn');
 const typing_text = document.querySelectorAll('.main_subtitle p');
 const text = document.querySelector('svg text');
+const vanilla = document.querySelector('#vanilla');
 let index = 0;
 
 for( let i = 0 ; i < section.length; i++ ){
@@ -17,35 +18,46 @@ for( let i = 0 ; i < section.length; i++ ){
 setTimeout( () => { main_visual_text.style.cssText = 'transition-delay: 0s;' }, 4000);
 
 const main_button = document.querySelectorAll('.main_button');
-let main_text;
+let main_text, vanilla_text;
 
-if( localStorage.getItem('hash') === '#kor' ) main_text = MAIN_TEXT.kor;
-else main_text = MAIN_TEXT.eng;
+if( localStorage.getItem('hash') === '#kor' ){
+    vanilla_text = VANILLA.kor;
+    main_text = MAIN_TEXT.kor;
+}
+else{
+    vanilla_text = VANILLA.eng;
+    main_text = MAIN_TEXT.eng;
+}
 
 text_setting();
 
 function text_setting(){
     if(  localStorage.getItem('hash') === '#kor' ){
+        vanilla.classList.remove('eng');
         main_visual_text.classList.add('kor');
         main_button.forEach(button => button.classList.add('kor'));
     }
     else{
+        vanilla.classList.add('eng');
         main_visual_text.classList.remove('kor');
         main_button.forEach(button => button.classList.remove('kor'));
     }
 
+    vanilla.innerText = vanilla_text;
     main_visual_text.innerHTML = main_text[0];
     for( let i = 0 ; i < main_button.length ; i++ )
         main_button[i].innerText = main_text[i+1];
 }
 
 eng.addEventListener('click', () => {
+    vanilla_text = VANILLA.eng;
     main_text = MAIN_TEXT.eng;
     main_visual_text.style.transition = 'none';
     text_setting();
     setTimeout( () => {main_visual_text.style.transition = 'all 2s ease';}, 1000 );
 });
 kor.addEventListener('click', () => {
+    vanilla_text = VANILLA.kor;
     main_text = MAIN_TEXT.kor;
     main_visual_text.style.transition = 'none';
     text_setting();
