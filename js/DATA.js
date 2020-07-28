@@ -1,5 +1,5 @@
 let VANILLA = {
-    eng: 'This site is coded with pure JavaScript',
+    eng: 'This site is coded with pure JavaScript.',
     kor: '이 사이트는 순수 자바스크립트로 코딩되었습니다.'
 }
 
