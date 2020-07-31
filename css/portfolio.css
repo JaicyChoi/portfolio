@@ -280,7 +280,7 @@
     cursor: none;
     transition: all .5s ease;
     padding: 0 0 15px 15px;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 .view_file a.dark_mode{
     color: white;
