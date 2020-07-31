@@ -50,7 +50,7 @@ let PROJECT_DATA = {
                         achievements: 'Understanding of the overall flow from planning to design and coding.<br/>Understanding of standard and responsive design'
                     }
                 ],
-                video: 'https://gfycat.com/ifr/PhysicalScentedErmine',
+                video: 'https://gfycat.com/ifr/NimblePastBlackpanther',
                 project_link: 'https://jaicychoi.github.io/tobe',
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
@@ -127,7 +127,7 @@ let PROJECT_DATA = {
                         achievements: '기획부터 코딩에 이르기까지의 전반적인 흐름의 이해,<br/>표준형과 반응형을 고려한 디자인에 대한 이해'
                     }
                 ],
-                video: 'https://gfycat.com/ifr/PhysicalScentedErmine',
+                video: 'https://gfycat.com/ifr/NimblePastBlackpanther',
                 project_link:  'https://jaicychoi.github.io/tobe',
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
