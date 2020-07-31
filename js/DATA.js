@@ -75,7 +75,7 @@ let PROJECT_DATA = {
                         achievements: 'I realized that creating a smooth animation effect with vanilla JavaScript without a plugin is a bit difficult,<br/>Overall understanding of scroll animation behavior'
                     }
                 ],
-                video: 'https://gfycat.com/ifr/SneakyPoliteKagu',
+                video: 'https://gfycat.com/ifr/UntimelyCoordinatedDodo',
                 project_link: 'https://jaicychoi.github.io/samueladams',
                 github: 'https://github.com/JaicyChoi/samueladams',
                 languages: [
@@ -152,7 +152,7 @@ let PROJECT_DATA = {
                         achievements: '플러그인이 없이 바닐라 자바스크립트로 부드러운 애니메이션 효과를 만드는 것에 대한 난해함.<br/>스크롤 애니메이션 동작에 대한 전반적인 이해.'
                     }
                 ],
-                video: 'https://gfycat.com/ifr/SneakyPoliteKagu',
+                video: 'https://gfycat.com/ifr/UntimelyCoordinatedDodo',
                 project_link: 'https://jaicychoi.github.io/samueladams',
                 github: 'https://github.com/JaicyChoi/samueladams',
                 languages: [
