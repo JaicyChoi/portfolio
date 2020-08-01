@@ -247,15 +247,15 @@ if( window.location.href.indexOf('index') === -1 && window.location.href.length 
     function star(){
         let count = 500;
         let generate_star = 0;
-        while( generate_star< count ){
+        while( generate_star < count ){
             let star = document.createElement('generate_star');
             let x = Math.floor(Math.random() * window.innerWidth);
-            let y = Math.floor(Math.random() * window.innerHeight);
+            // let y = Math.floor(Math.random() * window.innerHeight);
             let duration = Math.random() * 15;
             let size = Math.random() * 2;
  
             star.style.left = x + 'px';
-            star.style.stop = y + 'px';
+            // star.style.top = y + 'px';
             star.style.width = size + 'px';
             star.style.height = size + 'px';
  
