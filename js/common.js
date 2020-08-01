@@ -13,7 +13,7 @@ if( localStorage.getItem('site_mode') === null ) localStorage.setItem('site_mode
 const cursor = document.querySelector('#cursor');
 cursor.classList.add('hide');
 
-if( window.location.href.indexOf('index') === -1 && window.location.href.length > 38 ){
+if( document.title !== 'CYJ' === -1 && window.location.href.length > 38 ){
     if( localStorage.getItem('site_mode') === 'light' ){
         document.querySelector('#mode').removeAttribute('checked');
         document.body.classList.remove('dark_mode');
@@ -226,7 +226,7 @@ characters.forEach((char, index) => {
     cursor.appendChild(charElement);
 });
 
-if( window.location.href.indexOf('index') === -1 && window.location.href.length > 38 ){
+if( document.title !== 'CYJ' && window.location.href.length > 38 ){
     const mode = document.querySelector('#mode');
     const label = document.querySelector('.label');
 
