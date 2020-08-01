@@ -12,9 +12,8 @@ const others = document.querySelectorAll('.others');
 let about;
 let index = 0;
 
-//icon_wrapper scroll시 오른쪽->왼쪽으로 등장 애니메이션 만들기.
 window.addEventListener('scroll', () => { 
-    console.log(window.pageYOffset);
+    // console.log(window.pageYOffset);
     if( window.pageYOffset >= 180 ){
         let line_before = document.head.appendChild(document.createElement('style'));
         line_before.innerHTML = '#intro_text:before{ content: ""; animation: lineAnimate 2s linear; }'
