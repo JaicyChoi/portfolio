@@ -100,14 +100,14 @@ let PROJECT_DATA = {
                         achievements: 'Understanding process the creating dynamic elements as them needed.<br/>How to use various visual effects and animations, including svg animations.'
                     }
                 ],
-                video: 'https://gfycat.com/ifr/HopefulIllAardvark',
+                video: 'https://gfycat.com/ifr/PersonalUncomfortableGarpike',
                 project_link: 'https://jaicychoi.github.io/portfolio',
                 github: 'https://github.com/JaicyChoi/portfolio',
                 languages: [
                     {
-                        CSS: 32.2,
-                        HTML: 12.1,
-                        JavaScript: 55.7
+                        CSS: 31.2,
+                        HTML: 19.1,
+                        JavaScript: 49.7
                     }
                 ]
             }
@@ -177,14 +177,14 @@ let PROJECT_DATA = {
                         achievements: '필요에 따른 동적 요소 생성 과정에 대한 이해.<br/>svg 애니메이션을 포함한 다양한 시각적 효과 및 애니메이션 학습.'
                     }
                 ],
-                video: 'https://gfycat.com/ifr/HopefulIllAardvark',
+                video: 'https://gfycat.com/ifr/PersonalUncomfortableGarpike',
                 project_link: 'https://jaicychoi.github.io/portfolio',
                 github: 'https://github.com/JaicyChoi/portfolio',
                 languages: [
                     {
-                        CSS: 32.2,
-                        HTML: 12.1,
-                        JavaScript: 55.7
+                        CSS: 31.2,
+                        HTML: 19.1,
+                        JavaScript: 49.7
                     }
                 ]
             }
