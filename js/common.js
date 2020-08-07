@@ -71,13 +71,13 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
         document.querySelector('#mode').removeAttribute('checked');
         document.body.classList.remove('dark_mode');
         document.querySelector('.main_title').classList.remove('dark_mode');
-        star_bg_after.innerHTML = '.star_bg:after{ background-color: black; }';
+        star_bg_after.innerHTML = '#star_bg:after{ background-color: rgb(225, 255, 255); }';
     }
     else{
         document.querySelector('#mode').setAttribute('checked', '');
         document.body.classList.add('dark_mode');
         document.querySelector('.main_title').classList.add('dark_mode');
-        star_bg_after.innerHTML = '.star_bg:after{ background-color: rgb(225, 255, 255); }';
+        star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
     }
 
     setTimeout( () => {
