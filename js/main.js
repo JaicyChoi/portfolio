@@ -156,7 +156,7 @@ window.addEventListener('scroll', () => {
             prev_btn.classList.remove('visible');
         }
     }
-    if( offset === 0 ) section[0].style.cssText = 'background: url(images/main_0.jpg) no-repeat  center; background-size: contain; background-color: black;';
+    if( offset === 0 ) section[0].style.cssText = 'background: url(images/main_0.jpg) no-repeat center; background-size: contain; background-color: black;';
 });
 
 main_button.forEach(button => button.addEventListener('mouseenter', () => {
