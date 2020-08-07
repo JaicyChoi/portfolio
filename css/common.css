@@ -515,6 +515,6 @@ generate_star{
     }
     100%{
         opacity: 0;
-        transform: translateY(-100.5vh);
+        transform: translateY(-100vh);
     }
 }
