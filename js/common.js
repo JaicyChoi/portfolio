@@ -14,15 +14,70 @@ const cursor = document.querySelector('#cursor');
 cursor.classList.add('hide');
 
 if( document.title !== 'CYJ' && window.location.href.length > 38 ){
+    const mode = document.querySelector('#mode');
+    const label = document.querySelector('.label');
+
+    label.addEventListener('mouseenter', () => { cursor.classList.add('small'); });
+    label.addEventListener('mouseleave', () => { cursor.classList.remove('small'); });
+
+    mode.addEventListener('click', () => {
+        if( localStorage.getItem('site_mode') === 'light' )
+            localStorage.setItem('site_mode', 'dark');
+        else  localStorage.setItem('site_mode', 'light');
+        
+        document.body.classList.toggle('dark_mode');
+        document.querySelector('.main_title').classList.toggle('dark_mode');
+    });
+
+    const star_bg = document.querySelector('#star_bg');
+
+    function star(){
+        let count = 500;
+        let generate_star = 0;
+        while( generate_star < count ){
+            let star = document.createElement('generate_star');
+            let x = Math.floor(Math.random() * window.innerWidth);
+            // let y = Math.floor(Math.random() * window.innerHeight);
+            let duration = Math.random() * 15;
+            let size = Math.random() * 2;
+ 
+            star.style.left = x + 'px';
+            // star.style.top = y + 'px';
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+ 
+            star.style.animationDuration = 15 + duration + 's';
+            star.style.animationDelay = duration + 's';
+ 
+            star_bg.appendChild(star);
+            generate_star++;
+        }
+    }
+
+    star();
+
+    window.addEventListener('resize', () => {
+        while( star_bg.hasChildNodes() )
+            star_bg.removeChild(star_bg.firstChild);
+
+        star();
+    });
+}
+
+if( document.title !== 'CYJ' && window.location.href.length > 38 ){
+    let star_bg_after = document.head.appendChild(document.createElement('style'));
+    
     if( localStorage.getItem('site_mode') === 'light' ){
         document.querySelector('#mode').removeAttribute('checked');
         document.body.classList.remove('dark_mode');
         document.querySelector('.main_title').classList.remove('dark_mode');
+        star_bg_after.innerHTML = '.star_bg:after{ background-color: black; }';
     }
     else{
         document.querySelector('#mode').setAttribute('checked', '');
         document.body.classList.add('dark_mode');
         document.querySelector('.main_title').classList.add('dark_mode');
+        star_bg_after.innerHTML = '.star_bg:after{ background-color: rgb(225, 255, 255); }';
     }
 
     setTimeout( () => {
@@ -225,54 +280,3 @@ characters.forEach((char, index) => {
     currentAngle += deltaAngle;
     cursor.appendChild(charElement);
 });
-
-if( document.title !== 'CYJ' && window.location.href.length > 38 ){
-    const mode = document.querySelector('#mode');
-    const label = document.querySelector('.label');
-
-    label.addEventListener('mouseenter', () => { cursor.classList.add('small'); });
-    label.addEventListener('mouseleave', () => { cursor.classList.remove('small'); });
-
-    mode.addEventListener('click', () => {
-        if( localStorage.getItem('site_mode') === 'light' )
-            localStorage.setItem('site_mode', 'dark');
-        else  localStorage.setItem('site_mode', 'light');
-        
-        document.body.classList.toggle('dark_mode');
-        document.querySelector('.main_title').classList.toggle('dark_mode');
-    });
-
-    const star_bg = document.querySelector('#star_bg');
-
-    function star(){
-        let count = 500;
-        let generate_star = 0;
-        while( generate_star < count ){
-            let star = document.createElement('generate_star');
-            let x = Math.floor(Math.random() * window.innerWidth);
-            // let y = Math.floor(Math.random() * window.innerHeight);
-            let duration = Math.random() * 15;
-            let size = Math.random() * 2;
- 
-            star.style.left = x + 'px';
-            // star.style.top = y + 'px';
-            star.style.width = size + 'px';
-            star.style.height = size + 'px';
- 
-            star.style.animationDuration = 15 + duration + 's';
-            star.style.animationDelay = duration + 's';
- 
-            star_bg.appendChild(star);
-            generate_star++;
-        }
-    }
-
-    star();
-
-    window.addEventListener('resize', () => {
-        while( star_bg.hasChildNodes() )
-            star_bg.removeChild(star_bg.firstChild);
-
-        star();
-    });
-}
