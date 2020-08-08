@@ -21,9 +21,14 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
     label.addEventListener('mouseleave', () => { cursor.classList.remove('small'); });
 
     mode.addEventListener('click', () => {
-        if( localStorage.getItem('site_mode') === 'light' )
+        if( localStorage.getItem('site_mode') === 'light' ){
             localStorage.setItem('site_mode', 'dark');
-        else  localStorage.setItem('site_mode', 'light');
+            star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
+        }
+        else{
+            localStorage.setItem('site_mode', 'light');
+            star_bg_after.innerHTML = '#star_bg:after{ background-color: rgb(225, 255, 255); }';
+        }
         
         document.body.classList.toggle('dark_mode');
         document.querySelector('.main_title').classList.toggle('dark_mode');
@@ -62,9 +67,7 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
 
         star();
     });
-}
 
-if( document.title !== 'CYJ' && window.location.href.length > 38 ){
     let star_bg_after = document.head.appendChild(document.createElement('style'));
     
     if( localStorage.getItem('site_mode') === 'light' ){
@@ -84,6 +87,27 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
         cursor.classList.remove('hide');
     },1500);
 }
+
+// if( document.title !== 'CYJ' && window.location.href.length > 38 ){
+//     let star_bg_after = document.head.appendChild(document.createElement('style'));
+    
+//     if( localStorage.getItem('site_mode') === 'light' ){
+//         document.querySelector('#mode').removeAttribute('checked');
+//         document.body.classList.remove('dark_mode');
+//         document.querySelector('.main_title').classList.remove('dark_mode');
+//         star_bg_after.innerHTML = '#star_bg:after{ background-color: rgb(225, 255, 255); }';
+//     }
+//     else{
+//         document.querySelector('#mode').setAttribute('checked', '');
+//         document.body.classList.add('dark_mode');
+//         document.querySelector('.main_title').classList.add('dark_mode');
+//         star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
+//     }
+
+//     setTimeout( () => {
+//         cursor.classList.remove('hide');
+//     },1500);
+// }
 
 const loader = document.querySelector('.loader');
 let loader_before = document.head.appendChild(document.createElement('style'));
