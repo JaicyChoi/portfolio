@@ -124,6 +124,9 @@ setTimeout( () => {
 }, 1500);
 
 let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
+// function getNodeindex(elm){
+//     return [...elm.parentNode.children].indexOf(elm);
+// }
 
 window.onbeforeunload = () => { window.scrollTo(0, 0); }
 
