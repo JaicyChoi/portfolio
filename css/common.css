@@ -21,6 +21,52 @@ body::-webkit-scrollbar{
 body.scroll_fix{
     overflow: hidden;
 }
+body.ie{
+    overflow: hidden;
+}
+#dark_bg.ie{
+    background-color: rgba(0, 0, 0, .75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+#browser_guide{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    width: 560px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    opacity: .75;
+    z-index: 999;
+    display: none;
+}
+#browser_guide span{
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+}
+#browser_guide span:after{
+    content: '';
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 45px;
+    margin-top: 15px;
+    background: url(../images/browser.png) no-repeat center;
+    background-size: contain;
+}
 .loader_wrapper{
     width: 100%;
     height: 100%;
