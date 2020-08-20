@@ -135,7 +135,7 @@ kor.addEventListener('click', () => {
 });
 
 const icon_list = document.querySelector('#icon_list');
-let tool_icon = ['photoshop', 'illustraor', 'premiere', 'aftereffect', 'figma', 'vscode', 'github2', 'html', 'css', 'javascript', 'jquery'];
+let tool_icon = ['photoshop', 'illustraor', 'premiere', 'aftereffect', 'figma', 'vscode', 'github2', 'slack', 'html', 'css', 'javascript'];
 
 for( let i = 0 ; i < tool_icon.length ; i++ ){
     let li = document.createElement('li');
