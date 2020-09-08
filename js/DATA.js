@@ -47,7 +47,7 @@ let PROJECT_DATA = {
                     {
                         about: 'It\'s a web site designed recommends beer based on various themes so that ordinary people who are interested in beer but are hesitating about which beer to choose can easily choose a beer.<p class="view_file"><a href="doc/tobe_proposal.pdf" download target="_blank">proposal</a><a href="doc/tobe_storyboard.pdf" download target="_blank">storyboard</a><a href="https://www.figma.com/file/V0kHLrF7Y6fjBrWepiKMvq/MyAppPC?node-id=0%3A1" target="_blank">wireframe(Figma)</a><a href="https://www.figma.com/file/B1TmL1pZ4h0n15fV0acg6h/ToBe_Web_Design?node-id=0%3A1" target="_blank">PC design(Figma)</a><a href="https://www.figma.com/file/76nu75LY0rqkacegBKzSDw/Tobe_Mobile?node-id=0%3A1" target="_blank">mobile design(Figma)</a></p>',
                         aim: 'Design without complicity considering user convenience. design responsively in response to changes in resolution, design for tablets and mobile devices',
-                        achievements: 'Understanding of the overall flow from planning to design and coding.<br/>Understanding of standard and responsive design'
+                        achievements: 'Understanding of the overall flow from planning to design and coding.<br/>Understanding of standard and responsive design<br/>Understanding of Cross-Browsing'
                     }
                 ],
                 video: 'https://gfycat.com/ifr/NimblePastBlackpanther',
@@ -55,9 +55,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
                     {
-                        CSS: 36.9,
-                        HTML: 34.3,
-                        JavaScript: 28.8
+                        CSS: 32.8,
+                        HTML: 42.1,
+                        JavaScript: 25.1
                     }
                 ]
             }
@@ -80,9 +80,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/samueladams',
                 languages: [
                     {
-                        CSS: 33.0,
-                        HTML: 19.5,
-                        JavaScript: 47.5
+                        CSS: 38.7,
+                        HTML: 24.0,
+                        JavaScript: 37.3
                     }
                 ]
             }
@@ -124,7 +124,7 @@ let PROJECT_DATA = {
                     {
                         about: '주류 트렌드의 변화로 다양한 맥주가 넘쳐나는 현대사회를 살아가는, 맥주에 관심이 있지만 어떤 맥주를 선택해야할지 고민하는 일반인들이 쉽게 접근할 수 있도록 다양한 테마를 기준으로 맥주를 추천, 맥주 샘플을 신청할 수 있으며 이용자간 의견을 공유하는 사이트 입니다.<p class="view_file"><a href="doc/tobe_proposal.pdf" download target="_blank">proposal</a><a href="doc/tobe_storyboard.pdf" download target="_blank">storyboard</a><a href="https://www.figma.com/file/V0kHLrF7Y6fjBrWepiKMvq/MyAppPC?node-id=0%3A1" target="_blank">wireframe(Figma)</a><a href="https://www.figma.com/file/B1TmL1pZ4h0n15fV0acg6h/ToBe_Web_Design?node-id=0%3A1" target="_blank">PC design(Figma)</a><a href="https://www.figma.com/file/76nu75LY0rqkacegBKzSDw/Tobe_Mobile?node-id=0%3A1" target="_blank">mobile design(Figma)</a></p>',
                         aim: '사용자 편의성을 고려하여 복잡하지 않게 설계하기, 다양한 해상도 변화에 대응한 반응형 사이트로 설계하기, 태블릿 및 모바일 디바이스를 고려하여 설계하기',
-                        achievements: '기획부터 코딩에 이르기까지의 전반적인 흐름의 이해,<br/>표준형과 반응형을 고려한 디자인에 대한 이해'
+                        achievements: '기획부터 코딩에 이르기까지의 전반적인 흐름의 이해,<br/>표준형과 반응형을 고려한 디자인에 대한 이해, 크로스브라우징에 대한 이해'
                     }
                 ],
                 video: 'https://gfycat.com/ifr/NimblePastBlackpanther',
@@ -132,9 +132,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
                     {
-                        CSS: 36.9,
-                        HTML: 34.3,
-                        JavaScript: 28.8
+                        CSS: 32.8,
+                        HTML: 42.1,
+                        JavaScript: 25.1
                     }
                 ]
             }
@@ -157,9 +157,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/samueladams',
                 languages: [
                     {
-                        CSS: 33.0,
-                        HTML: 19.5,
-                        JavaScript: 47.5
+                        CSS: 38.7,
+                        HTML: 24.0,
+                        JavaScript: 37.3
                     }
                 ]
             }
