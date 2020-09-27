@@ -91,6 +91,28 @@
     transition: all .6s ease;
     opacity: 0;
 }
+#wedding{
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 570px;
+    background: url(../images/wedding.jpg) no-repeat center;
+    background-size: cover;
+    transition: all .7s ease;
+    opacity: 1;
+}
+#wedding.view{
+    position: absolute;
+    width: 220%;
+    height: 350px;
+    top: -840px;
+    right: -25px;
+    background: url(../images/wedding.jpg) no-repeat center;
+    background-size: cover;
+    z-index: 1;
+    transition: all .6s ease;
+    opacity: 0;
+}
 .list div.color{
     filter: grayscale(0);
 }
