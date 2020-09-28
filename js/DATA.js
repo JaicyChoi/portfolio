@@ -246,7 +246,7 @@ let PROJECT_DATA = {
 
 let ABOUT_DATA = {
     eng:{
-        intro_text : 'Hello.<br/><br/>I\'m Choi Yoo-jung, want to be a web publisher.<br/><br/>I’m rather calm and quiet, thus like jobs which i may set myself a place and focus on, that much i think i have strong concentration.<br/><br/>I\'m trying to listen to other people and develop a sense of tolerance that can accommodate the opinions of people who have different opinions from me.<br/><br/>I\'m interested in new technologies and will continue to learn to adapt to the fast-changing web ecosystem.',
+        intro_text : 'Hello.<br/><br/>I\'m Choi Yoo-jung, want to be a web developer.<br/><br/>I’m rather calm and quiet, thus like jobs which i may set myself a place and focus on, that much i think i have strong concentration.<br/><br/>I\'m trying to listen to other people and develop a sense of tolerance that can accommodate the opinions of people who have different opinions from me.<br/><br/>I\'m interested in new technologies and will continue to learn to adapt to the fast-changing web ecosystem.',
         graph_title: ['Graphic and Web Software', 'Scripting and Programming Language'],
         level: ['BEGINNER', 'ELEMENTARY', 'INTERMEDIATE', 'ADVANCED', 'EXPERT'],
         others: [
@@ -263,7 +263,7 @@ let ABOUT_DATA = {
         ]
     },
     kor: {
-        intro_text : '안녕하세요.<br/><br/>웹 퍼블리셔를 지망하는 최유정입니다.<br/><br/>차분하고 조용한 편으로 가만히 앉아 집중 할 수 있는 일을 선호하며, 그만큼 한 가지 일에 몰두할 때 집중력이 좋습니다.<br/><br/>다른 사람의 말을 귀 기울여 듣고 다른 의견을 가진 사람들의 의견을 수용할 수 있는 포용력을 가진 사람이 되기 위해 노력하고 있습니다.<br/><br/>빠르게 변화하는 웹 생태계에 적응하기 위해 항상 최신 기술에 관심을 가지고 배움을 게을리 하지 않는 엔지니어를 목표로 하고 있습니다.',
+        intro_text : '안녕하세요.<br/><br/>웹 프론트 엔드를 지망하는 최유정입니다.<br/><br/>차분하고 조용한 편으로 가만히 앉아 집중 할 수 있는 일을 선호하며, 그만큼 한 가지 일에 몰두할 때 집중력이 좋습니다.<br/><br/>다른 사람의 말을 귀 기울여 듣고 다른 의견을 가진 사람들의 의견을 수용할 수 있는 포용력을 가진 사람이 되기 위해 노력하고 있습니다.<br/><br/>빠르게 변화하는 웹 생태계에 적응하기 위해 항상 최신 기술에 관심을 가지고 배움을 게을리 하지 않는 엔지니어를 목표로 하고 있습니다.',
         graph_title: ['그래픽 & 웹 소프트웨어', '스트립팅 & 프로그래밍 언어'],
         level: ['초보', '기본', '중급', '고급', '전문가'],
         others: [
