@@ -24,7 +24,8 @@ let PROJECT_PREVIEW = {
             'Beer recommendation, user review(responsive/PC/mobile)',
             'Beer promotion page(responsive/PC/mobile)',
             'Web page for portfolio(PC)',
-            'Ssmall wedding intro web page(responsive/PC/mobile)'
+            'Ssmall wedding intro web page(responsive/PC/mobile)',
+            'Web page for Healthy Food Sales(responsive/PC/mobile)'
         ]
     },
     kor: {
@@ -32,7 +33,8 @@ let PROJECT_PREVIEW = {
             '맥주 추천/리뷰, 사용자간 의견 공유(반응형/PC/모바일)',
             '맥주 프로모션 페이지(반응형/PC/모바일)',
             '자기소개 웹 페이지(PC)',
-            '스몰 웨딩 소개 웹 페이지(반응형/PC/모바일)'
+            '스몰 웨딩 소개 웹 페이지(반응형/PC/모바일)',
+            '건강식 판매 웹 페이지(반응형/PC/모바일)'
         ]
     }
 }
@@ -138,6 +140,31 @@ let PROJECT_DATA = {
                     }
                 ]
             }
+        ],
+        project_5:[
+            {
+                project_id: 'funny_flakes',
+                project_title: [
+                    'Funny Flakes', 'publishing'
+                ],
+                project_info: [
+                    {
+                        about: 'A web page introducing small wedding. This page is based on a free web (PC) design template from www.freepik.com, and I\'ve designed and inserted all of the transition and animation effects myself. It\'s a responsive page, so it changes naturally according to the resolution from PC to mobile.<p class="view_file"><a href="https://www.freepik.com/free-psd/elegant-website-templates-wedding_4660026.htm#page=1&query=Web%20templates%20wedding&position=10" target="_blank">web design(freepik)</a></p>',
+                        aim: 'Making sure that the mobile pages change naturally based on resolution, even if I don\'t create them separately. Considering cross-browsing to work as well as modern browsers as possible in IE.',
+                        achievements: 'The importance of design to respond to a variety of devices considering the response type.'
+                    }
+                ],
+                video: 'https://gfycat.com/ifr/RaggedHarmfulAracari',
+                project_link: 'https://jaicychoi.github.io/funny_flakes/',
+                github: 'https://github.com/JaicyChoi/funny_flakes',
+                languages: [
+                    {
+                        CSS: 58.3,
+                        HTML: 30.1,
+                        JavaScript: 11.6
+                    }
+                ]
+            }
         ]
     },
     kor:{
@@ -237,6 +264,31 @@ let PROJECT_DATA = {
                         CSS: 60.9,
                         HTML: 24.1,
                         JavaScript: 15.0
+                    }
+                ]
+            }
+        ],
+        project_5:[
+            {
+                project_id: 'funny_flakes',
+                project_title: [
+                    'Funny Flakes', '퍼블리싱'
+                ],
+                project_info: [
+                    {
+                        about: '스몰 웨딩을 소개하는 웹 페이지. wwww.freepik.com에서 무료로 제공하는 웹(PC) 디자인 시안을 바탕으로 작업하였으며, 트랜지션 및 애니매이션 효과는 모두 직접 기획하여 넣었습니다. 반응형 페이지로, PC부터 모바일까지 해상도에 따라 자연스럽게 변하도록 하였습니다.<p class="view_file"><a href="https://www.freepik.com/free-psd/elegant-website-templates-wedding_4660026.htm#page=1&query=Web%20templates%20wedding&position=10" target="_blank">web design(freepik)</a></p>',
+                        aim: '모바일 페이지를 따로 제작하지 않더라도 해상도에 따라 자연스럽게 변하도록 하기, IE에서도 최대한 모던 브라우저와 동일하게 작동하도록 크로스 브라우징 고려하기',
+                        achievements: '반응형을 고려하여 다양한 기기에 대응할 수 있는 디자인의 중요성'
+                    }
+                ],
+                video: 'https://gfycat.com/ifr/RaggedHarmfulAracari',
+                project_link: 'https://jaicychoi.github.io/funny_flakes/',
+                github: 'https://github.com/JaicyChoi/funny_flakes',
+                languages: [
+                    {
+                        CSS: 58.3,
+                        HTML: 30.1,
+                        JavaScript: 11.6
                     }
                 ]
             }
