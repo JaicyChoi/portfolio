@@ -312,6 +312,15 @@ body.load_complete{
     line-height: 20px;
     text-align: justify;
 }
+.web_address{
+    color: rgb(0, 110, 255);
+    transition: all .5s ease;
+    font-weight: 500;
+    cursor: none;
+}
+.web_address:hover{
+    color: rgb(89, 161, 255);
+}
 .view_file{
     position: absolute;
     width: 100%;

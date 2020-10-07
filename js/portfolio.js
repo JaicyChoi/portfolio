@@ -194,6 +194,9 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         github.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
         github.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
 
+        let web_address = document.querySelector('.web_address');
+        web_address.addEventListener('mouseenter', () => { cursor.classList.add('select') });
+        web_address.addEventListener('mouseleave', () => { cursor.classList.remove('select') });
         // link_address.addEventListener('click', () => window.open(project.project_link) );
         link_address.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
         link_address.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
