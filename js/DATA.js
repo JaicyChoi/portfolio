@@ -59,9 +59,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
                     {
-                        CSS: 32.8,
-                        HTML: 42.1,
-                        JavaScript: 25.1
+                        CSS: 32.4,
+                        HTML: 43.2,
+                        JavaScript: 24.4
                     }
                 ]
             }
@@ -84,9 +84,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/samueladams',
                 languages: [
                     {
-                        CSS: 38.7,
-                        HTML: 24.0,
-                        JavaScript: 37.3
+                        CSS: 41.1,
+                        HTML: 24.6,
+                        JavaScript: 34.3
                     }
                 ]
             }
@@ -109,9 +109,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/portfolio',
                 languages: [
                     {
-                        CSS: 31.2,
-                        HTML: 19.1,
-                        JavaScript: 49.7
+                        CSS: 30.3,
+                        HTML: 18.2,
+                        JavaScript: 51.5
                     }
                 ]
             }
@@ -134,9 +134,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/wedding',
                 languages: [
                     {
-                        CSS: 60.9,
-                        HTML: 24.1,
-                        JavaScript: 15.0
+                        CSS: 59.7,
+                        HTML: 25.8,
+                        JavaScript: 14.5
                     }
                 ]
             }
@@ -159,9 +159,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/funny_flakes',
                 languages: [
                     {
-                        CSS: 58.3,
-                        HTML: 30.1,
-                        JavaScript: 11.6
+                        CSS: 57.5,
+                        HTML: 31.0,
+                        JavaScript: 11.5
                     }
                 ]
             }
@@ -186,9 +186,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
                     {
-                        CSS: 32.8,
-                        HTML: 42.1,
-                        JavaScript: 25.1
+                        CSS: 32.4,
+                        HTML: 43.2,
+                        JavaScript: 24.4
                     }
                 ]
             }
@@ -211,9 +211,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/samueladams',
                 languages: [
                     {
-                        CSS: 38.7,
-                        HTML: 24.0,
-                        JavaScript: 37.3
+                        CSS: 41.1,
+                        HTML: 24.6,
+                        JavaScript: 34.3
                     }
                 ]
             }
@@ -236,9 +236,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/portfolio',
                 languages: [
                     {
-                        CSS: 31.2,
-                        HTML: 19.1,
-                        JavaScript: 49.7
+                        CSS: 30.3,
+                        HTML: 18.2,
+                        JavaScript: 51.5
                     }
                 ]
             }
@@ -261,9 +261,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/wedding',
                 languages: [
                     {
-                        CSS: 60.9,
-                        HTML: 24.1,
-                        JavaScript: 15.0
+                        CSS: 59.7,
+                        HTML: 25.8,
+                        JavaScript: 14.5
                     }
                 ]
             }
@@ -286,9 +286,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/funny_flakes',
                 languages: [
                     {
-                        CSS: 58.3,
-                        HTML: 30.1,
-                        JavaScript: 11.6
+                        CSS: 57.5,
+                        HTML: 31.0,
+                        JavaScript: 11.5
                     }
                 ]
             }
