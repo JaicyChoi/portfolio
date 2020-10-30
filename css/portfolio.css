@@ -138,6 +138,28 @@ body.load_complete{
     transition: all .6s ease;
     opacity: 0;
 }
+#brunch{
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 570px;
+    background: url(../images/brunch.png) no-repeat center;
+    background-size: cover;
+    transition: all .7s ease;
+    opacity: 1;
+}
+#brunch.view{
+    position: absolute;
+    width: 220%;
+    height: 350px;
+    top: -840px;
+    left: -25px;
+    background: url(../images/brunch.png) no-repeat center;
+    background-size: cover;
+    z-index: 1;
+    transition: all .6s ease;
+    opacity: 0;
+}
 .list div.color{
     filter: grayscale(0);
 }

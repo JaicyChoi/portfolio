@@ -22,10 +22,11 @@ let PROJECT_PREVIEW = {
     eng:{
         description: [
             'Beer recommendation, user review(responsive/PC/mobile)',
-            'Beer promotion page(responsive/PC/mobile)',
+            'Beer promotional page(responsive/PC/mobile)',
             'Web page for portfolio(PC)',
             'Ssmall wedding intro web page(responsive/PC/mobile)',
-            'Web page for breakfast restaurant(responsive/PC/mobile)'
+            'Web page for breakfast restaurant(responsive/PC/mobile)',
+            'Promotional page for brunch sales(responsive/PC/mobile)'
         ]
     },
     kor: {
@@ -34,7 +35,8 @@ let PROJECT_PREVIEW = {
             '맥주 프로모션 페이지(반응형/PC/모바일)',
             '자기소개 웹 페이지(PC)',
             '스몰 웨딩 소개 웹 페이지(반응형/PC/모바일)',
-            '아침 식사 판매 식당(반응형/PC/모바일)'
+            '아침 식사 판매 식당(반응형/PC/모바일)',
+            '브런치 판매 홍보 웹 페이지(반응형/PC/모바일)'
         ]
     }
 }
@@ -165,6 +167,31 @@ let PROJECT_DATA = {
                     }
                 ]
             }
+        ],
+        project_6:[
+            {
+                project_id: 'brunch',
+                project_title: [
+                    'Brunch', 'publishing'
+                ],
+                project_info: [
+                    {
+                        about: 'This is a web page for promoting brunch sales and booking. This page is based on a free web (PC) design template from <a href="https://www.freepik.com" target="_blank" class="web_address">www.freepik.com</a>, and I\'ve designed and inserted all of the transition and animation effects myself. It\'s a responsive page, so it changes naturally according to the resolution from PC to mobile.<p class="view_file"><a href="https://www.freepik.com/free-psd/indian-food-website-templates-collection_4637694.htm#page=1&query=web%20site%20design%20brunch&position=0" target="_blank">web design(freepik)</a></p>',
+                        aim: 'Making sure that the mobile pages change naturally based on resolution, even if I don\'t create them separately. Considering cross-browsing to work as well as modern browsers as possible in IE.',
+                        achievements: 'The importance of design to respond to a variety of devices considering the response type.'
+                    }
+                ],
+                video: 'https://gfycat.com/ifr/QueasyEasygoingBeardedcollie',
+                project_link: 'https://jaicychoi.github.io/brunch/',
+                github: 'https://github.com/JaicyChoi/brunch',
+                languages: [
+                    {
+                        CSS: 59.9,
+                        HTML: 34.3,
+                        JavaScript: 5.8
+                    }
+                ]
+            }
         ]
     },
     kor:{
@@ -289,6 +316,31 @@ let PROJECT_DATA = {
                         CSS: 57.5,
                         HTML: 31.0,
                         JavaScript: 11.5
+                    }
+                ]
+            }
+        ],
+        project_6:[
+            {
+                project_id: 'brunch',
+                project_title: [
+                    'Brunch', '퍼블리싱'
+                ],
+                project_info: [
+                    {
+                        about: '브런치 판매 홍보 및 예약 웹 페이지.<a href="https://www.freepik.com" target="_blank" class="web_address">www.freepik.com</a>에서 무료로 제공하는 웹(PC) 디자인 시안을 바탕으로 작업하였으며, 트랜지션 및 애니매이션 효과는 모두 직접 기획하여 넣었습니다. 반응형 페이지로, PC부터 모바일까지 해상도에 따라 자연스럽게 변하도록 하였습니다.<p class="view_file"><a href="https://www.freepik.com/free-psd/indian-food-website-templates-collection_4637694.htm#page=1&query=web%20site%20design%20brunch&position=0" target="_blank">web design(freepik)</a></p>',
+                        aim: '모바일 페이지를 따로 제작하지 않더라도 해상도에 따라 자연스럽게 변하도록 하기, IE에서도 최대한 모던 브라우저와 동일하게 작동하도록 크로스 브라우징 고려하기',
+                        achievements: '반응형을 고려하여 다양한 기기에 대응할 수 있는 디자인의 중요성'
+                    }
+                ],
+                video: 'https://gfycat.com/ifr/QueasyEasygoingBeardedcollie',
+                project_link: 'https://jaicychoi.github.io/brunch/',
+                github: 'https://github.com/JaicyChoi/brunch',
+                languages: [
+                    {
+                        CSS: 59.9,
+                        HTML: 34.3,
+                        JavaScript: 5.8
                     }
                 ]
             }
