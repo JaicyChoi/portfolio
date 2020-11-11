@@ -6,7 +6,8 @@ const parallax = document.querySelector('.parallax');
 const prev_btn = document.querySelector('#prev_btn');
 const next_btn = document.querySelector('#next_btn');
 const typing_text = document.querySelectorAll('.main_subtitle p');
-const text = document.querySelector('svg text');
+let text = null;
+if( isIE === false ) text = document.querySelector('svg text');
 const vanilla = document.querySelector('#vanilla');
 let index = 0;
 
@@ -80,7 +81,7 @@ const toggleText = function(index, state){
   };
 
 setTimeout( function(){
-    if( text !== null ) text.classList.add('visible');
+    if( isIE === false ) text.classList.add('visible');
     main_visual_text.classList.add('show');
 }, 2100);
 
@@ -134,7 +135,7 @@ window.addEventListener('scroll', function(){
         toggleText(1, 'hide'); index = 0;
         if( offset < section[0].offsetHeight * 0.3 ){
             main_visual_text.classList.add('show');
-            if( text !== null ) text.classList.add('visible');
+            if( isIE === false ) text.classList.add('visible');
             prev_btn.classList.remove('visible');
         }
     }
