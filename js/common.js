@@ -273,7 +273,7 @@ const degreeToRadian = function(angle){
 const radius = 150;
 const circle_text = cursor.innerText;
 const characters = circle_text.split('');
-cursor.innerText = null;
+cursor.innerText = '';
 
 const startAngle = -90;
 const endAngle = -50;

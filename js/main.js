@@ -80,7 +80,7 @@ const toggleText = function(index, state){
   };
 
 setTimeout( function(){
-    text.classList.add('visible');
+    if( text !== null ) text.classList.add('visible');
     main_visual_text.classList.add('show');
 }, 2100);
 
@@ -134,7 +134,7 @@ window.addEventListener('scroll', function(){
         toggleText(1, 'hide'); index = 0;
         if( offset < section[0].offsetHeight * 0.3 ){
             main_visual_text.classList.add('show');
-            text.classList.add('visible');
+            if( text !== null ) text.classList.add('visible');
             prev_btn.classList.remove('visible');
         }
     }
