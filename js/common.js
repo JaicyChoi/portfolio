@@ -1,3 +1,6 @@
+if(window.NodeList && !NodeList.prototype.forEach)
+    NodeList.prototype.forEach = Array.prototype.forEach;
+
 document.body.classList.add('scroll_fix');
 
 // let data_reload = document.querySelectorAll('[data-reload]');
@@ -12,10 +15,10 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
     const mode = document.querySelector('#mode');
     const label = document.querySelector('.label');
 
-    label.addEventListener('mouseenter', () => { cursor.classList.add('small'); });
-    label.addEventListener('mouseleave', () => { cursor.classList.remove('small'); });
+    label.addEventListener('mouseenter', function(){ cursor.classList.add('small'); });
+    label.addEventListener('mouseleave', function(){ cursor.classList.remove('small'); });
 
-    mode.addEventListener('click', () => {
+    mode.addEventListener('click', function(){
         if( localStorage.getItem('site_mode') === 'light' ){
             localStorage.setItem('site_mode', 'dark');
             star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
@@ -56,7 +59,7 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
 
     star();
 
-    window.addEventListener('resize', () => {
+    window.addEventListener('resize', function(){
         while( star_bg.hasChildNodes() )
             star_bg.removeChild(star_bg.firstChild);
 
@@ -78,7 +81,7 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
         star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
     }
 
-    setTimeout( () => {
+    setTimeout( function(){
         cursor.classList.remove('hide');
     },1500);
 }
@@ -102,11 +105,11 @@ else{
     logo_link.innerText = 'CJY'
     logo.classList.remove('kor');
 }
-setTimeout( () => {
+setTimeout( function(){
     loader.style.borderBottom = '5px solid rgba(255, 255, 255, 0.1)';
 }, 500);
 
-setTimeout( () => {
+setTimeout( function(){
     loader.style.borderBottom = '5px solid rgba(255, 255, 255, 0)';
     loader.style.display = 'none';
     loader.classList.add('hide');
@@ -116,19 +119,21 @@ setTimeout( () => {
     for( let i = 0 ; i < slide_effect.length; i++ )
         slide_effect[i].style.height = '0%';
 
-    setTimeout( () => {
+    setTimeout( function(){
         document.body.classList.add('load_complete');
         document.body.removeChild(document.querySelector('.loader_wrapper'));
         document.body.classList.remove('scroll_fix');
     }, 1000);
 }, 1500);
 
-let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
-// function getNodeindex(elm){
-//     return [...elm.parentNode.children].indexOf(elm);
-// }
+// let getNodeindex = elm => [...elm.parentNode.children].indexOf(elm);
+function getNodeindex(elm){
+    let c = elm.parentNode.children;
+    for(let i = 0 ; i < c.length ; i++ )
+        if( c[i] === elm ) return i;
+}
 
-window.onbeforeunload = () => { window.scrollTo(0, 0); }
+window.onbeforeunload = function(){ window.scrollTo(0, 0); }
 
 const menu_btn = document.querySelector('#menu_btn');
 const nav = document.querySelector('#navigation');
@@ -138,7 +143,7 @@ const content = document.querySelector('#content');
 
 let menu_click = false;
 
-document.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', function(e){
     let x = e.clientX;
     let y = e.clientY;
 
@@ -146,25 +151,25 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = y + 'px';
 });
 
-nav.parentElement.addEventListener('mouseenter', () => {
+nav.parentElement.addEventListener('mouseenter', function(){
     cursor.classList.remove('hide');
 });
 if( window.location.href.indexOf('index') > 0 ){
-    nav.parentElement.addEventListener('mouseleave', () => {
+    nav.parentElement.addEventListener('mouseleave', function(){
         cursor.classList.add('hide');
     });
 }
 
-logo.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
-logo.addEventListener('mouseleave', () => {  cursor.classList.remove('select'); });
-menu_btn.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
-menu_btn.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
-li.forEach(li => li.addEventListener('mouseenter', () => {
+logo.addEventListener('mouseenter', function(){ cursor.classList.add('select'); });
+logo.addEventListener('mouseleave', function(){  cursor.classList.remove('select'); });
+menu_btn.addEventListener('mouseenter', function(){ cursor.classList.add('select'); });
+menu_btn.addEventListener('mouseleave', function(){ cursor.classList.remove('select'); });
+li.forEach(function(li){li.addEventListener('mouseenter', function(){
     cursor.classList.add('select');
-}));
-li.forEach(li => li.addEventListener('mouseleave', () => {
+})});
+li.forEach(function(li){li.addEventListener('mouseleave', function(){
     cursor.classList.remove('select');
-}));
+})});
 
 const language_option = document.querySelector('#language_option');
 const all_language = document.querySelectorAll('#language_option a');
@@ -179,12 +184,22 @@ if( localStorage.getItem('hash') === '#kor' ){
     all_language[1].style.color = 'white';    
 }
 
-all_language.forEach(language => language.addEventListener('mouseenter', () => { cursor.classList.add('small'); }));
-all_language.forEach(language => language.addEventListener('mouseleave', () => { cursor.classList.remove('small'); }));
+all_language.forEach(function(language){
+    language.addEventListener('mouseenter', 
+        function(){
+            cursor.classList.add('small');
+        })
+    });
+all_language.forEach(function(language){
+    language.addEventListener('mouseleave',
+        function(){
+            cursor.classList.remove('small');
+        })
+});
 
-eng.addEventListener('click', () => {
+eng.addEventListener('click', function(){
     localStorage.setItem('hash', '#eng');
-    if( eng.classList.value.includes('eng_selected') ) return;
+    if( eng.classList.value.indexOf('eng_selected') > 0 ) return;
     else{
         eng.classList.add('eng_selected');
         kor.classList.add('eng_selected');
@@ -195,9 +210,9 @@ eng.addEventListener('click', () => {
     logo_link.innerText = 'CJY'
     logo.classList.remove('kor');
 });
-kor.addEventListener('click', () => {
+kor.addEventListener('click', function(){
     localStorage.setItem('hash', '#kor');
-    if( kor.classList.value.includes('kor_selected') ) return;
+    if( kor.classList.value.indexOf('kor_selected') > 0 ) return;
     else{
         kor.classList.add('kor_selected');
         eng.classList.remove('eng_selected');
@@ -209,8 +224,8 @@ kor.addEventListener('click', () => {
     logo.classList.add('kor');
 });
 
-menu_btn.addEventListener('click', () => {
-    if ( content.lastElementChild.classList.value.includes('bottom_area') )
+menu_btn.addEventListener('click', function(){
+    if ( content.lastElementChild.classList.value.indexOf('bottom_area') > 0 )
         var bottom_area = document.querySelector('.bottom_area');
 
     if( !menu_click ){
@@ -228,7 +243,7 @@ menu_btn.addEventListener('click', () => {
         if( document.title !== 'CYJ' && window.location.href.length > 38 )
             document.querySelector('.label').classList.add('blur');
         language_option.classList.add('blur');
-        li.forEach(li => li.classList.add('pop'));
+        li.forEach(function(li){li.classList.add('pop')});
         cursor.classList.remove('hide');
     }
     else{
@@ -246,19 +261,19 @@ menu_btn.addEventListener('click', () => {
             document.querySelector('.label').classList.remove('blur');
         language_option.classList.remove('blur');
         content.classList.remove('blur');
-        li.forEach(li => li.classList.remove('pop'));
+        li.forEach(function(li){li.classList.remove('pop')});
         if( window.location.href.indexOf('index') > 0 )
             cursor.classList.add('hide');
     }
 });
 
-const degreeToRadian = (angle) => {
+const degreeToRadian = function(angle){
     return angle * (Math.PI / 180);
 };
 const radius = 150;
 const circle_text = cursor.innerText;
 const characters = circle_text.split('');
-cursor.innerText = null;
+cursor.innerText = '';
 
 const startAngle = -90;
 const endAngle = -50;
@@ -267,16 +282,16 @@ const angleRange = endAngle - startAngle;
 const deltaAngle = angleRange / characters.length;
 let currentAngle = startAngle;
 
-characters.forEach((char, index) => {
+characters.forEach(function(char, index){
     const charElement = document.createElement('span');
     charElement.classList.add('hide');
     charElement.innerText = char;
     const xPos = radius * (1 + Math.cos(degreeToRadian(currentAngle)));
     const yPos = radius * (1 + Math.sin(degreeToRadian(currentAngle)));
 
-    const transform = `translate(${xPos}px, ${yPos}px)`;
-    const rotate = `rotate(${index * deltaAngle}deg)`;
-    charElement.style.transform = `${transform} ${rotate}`;
+    const transform = 'translate('+ xPos + 'px,' + yPos + 'px)';
+    const rotate = 'rotate(' + index * deltaAngle +'deg)';
+    charElement.style.transform = transform + rotate;
 
     currentAngle += deltaAngle;
     cursor.appendChild(charElement);
