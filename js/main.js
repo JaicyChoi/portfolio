@@ -103,7 +103,7 @@ prev_btn.addEventListener('click', function(){
     index--;
     section[index].scrollIntoView({behavior: 'smooth'});
 })
-next_btn.addEventListener('click', function(){
+next_btn.addEventListener('click', () => {
     if( index > 2 ) return;
     // toggleText(index, 'hide');
     // index++;

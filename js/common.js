@@ -1,6 +1,6 @@
 document.body.classList.add('scroll_fix');
 
-let data_reload = document.querySelectorAll('[data-reload]');
+// let data_reload = document.querySelectorAll('[data-reload]');
 
 if( localStorage.getItem('hash') === null ) localStorage.setItem('hash', '#eng');
 if( localStorage.getItem('site_mode') === null ) localStorage.setItem('site_mode', 'light');
