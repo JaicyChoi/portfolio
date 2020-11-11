@@ -127,7 +127,7 @@ window.addEventListener('scroll', function(){
         typingText(0, 'show');
         index = 1;
         main_visual_text.classList.remove('show');
-        text.classList.remove('visible');
+        if( isIE === false ) text.classList.remove('visible');
         prev_btn.classList.add('visible');
     }
     else if( offset < section[0].offsetHeight * 0.5 ){

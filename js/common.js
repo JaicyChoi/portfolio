@@ -199,7 +199,7 @@ all_language.forEach(function(language){
 
 eng.addEventListener('click', function(){
     localStorage.setItem('hash', '#eng');
-    if( eng.classList.value.includes('eng_selected') ) return;
+    if( eng.classList.value.indexOf('eng_selected') > 0 ) return;
     else{
         eng.classList.add('eng_selected');
         kor.classList.add('eng_selected');
@@ -212,7 +212,7 @@ eng.addEventListener('click', function(){
 });
 kor.addEventListener('click', function(){
     localStorage.setItem('hash', '#kor');
-    if( kor.classList.value.includes('kor_selected') ) return;
+    if( kor.classList.value.indexOf('kor_selected') > 0 ) return;
     else{
         kor.classList.add('kor_selected');
         eng.classList.remove('eng_selected');
@@ -225,7 +225,7 @@ kor.addEventListener('click', function(){
 });
 
 menu_btn.addEventListener('click', function(){
-    if ( content.lastElementChild.classList.value.includes('bottom_area') )
+    if ( content.lastElementChild.classList.value.indexOf('bottom_area') > 0 )
         var bottom_area = document.querySelector('.bottom_area');
 
     if( !menu_click ){
