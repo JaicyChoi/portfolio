@@ -10,6 +10,30 @@
     body{
         font-size: 0.9em;
     }
+    .label{
+        top: 85px;
+        right: 10px;
+        width: 60px;
+        height: 30px;
+        border-radius: 25px;
+    }
+    #light_icon{
+        right: 4px;
+        top: 2px;
+        width: 27px;
+    }
+    #dark_icon{
+        left: 4px;
+        top: 2px;
+        width: 27px;
+    }
+    #switch{
+        width: 24.5px;
+        height: 24.5px;
+    }
+    .checkbox:checked + .label #switch{
+        transform: translateX(29px);
+    }
 }
 @media screen and (max-width: 650px){
     #nav_inner{
@@ -53,6 +77,19 @@
     }
     #language_option{
         right: 55px;
+    }
+    .label{
+        top: 75px;
+        width: 60px;
+    }
+    .main_title{
+        font-size: 2.55em;
+        letter-spacing: 0.45em;
+        margin-bottom: 15px;
+    }
+    .small_title{
+        font-size: 1.25em;
+        letter-spacing: 0.045em;
     }
 }
 @media screen and (max-width:320px){

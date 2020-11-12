@@ -1,0 +1,53 @@
+@media screen and (max-width:1200px){
+    .gform{
+        top: 320px;
+        width: 95%;
+    }
+    #contact_inner{
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px){
+    body.load_complete{
+        min-height: 1060px;
+    }
+}
+@media screen and (max-width:480px){
+    body.load_complete{
+        min-height: 1050px;
+    }
+    .gform{
+        top: 255px;
+    }
+    #name, #email{
+        position: relative;
+        width: 100%;
+    }
+    #name{
+        margin-bottom: 30px;
+    }
+    #message{
+        margin-top: 55px;
+    }
+    #message1{
+        font-size: 1.6em;
+    }
+    #message2{
+        font-size: 1em;
+    }
+    #re-write{
+        line-height: 35px;
+        font-size: 1em;
+    }
+    button{
+        margin-top: 60px;
+    }
+    #contact_method{
+        height: 180px;
+    }
+}
+@media screen and (max-width:400px){
+    #phone_contact:before, #email_contact:before{
+        content: none;
+    }
+}

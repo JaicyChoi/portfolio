@@ -1,11 +1,10 @@
-
 body{
     position: relative;
 }
 body.load_complete{
     min-height: 1150px;
 }
-form{
+.gform{
     position: absolute;
     top: 320px;
     left: 50%;
