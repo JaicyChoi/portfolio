@@ -3,7 +3,7 @@
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: 3;
     height: 65px;
     display: flex;
     flex-direction: column;
@@ -57,6 +57,7 @@ section:before{
 #vanilla{
     position: absolute;
     left: 50%;
+    width: 290px;
     top: 100px;
     transform: translateX(-50%);
     color: rgba(255, 255, 255, 0.8);
@@ -64,6 +65,7 @@ section:before{
     font-size: 0.9em;
     opacity: 1;
     animation: blinkAnimate 7s ease-in-out infinite;
+    text-align: center;
 }
 #vanilla.eng{
     font-size: 1em;
@@ -76,12 +78,19 @@ section:before{
         opacity: 0.1;
     }
 }
-#svg_wrapper{
+.main_text_wrapper{
     position: absolute;
-    width: 688px;
     left: 50%;
-    top: 44%;
+    top: 50%;
     transform: translate(-50%, -50%);
+    width: 688px;
+}
+#svg_wrapper{
+    position: relative;
+    float: left;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 svg text{
     stroke: white;
@@ -112,20 +121,22 @@ svg text.visible{
     }
 }
 #main_visual_text{
-    position: absolute;
+    position: relative;
+    clear: both;
+    float: left;
     left: 50%;
-    top: 56.5%;
-    transform:translate(-50%, -50%);
+    transform:translateX(-50%);
     color: white;
     font-family: 'Rasa', 'NanumBarunpen', serif;
     font-size: 1.75em;
     font-weight: 300;
-/*     background-color: red; */
+/*     background-color: blue; */
     text-align: center;
     line-height: 1.15em;
     opacity: 0;
     transition: all 2s ease;
     transition-delay: 2s;
+    margin-top: -10px;
 }
 #main_visual_text.kor{
     font-size: 1.5em;

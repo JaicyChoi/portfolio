@@ -290,9 +290,10 @@ body.ie{
     position: relative;
     z-index: 1;
     font-family: 'Rasa', 'NanumBarunpen', serif;
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 300;
     float: left;
+    line-height: 70px;
 /*     background: green; */
 }
 #logo.kor{
@@ -374,7 +375,7 @@ body.ie{
     top: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    height: 25vh;
+    height: 330px;
 /*     background: blue; */
     text-align: center;
     display: flex;
