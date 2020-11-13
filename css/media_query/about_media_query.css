@@ -1,0 +1,87 @@
+@media screen and (max-width:1200px){
+    #intro, #skills, #icon_inner, #graph, #others, #aim{
+        width: 100%;
+    }
+    #intro_text{
+        width: 60%;
+    }
+}
+@media screen  and (max-width:1055px){
+    #programming{
+        right: 10px;
+    }
+}
+@media screen and (max-width:980px){
+     #intro_text{
+        width: 70%;
+    }
+    #graph{
+        flex-direction: column;
+        align-items: center;
+    }
+    #graphic{
+        margin-bottom: 60px;
+    }
+    #programming{
+        right: 0;
+    }
+    #graphic, #programming{
+        width: 80%;
+    }
+}
+@media screen and (max-width:768px){
+    #intro_text{
+        width: 80%;
+    }
+    #graphic, #programming{
+        width: 90%;
+    }
+    #aim_wrapper{
+        margin-top: -10px;
+        height: 180px;
+    }
+    #speech_bubble{
+        bottom: 200px;
+    }
+}
+@media screen and (max-width:580px){
+     #graphic, #programming{
+            width: 100%;
+     }
+}
+@media screen and (max-width:480px){
+    #intro{
+        margin-top: 180px;
+    }
+    #profile_img{
+        width: 300px;
+        height: 172px;
+        margin-bottom: 20px;
+    }
+     #graphic, #programming{
+            width: 100%;
+     }
+     .level{
+         font-size: 0.8em;
+     }
+     #others_list{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #others_list li:first-child{
+        margin-bottom: 35px;
+    }
+    #aim_wrapper{
+        margin-top: -20px;
+        height: 170px;
+    }
+    #speech_bubble{
+        bottom: 190px;
+    }
+}
+@media screen and (max-width:400px){
+    #graph{
+        left: 45%;
+    }
+}

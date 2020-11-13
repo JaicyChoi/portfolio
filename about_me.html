@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/media_query/common_media_query.css">
+    <link rel="stylesheet" href="css/media_query/about_media_query.css">
     <link rel="shortcut icon" href="ico/favicon.ico">
     <script src="js/DATA.js"></script>
     <title>about me</title>
@@ -18,7 +20,7 @@
 		</div>
         <span class="loader"></span>
     </div>
-    <div id="star_bg"></div>
+    <!-- <div id="star_bg"></div> -->
     <div id="cursor">click</div>
     <div id="nav_bg">
         <div id="nav_inner">
@@ -55,7 +57,9 @@
         </div>
         <div id="intro">
             <div id="profile_img"></div>
-            <p id="intro_text"></p>
+            <div class="intro_text_wrapper">
+                <p id="intro_text"></p>
+            </div>
         </div>
         <div id="skills">
             <p class="subtitle">Skills</p>

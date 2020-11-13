@@ -6,9 +6,23 @@
         width: 97%;
     }
 }
+@media screen  and (max-width:980px){
+    #navigation ul li a:before{
+        font-size: 6em;
+    }
+    #navigation ul li a:hover:before{
+        height: 150px;
+    }
+}
 @media screen and (max-width:768px){
     body{
         font-size: 0.9em;
+    }
+    #navigation ul li a:before{
+        font-size: 4.5em;
+    }
+    #navigation ul li a:hover:before{
+        height: 100px;
     }
     .label{
         top: 85px;
@@ -39,10 +53,22 @@
     #nav_inner{
         width: 95%;
     }
+    #navigation ul li a:before{
+        font-size: 4em;
+    }
+    #navigation ul li a:hover:before{
+        height: 80px;
+    }
 }
 @media screen and (max-width:480px){
     body{
         font-size: 0.85em;
+    }
+    #navigation ul li a:before{
+        font-size: 2.3em;
+    }
+    #navigation ul li a:hover:before{
+        height: 70px;
     }
     #nav_bg{
         height: 60px;
@@ -95,6 +121,12 @@
 @media screen and (max-width:320px){
     #nav_inner{
         width: 93%;
+    }
+    #navigation ul li a:before{
+        font-size: 1.8em;
+    }
+    #navigation ul li a:hover:before{
+        height: 60px;
     }
     #navigation ul{
         height: 270px;

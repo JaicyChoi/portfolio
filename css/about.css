@@ -1,24 +1,43 @@
-#content{
-    width: 100%;
-}
 body{
     position: relative;
 }
 body.load_complete{
     min-height: 1150px;
 }
+#content{
+    width: 100%;
+}
 #intro{
     position: relative;
+    float: left;
     left: 50%;
     transform: translateX(-50%);
     width: 1200px;
-    top: 220px;
-    height: 865px;
+    margin-top: 220px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
     font-family: 'Ubuntu Mono', 'BBTreeGL', monospace;
     font-size: 1.25em;
     text-align: justify;
     transition: all 1s ease-in;
-    float: left;
+}
+#intro:before{
+    content: '';
+    width: 27.5%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-bottom: 1px solid #909090;
+}
+#intro:after{
+    content: '';
+    width: 27.5%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    border-bottom: 1px solid #909090;
 }
 #intro.dark_mode{
     color: #dfdfdf;
@@ -26,6 +45,7 @@ body.load_complete{
 #profile_img{
     display: block;
     position: relative;
+    float: left;
     left: 50%;
     transform: translateX(-50%);
     width: 400px;
@@ -36,33 +56,24 @@ body.load_complete{
     margin-bottom: 40px;
     filter: grayscale(100%);
 }
+.intro_text_wrapper{
+    position: relative;
+    float: left;
+    width: 100%;
+}
 #intro_text{
     position: relative;
+    float: left;
+    display: block;
     left: 50%;
     transform: translateX(-50%);
-    top: 15px;
+    margin-top: 15px;
     width: 55%;
-    height: 306px;
     text-align: center;
-    float: left;
 }
 #intro_text.kor{
     font-size: 0.925em;
     line-height: 22px;
-}
-#intro_text:before{
-    width: 330px;
-    position: absolute;
-    left: 50%;
-    bottom: 0px;
-    border-bottom: 1px solid #909090;
-}
-#intro_text:after{
-    width: 330px;
-    position: absolute;
-    bottom: 0px;
-    right: 50%;
-    border-bottom: 1px solid #909090;
 }
 @keyframes lineAnimate{
     0%{
@@ -72,6 +83,7 @@ body.load_complete{
 #skills{
     width: 1200px;
     position: relative;
+    float: left;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -296,6 +308,7 @@ body.load_complete{
     font-family: 'Rajdhani', 'BBTreeGL', sans-serif;
     opacity: 0;
     transition: all 2s ease-in-out;
+    overflow: hidden;
 }
 #graph.show{
     opacity: 1;
@@ -366,7 +379,8 @@ body.load_complete{
 .level{
     position: relative;
     left: 110px;
-    width: 475px;
+/*     width: 475px; */
+    width: 79.1666%; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -431,14 +445,14 @@ body.load_complete{
     margin-bottom: 150px;
 }
 #others:before{
-    width: 330px;
+    width: 27.5%;
     position: absolute;
     top: -50px;
     left: 50%;
     border-bottom: 1px solid #909090;
 }
 #others:after{
-    width: 330px;
+    width: 27.5%;
     position: absolute;
     top: -50px;
     right: 50%;

@@ -18,18 +18,18 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
     mode.addEventListener('click', () => {
         if( localStorage.getItem('site_mode') === 'light' ){
             localStorage.setItem('site_mode', 'dark');
-            star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
+            // star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
         }
         else{
             localStorage.setItem('site_mode', 'light');
-            star_bg_after.innerHTML = '#star_bg:after{ background-color: rgb(225, 255, 255); }';
+            // star_bg_after.innerHTML = '#star_bg:after{ background-color: rgb(225, 255, 255); }';
         }
         
         document.body.classList.toggle('dark_mode');
         document.querySelector('.main_title').classList.toggle('dark_mode');
     });
 
-    const star_bg = document.querySelector('#star_bg');
+    // const star_bg = document.querySelector('#star_bg');
 
     function star(){
         let count = 500;
@@ -54,28 +54,28 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
         }
     }
 
-    star();
+    // star();
 
-    window.addEventListener('resize', () => {
-        while( star_bg.hasChildNodes() )
-            star_bg.removeChild(star_bg.firstChild);
+    // window.addEventListener('resize', () => {
+    //     while( star_bg.hasChildNodes() )
+    //         star_bg.removeChild(star_bg.firstChild);
 
-        star();
-    });
+    //     star();
+    // });
 
-    let star_bg_after = document.head.appendChild(document.createElement('style'));
+    // let star_bg_after = document.head.appendChild(document.createElement('style'));
     
     if( localStorage.getItem('site_mode') === 'light' ){
         document.querySelector('#mode').removeAttribute('checked');
         document.body.classList.remove('dark_mode');
         document.querySelector('.main_title').classList.remove('dark_mode');
-        star_bg_after.innerHTML = '#star_bg:after{ background-color: rgb(225, 255, 255); }';
+        // star_bg_after.innerHTML = '#star_bg:after{ background-color: rgb(225, 255, 255); }';
     }
     else{
         document.querySelector('#mode').setAttribute('checked', '');
         document.body.classList.add('dark_mode');
         document.querySelector('.main_title').classList.add('dark_mode');
-        star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
+        // star_bg_after.innerHTML = '#star_bg:after{ background-color: black }';
     }
 
     setTimeout( () => {

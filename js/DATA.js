@@ -383,8 +383,10 @@ let ABOUT_DATA = {
             }
         ]
     },
-    graphic_list: [ 350, 190, 210, 140, 270 ],
-    programming_list: [ 350, 330, 325, 210 ],
+    // graphic_list: [ 350, 190, 210, 140, 270 ],
+    // programming_list: [ 350, 330, 325, 210 ],
+    graphic_list: [ 55, 30, 40, 15, 50 ],
+    programming_list: [ 60, 57, 55]
 }
 
 let CONTACT = {
