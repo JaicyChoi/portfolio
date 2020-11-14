@@ -89,8 +89,9 @@
     .top_preview{
         height: 250px;
     }
-    #tobe.view{
+    #tobe.view, #samueladams.view, #portfolio.view, #wedding.view, #funny_flakes.view, #brunch.view{
         width: 100%;
+        right: 0;
     }
     .project_title{
         position: relative;
