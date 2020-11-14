@@ -1,6 +1,6 @@
-setTimeout( () => {
-    document.body.style.minHeight = '1450px';
-}, 1500);
+// setTimeout( () => {
+//     document.body.style.minHeight = '1450px';
+// }, 1500);
 
 const img = document.querySelectorAll('.list');
 const preview = document.querySelectorAll('.list p');
@@ -15,7 +15,7 @@ change_description();
 
 function change_description(){
     for( let i = 0 ; i < description.length; i++ )
-        description[i].innerText = description_text[i];
+        description[i].innerHTML = description_text[i];
 }
 eng.addEventListener('click', () => {
     description_text = PROJECT_PREVIEW.eng.description;
@@ -126,8 +126,8 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         else js_after.innerHTML = '.js:after{ content: "JavaScript ' + project.languages[0].JavaScript + '%"; }';
         languages.appendChild(languages_title); languages.appendChild(css); languages.appendChild(html); languages.appendChild(js);
 
-        description_box.appendChild(project_title); description_box.appendChild(github); description_box.appendChild(project_info);
-        description_box.appendChild(project_link); description_box.appendChild(languages);
+        description_box.appendChild(project_title); description_box.appendChild(github);
+        description_box.appendChild(project_link); description_box.appendChild(languages); description_box.appendChild(project_info);
 
         let video = document.createElement('div'); video.classList.add('video');
         let iframe = document.createElement('iframe'); iframe.src = project.video;

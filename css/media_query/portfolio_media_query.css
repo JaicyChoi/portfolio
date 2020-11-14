@@ -1,0 +1,124 @@
+@media screen and (max-width:1200px){
+    #portfolio_list{
+        width: 95%;
+        grid-gap: 50px;
+    }
+    .list{
+        width: 100%;
+        height: 400px;
+    }
+    .view_inner{
+        width: 98%;
+    }
+}
+@media screen and (max-width:980px){
+    #portfolio_list{
+        grid-gap: 40px;
+    }
+    .list{
+        height: 330px;
+    }
+    .project_link{
+        margin-top: 150px;
+    }
+    .project_link a{
+        top: 25px;
+        margin-left: -75px;
+    }
+    .project_info{
+        margin-top: 55px;
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px){
+    #portfolio_list{
+        margin-bottom: 60px;
+        grid-gap: 30px;
+    }
+    .list{
+        height: 250px;
+    }
+    .project_info{
+        width: 55%;
+        margin-top: 40px;
+    }
+    .project_info div{
+        margin-bottom: 40px;
+    }
+    .portfolio_title{
+        text-indent: 10px;
+        bottom: 35px;
+        font-size: 1.3em;
+    }
+    .portfolio_description{
+        text-indent: 10px;
+        bottom: 15px;
+        font-size: 1.15em;
+    }
+    .view_file a{
+        padding-bottom: 5px;
+    }
+}
+@media screen and (max-width:630px){
+    #portfolio_list{
+        width: 85%;
+        display: flex;
+        flex-direction:column;
+        grid-gap: 25px;
+    }
+    .list{
+        height: 300px;
+    }
+    #tobe.view{
+        width: 100%;
+    }
+    .project_title{
+        position: relative;
+    }
+    .github{
+        top: 0;
+        margin-top: 40px;
+    }
+    .project_link{
+        margin-top: 150px;
+    }
+    .project_link a{
+        top: -7px;
+        margin-left: 30px;
+    }
+    .languages{
+        position: relative;
+        float: left;
+        top: 0;
+        margin-left: -27px;
+        margin-top: 170px;
+    }
+    .project_info{
+        position: relative;
+        float: left;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+}
+@media screen and (max-width:480px){
+    #portfolio_list{
+        margin-top: 190px;
+        width: 90%;
+        grid-gap: 20px;
+    }
+    .list{
+        height: 250px;
+    }
+}
+@media screen and (max-width:320px){
+    #portfolio_list{
+        margin-top: 180px;
+        width: 90%;
+        grid-gap: 15px;
+    }
+    .list{
+        height: 200px;
+    }
+}

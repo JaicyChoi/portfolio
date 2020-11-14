@@ -21,22 +21,22 @@ let MAIN_TEXT = {
 let PROJECT_PREVIEW = {
     eng:{
         description: [
-            'Beer recommendation, user review(responsive/PC/mobile)',
-            'Beer promotional page(responsive/PC/mobile)',
-            'Web page for portfolio(PC)',
-            'Ssmall wedding intro web page(responsive/PC/mobile)',
-            'Web page for breakfast restaurant(responsive/PC/mobile)',
-            'Promotional page for brunch sales(responsive/PC/mobile)'
+            'Beer recommendation, user review',
+            'Beer promotional page',
+            'Web page for portfolio',
+            'Ssmall wedding intro web page',
+            'Web page for breakfast restaurant',
+            'Promotional page for brunch sales'
         ]
     },
     kor: {
         description: [
-            '맥주 추천/리뷰, 사용자간 의견 공유(반응형/PC/모바일)',
-            '맥주 프로모션 페이지(반응형/PC/모바일)',
-            '자기소개 웹 페이지(PC)',
-            '스몰 웨딩 소개 웹 페이지(반응형/PC/모바일)',
-            '아침 식사 판매 식당(반응형/PC/모바일)',
-            '브런치 판매 홍보 웹 페이지(반응형/PC/모바일)'
+            '맥주 추천/리뷰, 사용자간 의견 공유',
+            '맥주 프로모션 페이지',
+            '자기소개 웹 페이지',
+            '스몰 웨딩 소개 웹 페이지',
+            '아침 식사 판매 식당',
+            '브런치 판매 홍보 웹 페이지'
         ]
     }
 }
