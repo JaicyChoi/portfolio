@@ -101,7 +101,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         let project_link = document.createElement('div'); project_link.classList.add('project_link');
         let project_link_title = document.createElement('span'); project_link_title.innerHTML = 'Project link<br/>(PC/Mobile)';
         let link_address = document.createElement('a'); link_address.innerText = project.project_link;
-        link_address.setAttribute('href', project.project_link); link_address.setAttribute('target', '_blank');
+        link_address.setAttribute('href', 'https://'+project.project_link); link_address.setAttribute('target', '_blank');
         project_link.appendChild(project_link_title); project_link.appendChild(link_address);
 
         let github = document.createElement('a'); github.classList.add('github');
@@ -194,13 +194,15 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
         github.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
         github.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
 
-        let web_address = document.querySelector('.web_address');
-        web_address.addEventListener('mouseenter', () => { cursor.classList.add('select') });
-        web_address.addEventListener('mouseleave', () => { cursor.classList.remove('select') });
-        // link_address.addEventListener('click', () => window.open(project.project_link) );
-        link_address.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
-        link_address.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
-
+        let info_text = document.querySelector('.info_text');
+        if( info_text.children[0].classList.value.includes('web_address') ){
+            let web_address = document.querySelector('.web_address');
+            web_address.addEventListener('mouseenter', () => { cursor.classList.add('select') });
+            web_address.addEventListener('mouseleave', () => { cursor.classList.remove('select') });
+            // link_address.addEventListener('click', () => window.open(project.project_link) );
+            link_address.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
+            link_address.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+        }
         if( localStorage.getItem('site_mode') === 'dark' ){
             view_portfolio.classList.add('dark_mode');
             github.classList.add('dark_mode');

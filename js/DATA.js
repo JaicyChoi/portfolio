@@ -57,7 +57,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/NimblePastBlackpanther',
-                project_link: 'https://jaicychoi.github.io/tobe',
+                project_link: 'jaicychoi.github.io/tobe',
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
                     {
@@ -82,7 +82,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/UntimelyCoordinatedDodo',
-                project_link: 'https://jaicychoi.github.io/samueladams',
+                project_link: 'jaicychoi.github.io/samueladams',
                 github: 'https://github.com/JaicyChoi/samueladams',
                 languages: [
                     {
@@ -107,7 +107,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/PersonalUncomfortableGarpike',
-                project_link: 'https://jaicychoi.github.io/portfolio',
+                project_link: 'jaicychoi.github.io/portfolio',
                 github: 'https://github.com/JaicyChoi/portfolio',
                 languages: [
                     {
@@ -132,7 +132,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/RaggedHarmfulAracari',
-                project_link: 'https://jaicychoi.github.io/wedding',
+                project_link: 'jaicychoi.github.io/wedding',
                 github: 'https://github.com/JaicyChoi/wedding',
                 languages: [
                     {
@@ -157,7 +157,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/KnobbyPastIndochinahogdeer',
-                project_link: 'https://jaicychoi.github.io/funny_flakes/',
+                project_link: 'jaicychoi.github.io/funny_flakes/',
                 github: 'https://github.com/JaicyChoi/funny_flakes',
                 languages: [
                     {
@@ -182,7 +182,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/QueasyEasygoingBeardedcollie',
-                project_link: 'https://jaicychoi.github.io/brunch/',
+                project_link: 'jaicychoi.github.io/brunch/',
                 github: 'https://github.com/JaicyChoi/brunch',
                 languages: [
                     {
@@ -209,7 +209,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/NimblePastBlackpanther',
-                project_link:  'https://jaicychoi.github.io/tobe',
+                project_link:  'jaicychoi.github.io/tobe',
                 github: 'https://github.com/JaicyChoi/tobe',
                 languages: [
                     {
@@ -234,7 +234,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/UntimelyCoordinatedDodo',
-                project_link: 'https://jaicychoi.github.io/samueladams',
+                project_link: 'jaicychoi.github.io/samueladams',
                 github: 'https://github.com/JaicyChoi/samueladams',
                 languages: [
                     {
@@ -259,7 +259,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/PersonalUncomfortableGarpike',
-                project_link: 'https://jaicychoi.github.io/portfolio',
+                project_link: 'jaicychoi.github.io/portfolio',
                 github: 'https://github.com/JaicyChoi/portfolio',
                 languages: [
                     {
@@ -284,7 +284,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/RaggedHarmfulAracari',
-                project_link: 'https://jaicychoi.github.io/wedding',
+                project_link: 'jaicychoi.github.io/wedding',
                 github: 'https://github.com/JaicyChoi/wedding',
                 languages: [
                     {
@@ -309,7 +309,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/KnobbyPastIndochinahogdeer',
-                project_link: 'https://jaicychoi.github.io/funny_flakes/',
+                project_link: 'jaicychoi.github.io/funny_flakes/',
                 github: 'https://github.com/JaicyChoi/funny_flakes',
                 languages: [
                     {
@@ -334,7 +334,7 @@ let PROJECT_DATA = {
                     }
                 ],
                 video: 'https://gfycat.com/ifr/QueasyEasygoingBeardedcollie',
-                project_link: 'https://jaicychoi.github.io/brunch/',
+                project_link: 'jaicychoi.github.io/brunch/',
                 github: 'https://github.com/JaicyChoi/brunch',
                 languages: [
                     {

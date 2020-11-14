@@ -29,6 +29,15 @@
         margin-top: 55px;
         width: 60%;
     }
+    .project_info div:first-child{
+        margin-bottom: 50px;
+    }
+    .view_file a{
+        padding-bottom: 5px;
+    }
+    .video{
+        height: 409px;
+    }
 }
 @media screen and (max-width:768px){
     #portfolio_list{
@@ -38,12 +47,12 @@
     .list{
         height: 250px;
     }
+    .top_preview{
+        height: 270px;
+    }
     .project_info{
         width: 55%;
         margin-top: 40px;
-    }
-    .project_info div{
-        margin-bottom: 40px;
     }
     .portfolio_title{
         text-indent: 10px;
@@ -55,8 +64,16 @@
         bottom: 15px;
         font-size: 1.15em;
     }
-    .view_file a{
-        padding-bottom: 5px;
+    .video{
+        height: 330px;
+    }
+    .project_logo{
+        margin-top: 100px;
+        height: 550px;
+    }
+    .project_mockup{
+        margin-top: 100px;
+        height: 650px;
     }
 }
 @media screen and (max-width:630px){
@@ -69,6 +86,9 @@
     .list{
         height: 300px;
     }
+    .top_preview{
+        height: 250px;
+    }
     #tobe.view{
         width: 100%;
     }
@@ -77,7 +97,7 @@
     }
     .github{
         top: 0;
-        margin-top: 40px;
+        margin-top: 15px;
     }
     .project_link{
         margin-top: 150px;
@@ -91,16 +111,32 @@
         float: left;
         top: 0;
         margin-left: -27px;
-        margin-top: 170px;
+        margin-top: 155px;
     }
     .project_info{
         position: relative;
         float: left;
-        width: 90%;
+        margin-top: 50px;
+        width: 98%;
         left: 50%;
         transform: translateX(-50%);
     }
-    
+    .video{
+        height: 278px;
+    }
+    .video iframe{
+        height: 122%;
+    }
+    .project_logo{
+        margin-top: 80px;
+        height: 450px;
+        grid-gap: 15px;
+    }
+    .project_mockup{
+        margin-top: 80px;
+        height: 550px;
+        grid-gap: 15px;
+    }
 }
 @media screen and (max-width:480px){
     #portfolio_list{
@@ -111,6 +147,46 @@
     .list{
         height: 250px;
     }
+    .top_preview{
+        height: 200px;
+    }
+    .video{
+        height: 220px;
+    }
+    .project_logo{
+        margin-top: 60px;
+        height: 350px;
+        grid-gap: 10px;
+    }
+    .project_mockup{
+        margin-top: 60px;
+        margin-bottom: 50px;
+        height: 450px;
+        grid-gap: 10px;
+    }
+    .logo1{
+        background-size: auto 80px;
+    }
+    .logo2{
+        background-size: auto 80px;
+    }
+    .logo3{
+        background-size: auto 110px;
+    }
+}
+@media screen and (max-width:380px){
+/*     .project_link a{
+        top: -7px;
+        margin-left: 10px;
+    } */
+}
+@media screen and (max-width:335px){
+    .view_file a{
+        padding-bottom: 3px;
+    }
+    .project_info div:first-child{
+        margin-bottom: 80px;
+    }
 }
 @media screen and (max-width:320px){
     #portfolio_list{
@@ -120,5 +196,35 @@
     }
     .list{
         height: 200px;
+    }
+    .top_preview{
+        height: 155px;
+    }
+    .video{
+        height: 138px;
+    }
+    .video iframe{
+        top: 64%;
+        height: 145%;
+    }
+    .project_logo{
+        margin-top: 50px;
+        height: 300px;
+        grid-gap: 7px;
+    }
+    .project_mockup{
+        margin-top: 50px;
+        margin-bottom: 40px;
+        height: 400px;
+        grid-gap: 7px;
+    }
+    .logo1{
+        background-size: auto 70px;
+    }
+    .logo2{
+        background-size: auto 70px;
+    }
+    .logo3{
+        background-size: auto 100px;
     }
 }
