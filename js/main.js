@@ -84,8 +84,10 @@ setTimeout( () => {
     main_visual_text.classList.add('show');
 }, 2100);
 
-prev_btn.parentElement.addEventListener('mouseenter', () => { cursor.classList.remove('hide'); cursor.classList.add('select'); });
-prev_btn.parentElement.addEventListener('mouseleave', () => { cursor.classList.add('hide'); cursor.classList.remove('select'); });
+if(!isMobile){
+    prev_btn.parentElement.addEventListener('mouseenter', () => { cursor.classList.remove('hide'); cursor.classList.add('select'); });
+    prev_btn.parentElement.addEventListener('mouseleave', () => { cursor.classList.add('hide'); cursor.classList.remove('select'); });
+}
 
 prev_btn.addEventListener('click', () => {
     if( index < 1 ) return;
@@ -141,11 +143,13 @@ window.addEventListener('scroll', () => {
     if( offset === 0 ) section[0].style.cssText = 'background: url(images/main_0.jpg) no-repeat center; background-size: contain; background-color: black;';
 });
 
-main_button.forEach(button => button.addEventListener('mouseenter', () => {
-    cursor.classList.remove('hide');
-    cursor.classList.add('select');
-}));
-main_button.forEach(button => button.addEventListener('mouseleave', () => {
-    cursor.classList.add('hide');
-    cursor.classList.remove('select');
-}));
+if(!isMobile){
+    main_button.forEach(button => button.addEventListener('mouseenter', () => {
+        cursor.classList.remove('hide');
+        cursor.classList.add('select');
+    }));
+    main_button.forEach(button => button.addEventListener('mouseleave', () => {
+        cursor.classList.add('hide');
+        cursor.classList.remove('select');
+    }));
+}

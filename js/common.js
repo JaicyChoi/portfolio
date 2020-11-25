@@ -79,7 +79,8 @@ if( document.title !== 'CYJ' && window.location.href.length > 38 ){
     }
 
     setTimeout( () => {
-        cursor.classList.remove('hide');
+        if(!isMobile)
+            cursor.classList.remove('hide');
     },1500);
 }
 
@@ -147,7 +148,8 @@ document.addEventListener('mousemove', (e) => {
 });
 
 nav.parentElement.addEventListener('mouseenter', () => {
-    cursor.classList.remove('hide');
+    if(!isMobile)
+        cursor.classList.remove('hide');
 });
 if( window.location.href.indexOf('index') > 0 ){
     nav.parentElement.addEventListener('mouseleave', () => {
@@ -229,7 +231,8 @@ menu_btn.addEventListener('click', () => {
             document.querySelector('.label').classList.add('blur');
         language_option.classList.add('blur');
         li.forEach(li => li.classList.add('pop'));
-        cursor.classList.remove('hide');
+        if(!isMobile)
+            cursor.classList.remove('hide');
     }
     else{
         if( bottom_area){

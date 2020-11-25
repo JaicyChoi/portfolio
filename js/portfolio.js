@@ -28,8 +28,10 @@ kor.addEventListener('click', () => {
 
 img.forEach(img => img.childNodes[1].addEventListener('mouseenter', () => {
         img.childNodes[1].classList.add('color');
-        cursor.classList.add('point');
-        cursor.childNodes.forEach(span => span.classList.remove('hide'));
+        if(!isMobile){
+            cursor.classList.add('point');
+            cursor.childNodes.forEach(span => span.classList.remove('hide'));
+        }
         preview[getNodeindex(img)].classList.add('show');
 
         if( localStorage.getItem('site_mode') === 'dark' )
@@ -40,8 +42,10 @@ img.forEach(img => img.childNodes[1].addEventListener('mouseenter', () => {
 ));
 img.forEach(img => img.addEventListener('mouseleave', () => {
         img.childNodes[1].classList.remove('color');
-        cursor.classList.remove('point');
-        cursor.childNodes.forEach(span => span.classList.add('hide'));
+        if(!isMobile){
+            cursor.classList.remove('point');
+            cursor.childNodes.forEach(span => span.classList.add('hide'));
+        }
         preview[getNodeindex(img)].classList.remove('show');
     }
 ));
@@ -168,20 +172,22 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             a.forEach(a => a.classList.remove('dark_mode'));
 
         a.forEach(a => a.addEventListener( 'mouseenter' , () => {
-            cursor.classList.add('select');
+            if(!isMobile) cursor.classList.add('select');
             let file_view = document.head.appendChild(document.createElement('style'));
             file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: updownAnimate .9s infinite; }';
         }));
         a.forEach(a => a.addEventListener( 'mouseleave' , () => {
-            cursor.classList.remove('select');
+            if(!isMobile) cursor.classList.remove('select');
             let file_view = document.head.appendChild(document.createElement('style'));
             file_view.innerHTML = '.view_file a:nth-child(' + ( getNodeindex(a) + 1 ) + '):after{ animation: none; }';
         }));
 
         let go_top = document.createElement('div'); go_top.classList.add('go_top');
         document.body.appendChild(go_top);
-        go_top.addEventListener('mousemove', () => { cursor.classList.add('select'); });
-        go_top.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+        if(!isMobile){
+            go_top.addEventListener('mousemove', () => { cursor.classList.add('select'); });
+            go_top.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+        }
         go_top.addEventListener('click', () => {  top_preview.scrollIntoView({behavior: 'smooth'}); });
 
         window.addEventListener('scroll', () => {
@@ -191,17 +197,21 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
                 go_top.classList.remove('show');
         });
         
-        github.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
-        github.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
-
-        let info_text = document.querySelector('.info_text');
-        if( info_text.children[0].classList.value.includes('web_address') ){
-            let web_address = document.querySelector('.web_address');
-            web_address.addEventListener('mouseenter', () => { cursor.classList.add('select') });
-            web_address.addEventListener('mouseleave', () => { cursor.classList.remove('select') });
-            // link_address.addEventListener('click', () => window.open(project.project_link) );
-            link_address.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
-            link_address.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+        if(!isMobile){
+            github.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
+            github.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+        }
+        
+        if(!isMobile){
+            let info_text = document.querySelector('.info_text');
+            if( info_text.children[0].classList.value.includes('web_address') ){
+                let web_address = document.querySelector('.web_address');
+                web_address.addEventListener('mouseenter', () => { cursor.classList.add('select') });
+                web_address.addEventListener('mouseleave', () => { cursor.classList.remove('select') });
+                // link_address.addEventListener('click', () => window.open(project.project_link) );
+                link_address.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
+                link_address.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+            }
         }
         if( localStorage.getItem('site_mode') === 'dark' ){
             view_portfolio.classList.add('dark_mode');
@@ -218,8 +228,10 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             close_btn.classList.remove('dark_mode');
         }
 
-        close_btn.addEventListener('mouseenter',  () => { cursor.classList.add('select'); });
-        close_btn.addEventListener('mouseleave',  () => { cursor.classList.remove('select'); });
+        if(!isMobile){
+            close_btn.addEventListener('mouseenter',  () => { cursor.classList.add('select'); });
+            close_btn.addEventListener('mouseleave',  () => { cursor.classList.remove('select'); });
+        }
         close_btn.addEventListener('click',  () => {
             setTimeout( () => {
                 img.firstElementChild.style.position = 'relative';
@@ -229,7 +241,7 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
             }, 700);
             setTimeout( () => { document.body.removeChild(view_portfolio); }, 1000);
             view_portfolio.classList.remove('down');
-            cursor.classList.remove('select');
+            if(!isMobile) cursor.classList.remove('select');
             document.body.removeChild(go_top);
             img.firstElementChild.classList.remove('view');
             label.classList.remove('blur');

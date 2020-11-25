@@ -21,16 +21,18 @@ function placeholder_setting(){
     textarea.placeholder = message.placeholder[2];
     submit.innerText = message.submit;
 }
-input.forEach(input => input.addEventListener('mouseenter', () => {
-    cursor.classList.add('hide');
-}));
-input.forEach(input => input.addEventListener('mouseleave', () => {
-    cursor.classList.remove('hide');
-}));
-textarea.addEventListener('mouseenter', () => { cursor.classList.add('hide'); });
-textarea.addEventListener('mouseleave', () => { cursor.classList.remove('hide'); });
-submit.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
-submit.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+if(!isMobile){
+    input.forEach(input => input.addEventListener('mouseenter', () => {
+        cursor.classList.add('hide');
+    }));
+    input.forEach(input => input.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hide');
+    }));
+    textarea.addEventListener('mouseenter', () => { cursor.classList.add('hide'); });
+    textarea.addEventListener('mouseleave', () => { cursor.classList.remove('hide'); });
+    submit.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
+    submit.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
+}
 
 for( let i = 0 ; i < input.length ; i++ )
     input[i].addEventListener('focus', () => { input[i].placeholder = ''; });
@@ -105,11 +107,11 @@ const re_write = document.querySelector('#re-write');
 let tmp_style = document.head.appendChild(document.createElement('style'));
 
 re_write.addEventListener('mouseenter', () => {
-    cursor.classList.add('select');
+    if(!isMobile) cursor.classList.add('select');
     tmp_style.innerHTML = '#re-write:before{ animation: retryAnimate 2s linear infinite; }';
 });
 re_write.addEventListener('mouseleave', () => {
-    cursor.classList.remove('select');
+    if(!isMobile) cursor.classList.remove('select');
     tmp_style.innerHTML = '#re-write:before{ animation: none; }';
 });
 re_write.addEventListener('click', () => {

@@ -1,3 +1,4 @@
+//ie check
 let agent = navigator.userAgent.toLowerCase();
 let isIE = false;
 
@@ -16,3 +17,10 @@ window.addEventListener('DOMContentLoaded', function(){
         document.querySelector('#dark_bg').classList.add('ie');
     }
 });
+
+//mobile check
+let filter = 'win16|win32|win64|mac|macintel';
+let isMobile = false;
+
+if( filter.indexOf(navigator.platform.toLowerCase()) < 0 )
+    isMobile = true;
