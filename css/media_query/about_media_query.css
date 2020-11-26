@@ -33,6 +33,20 @@
     #intro_text{
         width: 80%;
     }
+    #icon_wrapper{
+        height: 120px;
+    }
+    @keyframes scrollAnimate{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-180px * 11));
+        }
+    }
+    .tool_icon{
+        width: 180px;
+    }
     #graphic, #programming{
         width: 90%;
     }
@@ -45,8 +59,25 @@
     }
 }
 @media screen and (max-width:580px){
+    #icon_wrapper{
+        height: 100px;
+    }
+    @keyframes scrollAnimate{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-150px * 11));
+        }
+    }
+    .tool_icon{
+        width: 150px;
+    }
+    #graph{
+        left: 47%;
+    }
      #graphic, #programming{
-            width: 100%;
+         width: 100%;
      }
 }
 @media screen and (max-width:480px){
@@ -58,8 +89,22 @@
         height: 172px;
         margin-bottom: 20px;
     }
+    #icon_wrapper{
+        height: 90px;
+    }
+    @keyframes scrollAnimate{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-120px * 11));
+        }
+    }
+    .tool_icon{
+        width: 120px;
+    }
      #graphic, #programming{
-            width: 100%;
+         width: 100%;
      }
      .level{
          font-size: 0.8em;

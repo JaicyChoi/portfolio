@@ -159,18 +159,39 @@ let tool_icon = ['photoshop', 'illustraor', 'premiere', 'aftereffect', 'figma', 
 
 for( let i = 0 ; i < tool_icon.length ; i++ ){
     let li = document.createElement('li');
-    li.style.cssText = 'background: url(images/' + tool_icon[i] +'.png) no-repeat center; background-size: 70px 70px;';
+    if(window.innerWidth <= 580)
+        li.style.cssText = 'background: url(images/' + tool_icon[i] +'.png) no-repeat center; background-size: 50px 50px;';
+    else
+        li.style.cssText = 'background: url(images/' + tool_icon[i] +'.png) no-repeat center; background-size: 70px 70px;';
     li.classList.add('tool_icon');
 
     icon_list.appendChild(li);
 }
 for( let i = 0 ; i < 6 ; i ++ ){
     let li = document.createElement('li');
-    li.style.cssText = 'background: url(images/' + tool_icon[i] +'.png) no-repeat center; background-size: 70px 70px;';
+    if(window.innerWidth <= 580)
+        li.style.cssText = 'background: url(images/' + tool_icon[i] +'.png) no-repeat center; background-size: 50px 50px;';
+    else
+        li.style.cssText = 'background: url(images/' + tool_icon[i] +'.png) no-repeat center; background-size: 70px 70px;';
     li.classList.add('tool_icon');
 
     icon_list.appendChild(li);
 }
+
+window.addEventListener('resize', () => {
+    let resize_icon = document.querySelectorAll('.tool_icon');
+    for( let i = 0 ; i < tool_icon.length ; i++ ){
+        if(window.innerWidth <= 580)
+            resize_icon[i].style.cssText = 'background: url(images/' + tool_icon[i] +'.png) no-repeat center; background-size: 50px 50px;';
+        else
+            resize_icon[i].style.cssText = 'background: url(images/' + tool_icon[i] +'.png) no-repeat center; background-size: 70px 70px;';
+    }
+    for( let i = tool_icon.length ; i < tool_icon.length + 6 ; i++ )
+        if(window.innerWidth <= 580)
+            resize_icon[i].style.cssText = 'background: url(images/' + tool_icon[i-tool_icon.length] +'.png) no-repeat center; background-size: 50px 50px;';
+        else
+            resize_icon[i].style.cssText = 'background: url(images/' + tool_icon[i-tool_icon.length] +'.png) no-repeat center; background-size: 70px 70px;';
+});
 
 change_mode();
 
