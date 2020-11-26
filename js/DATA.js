@@ -111,9 +111,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/portfolio',
                 languages: [
                     {
-                        CSS: 30.3,
-                        HTML: 18.2,
-                        JavaScript: 51.5
+                        CSS: 34.2,
+                        HTML: 16.9,
+                        JavaScript: 48.9
                     }
                 ]
             }
@@ -136,9 +136,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/wedding',
                 languages: [
                     {
-                        CSS: 59.7,
+                        CSS: 59.5,
                         HTML: 25.8,
-                        JavaScript: 14.5
+                        JavaScript: 14.7
                     }
                 ]
             }
@@ -186,9 +186,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/brunch',
                 languages: [
                     {
-                        CSS: 59.9,
-                        HTML: 34.3,
-                        JavaScript: 5.8
+                        CSS: 59.4,
+                        HTML: 35.0,
+                        JavaScript: 5.6
                     }
                 ]
             }
@@ -263,9 +263,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/portfolio',
                 languages: [
                     {
-                        CSS: 30.3,
-                        HTML: 18.2,
-                        JavaScript: 51.5
+                        CSS: 34.2,
+                        HTML: 16.9,
+                        JavaScript: 48.9
                     }
                 ]
             }
@@ -288,9 +288,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/wedding',
                 languages: [
                     {
-                        CSS: 59.7,
+                        CSS: 59.5,
                         HTML: 25.8,
-                        JavaScript: 14.5
+                        JavaScript: 14.7
                     }
                 ]
             }
@@ -338,9 +338,9 @@ let PROJECT_DATA = {
                 github: 'https://github.com/JaicyChoi/brunch',
                 languages: [
                     {
-                        CSS: 59.9,
-                        HTML: 34.3,
-                        JavaScript: 5.8
+                        CSS: 59.4,
+                        HTML: 35.0,
+                        JavaScript: 5.6
                     }
                 ]
             }
