@@ -100,6 +100,11 @@
         top: 0;
         margin-top: 15px;
     }
+    .github.dark_mode{
+        color: white;
+        background: url(../../images/github_white.png) no-repeat center;
+        background-size: contain;
+    }
     .project_link{
         margin-top: 150px;
     }
