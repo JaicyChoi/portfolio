@@ -197,11 +197,8 @@ img.forEach(img => img.firstElementChild.addEventListener('click', () => {
                 go_top.classList.remove('show');
         });
         
-        if(!isMobile)
-        {
-            github.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
-            github.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
-        }
+        github.addEventListener('mouseenter', () => { cursor.classList.add('select'); });
+        github.addEventListener('mouseleave', () => { cursor.classList.remove('select'); });
         
         if(!isMobile){
             let info_text = document.querySelector('.info_text');
